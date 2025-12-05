@@ -1,0 +1,465 @@
+{
+  "demo_info": {
+    "id": "software_dev",
+    "industry": "Software Development & DevOps",
+    "title": "WIM Industry Demo: Software Development",
+    "subtitle": "Production Engineering - Mid-Sprint Crisis Management",
+    "version": "2.0.0",
+    "duration_minutes": 12,
+    "author": "Oscurso Labs"
+  },
+
+  "introduction": {
+    "header": {
+      "title": "WIM - WORKING INTENT MEMORY",
+      "subtitle": "Industry Demo: Software Development & DevOps",
+      "tagline": "Production Engineering - Mid-Sprint Crisis"
+    },
+    "welcome_message": "Welcome to the WIM Software Development Demo\n\nThis scenario demonstrates how WIM manages the chaos of modern software\ndevelopment: feature work interrupted by production incidents, security\npatches, and the endless context switching that kills productivity.",
+    "context": {
+      "role": "Senior Backend Engineer",
+      "time": "Tuesday, 10:47 AM EST (sprint day 7 of 10)",
+      "location": "Enterprise SaaS Platform Team"
+    }
+  },
+
+  "scenario": {
+    "name": "Mid-Sprint Feature Development with Production Crisis",
+    "description": "Deep in flow state coding payment integration when database connection pool exhaustion takes down production",
+    "primary_intent": {
+      "id": "INT-FEATURE-001",
+      "description": "Ship Q4 payment integration feature for enterprise customers",
+      "epic_id": "EPIC-2847",
+      "feature": "Stripe Connect multi-currency support",
+      "urgency": 0.70,
+      "sprint": "Sprint 23",
+      "deadline": "2024-12-15",
+      "business_value": "$450K ARR at risk if delayed"
+    }
+  },
+
+  "timeline": [
+    {
+      "scene": 1,
+      "title": "Deep Work - Feature Development",
+      "time_offset_minutes": 0,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 1: Deep Work - Feature Development"
+        },
+        {
+          "type": "display_message",
+          "content": "Current Sprint Goal: Ship Stripe Connect multi-currency payment integration\nBusiness Value: $450K ARR at risk if delayed\nSprint: 23 (Day 7 of 10)\nDeadline: December 15"
+        },
+        {
+          "type": "wim_intent_create",
+          "intent_id": "INT-FEATURE-001",
+          "description": "Ship Q4 payment integration feature",
+          "intent_type": "Goal",
+          "priority": "High",
+          "urgency": 0.70
+        },
+        {
+          "type": "display_message",
+          "style": "success",
+          "content": "▶ Creating primary intent in WIM...\n\nIntent: \"Ship Q4 payment integration feature\"\nType: Goal\nPriority: High (70%)\nSprint: 23"
+        },
+        {
+          "type": "wim_task_decompose",
+          "intent_id": "INT-FEATURE-001",
+          "tasks": [
+            {
+              "id": "DEV-2847-1",
+              "description": "Design Stripe Connect integration architecture",
+              "status": "completed",
+              "duration_hours": 2
+            },
+            {
+              "id": "DEV-2847-2",
+              "description": "Implement multi-currency account creation",
+              "status": "completed",
+              "duration_hours": 4,
+              "pr_number": 891
+            },
+            {
+              "id": "DEV-2847-3",
+              "description": "Add currency conversion service with caching",
+              "status": "in_progress",
+              "progress": 0.65
+            },
+            {
+              "id": "DEV-2847-4",
+              "description": "Build frontend currency selector component",
+              "status": "pending"
+            },
+            {
+              "id": "DEV-2847-5",
+              "description": "Integration tests and QA validation",
+              "status": "pending"
+            }
+          ]
+        },
+        {
+          "type": "display_message",
+          "content": "Task Progress:\n  ✓ DEV-2847-1: Design Stripe Connect architecture (2h)\n  ✓ DEV-2847-2: Implement multi-currency account creation (4h)\n  → DEV-2847-3: Add currency conversion service [IN PROGRESS]\n  • DEV-2847-4: Build frontend currency selector component\n  • DEV-2847-5: Integration tests and QA validation"
+        },
+        {
+          "type": "display_task_progress",
+          "completed": 2,
+          "total": 5
+        },
+        {
+          "type": "display_context",
+          "context": {
+            "code_state": {
+              "branch": "feature/stripe-connect-multicurrency",
+              "last_commit": "a7f3c21 - Add currency conversion API client",
+              "working_file": "src/services/currency_converter.ts",
+              "lines_written": 320,
+              "tests_passing": "11/11"
+            },
+            "environment": {
+              "services": ["postgres:5432", "redis:6379", "stripe-mock:12111", "api:3000"],
+              "mental_context": "Implementing Redis caching with 5-minute TTL for exchange rates"
+            }
+          }
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 2,
+      "title": "Flow State - Deep Work Mode",
+      "time_offset_minutes": 37,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 2: Flow State - Deep Work Mode"
+        },
+        {
+          "type": "display_message",
+          "content": "10:47 AM - You've been coding for 37 minutes"
+        },
+        {
+          "type": "wim_focus_status",
+          "focus": {
+            "strength": 0.96,
+            "duration_minutes": 37.3,
+            "distractions": 0,
+            "cognitive_load": "Optimal"
+          }
+        },
+        {
+          "type": "display_message",
+          "content": "Current Task Progress:\n\n  class CurrencyConverter {\n    private cache: RedisClient;\n    private apiClient: ExchangeRateAPI;\n\n    async convert(amount: number, from: string, to: string) {\n      const cacheKey = `rate:${from}:${to}`;\n      const cached = await this.cache.get(cacheKey);\n      if (cached) return amount * parseFloat(cached);\n\n      // Just implemented caching logic ↑\n      // About to implement cache TTL and error handling...\n    }\n  }\n\n▶ 320 lines written, 11 tests passing\n▶ ETA to task completion: 45 minutes"
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 3,
+      "title": "🚨 PRODUCTION INCIDENT 🚨",
+      "time_offset_minutes": 40,
+      "events": [
+        {
+          "type": "display_header",
+          "style": "critical",
+          "content": "SCENE 3: 🚨 PRODUCTION INCIDENT 🚨"
+        },
+        {
+          "type": "display_alert_box",
+          "title": "P1 INCIDENT",
+          "content": "Database connection pool exhausted\nAPI returning 503 errors to all customers\nImpact: CRITICAL"
+        },
+        {
+          "type": "display_message",
+          "style": "critical",
+          "content": "⚠ Datadog Alert: API 503 error rate >50% (threshold: 1%)\n⚠ PagerDuty: Database connection timeout - CRITICAL\n⚠ Sentry: 1,847 errors in last 5 minutes"
+        },
+        {
+          "type": "display_message",
+          "content": "Monitoring Dashboard:\n  • Customers affected: 1,847\n  • Revenue impact: $12K/hour\n  • Affected endpoints: /api/payments, /api/invoices, /api/subscriptions"
+        },
+        {
+          "type": "wim_urgency_analysis",
+          "current_urgency": 0.70,
+          "interruption_urgency": 0.98,
+          "threshold": 0.80,
+          "decision": "HANDLE_NOW",
+          "rationale": "Production incident exceeds threshold by 0.18 - all users affected"
+        },
+        {
+          "type": "display_message",
+          "style": "warning",
+          "content": "WIM Interruption Handler analyzing...\n\n  Current intent urgency: 0.70 (High - feature work)\n  Interruption urgency:   0.98 (CRITICAL - production down)\n  Interruption threshold: 0.80\n\n→ Production incident EXCEEDS threshold by 0.18\n→ Decision: DROP EVERYTHING - Handle immediately"
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 4,
+      "title": "Context Preservation - WIM Saves Your State",
+      "time_offset_minutes": 44,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 4: Context Preservation - WIM Saves Your State"
+        },
+        {
+          "type": "wim_context_preserve",
+          "intent_id": "INT-FEATURE-001",
+          "preserved_state": {
+            "branch": "feature/stripe-connect-multicurrency",
+            "uncommitted_changes": "src/services/currency_converter.ts",
+            "cursor_position": "Line 84, implementing error handling",
+            "mental_context": "Was implementing Redis TTL for exchange rate cache",
+            "research_tabs": 5,
+            "services_running": ["postgres", "redis", "stripe-mock", "api-server"]
+          }
+        },
+        {
+          "type": "display_message",
+          "content": "WIM is preserving your entire development context...\n\n▶ Capturing code state:\n\n  ✓ Branch state saved: feature/stripe-connect-multicurrency\n  ✓ Uncommitted changes stashed: src/services/currency_converter.ts\n  ✓ Mental context: 'Was implementing Redis TTL for exchange rate cache'\n  ✓ Cursor position: Line 84, implementing error handling\n  ✓ Research tabs bookmarked (5 tabs)\n  ✓ Local services state captured: postgres, redis, stripe-mock running"
+        },
+        {
+          "type": "display_message",
+          "style": "success",
+          "content": "▶ Context switch time: 4 minutes\n▶ No information lost"
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 5,
+      "title": "Incident Response - Production First",
+      "time_offset_minutes": 48,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 5: Incident Response - Production First"
+        },
+        {
+          "type": "wim_intent_create",
+          "intent_id": "INT-P1-INCIDENT",
+          "description": "Resolve database connection pool exhaustion",
+          "intent_type": "Problem",
+          "priority": "Critical",
+          "urgency": 0.98
+        },
+        {
+          "type": "display_message",
+          "style": "critical",
+          "content": "10:51 AM - Switched to incident response mode\n\nNew Primary Intent: Resolve database connection pool exhaustion"
+        },
+        {
+          "type": "display_message",
+          "content": "Investigation in progress...\n\n  ▶ Checking connection pool metrics\n      Pool size: 100 (max)\n      Active: 98\n      Waiting: 143 queries\n      Avg query time: 4.2s (normally 120ms)\n\n  ▶ Analyzing slow queries\n      Found: Analytics report job running during peak hours\n      Query time: 8.3 seconds\n      Holding: 47 connections\n\n→ Root cause identified: Unoptimized analytics query"
+        },
+        {
+          "type": "display_message",
+          "content": "Resolution tasks:\n  ✓ Kill long-running analytics query (3 min)\n  ✓ Restart affected API pods (5 min)\n  ✓ Add query timeout to analytics job (15 min)\n  ✓ Reschedule job to off-peak hours (10 min)\n  → Adding connection pool monitoring alerts... [IN PROGRESS]"
+        },
+        {
+          "type": "display_task_progress",
+          "completed": 4,
+          "total": 5
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 6,
+      "title": "Cascading Interruptions - Security Patch",
+      "time_offset_minutes": 64,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 6: Cascading Interruptions - Security Patch"
+        },
+        {
+          "type": "display_message",
+          "content": "11:04 AM - While resolving P1 incident..."
+        },
+        {
+          "type": "display_message",
+          "style": "warning",
+          "content": "⚠ Security Alert:\n\n  CVE-2024-XXXXX: Remote Code Execution in jsonwebtoken@8.5.1\n  CVSS Score: 8.6 (High)\n  Exploit: Available in the wild\n  Affected: api-server, auth-service"
+        },
+        {
+          "type": "display_message",
+          "content": "WIM managing multiple simultaneous intents:\n\n  1. [ACTIVE, P1] Resolve production database issue (80% done)\n  2. [PENDING, P2] Patch security vulnerability\n  3. [PAUSED] Ship Q4 payment integration feature (40% done)"
+        },
+        {
+          "type": "display_message",
+          "style": "success",
+          "content": "WIM Priority Decision:\n\n  Security urgency: 0.85 (High, but not production-breaking)\n  Current P1 urgency: 0.98 (Critical, customers affected)\n\n→ Decision: Finish P1 first (15 min remaining), then patch security\n→ Feature work remains paused until both critical items resolved"
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 7,
+      "title": "Crisis Resolution & Return to Feature Work",
+      "time_offset_minutes": 160,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 7: Crisis Resolution & Return to Feature Work"
+        },
+        {
+          "type": "display_message",
+          "content": "1:20 PM - Both critical issues resolved"
+        },
+        {
+          "type": "display_message",
+          "style": "success",
+          "content": "✓ P1 Incident Resolved\n  • Total time: 53 minutes\n  • Connection pool stable\n  • All services healthy\n  • Postmortem scheduled\n\n✓ Security Patch Deployed\n  • jsonwebtoken upgraded to 9.0.0\n  • Tests passing in production\n  • Total time: 50 minutes"
+        },
+        {
+          "type": "display_message",
+          "style": "info",
+          "content": "Returning to Feature Work...\n\n▶ WIM restoring your development context:\n\n  ✓ Switched to branch: feature/stripe-connect-multicurrency\n  ✓ Unstashed changes: src/services/currency_converter.ts\n  ✓ Restored services: postgres, redis, stripe-mock, api-server\n  ✓ Reopened research tabs (5 tabs)\n  ✓ Restored cursor to line 84\n\nMental Context Restored:\n  \"You were implementing 5-minute TTL for exchange rate cache.\n   Next: Add error handling and circuit breaker pattern.\"\n\n▶ Context restoration time: 4 minutes\n▶ You can continue exactly where you left off"
+        },
+        {
+          "type": "display_message",
+          "content": "Without WIM: Average 23 minutes to rebuild mental context\nWith WIM: 4 minutes - 82% time saved"
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 8,
+      "title": "End-of-Day Report",
+      "time_offset_minutes": 480,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 8: End-of-Day Report"
+        },
+        {
+          "type": "display_metrics_report",
+          "metrics": {
+            "session": "Tuesday, Dec 5",
+            "total_hours": 8.0,
+            "intents_tracked": 3,
+            "context_switches": 4,
+            "avg_switch_time_minutes": 4.2,
+            "context_restoration": "100% accuracy",
+            "focus": {
+              "deep_work_sessions": 3,
+              "total_focus_hours": 4.78,
+              "avg_strength": 0.89,
+              "interruptions_handled": 4
+            },
+            "production_impact": {
+              "p1_resolution_minutes": 53,
+              "security_patch_minutes": 50,
+              "errors": 0,
+              "sprint_status": "On track despite 2h delay"
+            },
+            "feature_progress": {
+              "tasks_completed": 0.65,
+              "code_lines": 320,
+              "tests_added": 11,
+              "tests_status": "all passing"
+            },
+            "productivity": {
+              "time_lost_to_context": 17,
+              "time_recovered": 75,
+              "improvement": "81%"
+            }
+          }
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 9,
+      "title": "WIM VALUE PROPOSITION: Software Development",
+      "time_offset_minutes": 482,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "WIM VALUE PROPOSITION: Software Development"
+        },
+        {
+          "type": "display_value_comparison",
+          "without_wim": [
+            "23 minutes average to rebuild mental context",
+            "40% of deep work abandoned when interrupted",
+            "6.3 interruptions/day × 23 min = 2.4 hours lost daily",
+            "30% of productive time lost to context switching",
+            "5.7 incomplete tasks per sprint",
+            "Developer satisfaction: 5.8/10"
+          ],
+          "with_wim": [
+            "4-minute context restoration (82% improvement)",
+            "92% task completion despite interruptions",
+            "Complete mental state preservation",
+            "Automatic urgency-based prioritization",
+            "Zero cognitive overhead when resuming work",
+            "23% of day recovered for productive work",
+            "Developer satisfaction: 8.7/10"
+          ],
+          "key_benefits": [
+            "Production incidents handled without losing feature progress",
+            "Complete development context preserved (code, research, mental state)",
+            "Intelligent priority management across competing demands",
+            "Flow state protection maximizes deep work",
+            "Stakeholder communication: Clear rationale for delays"
+          ],
+          "roi": {
+            "annual_value": "$47,000 per developer annually",
+            "time_saved_per_day": "75 minutes",
+            "flow_state_increase": "+217%"
+          }
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    }
+  ],
+
+  "value_proposition": {
+    "industry": "Software Development",
+    "why_wim_matters": "Flow state is a developer's most valuable asset. WIM protects it while ensuring production incidents get immediate attention.",
+    "without_wim": {
+      "context_restoration_minutes": 23,
+      "work_abandoned_rate": 0.40,
+      "daily_time_lost_minutes": 145,
+      "incomplete_tasks_per_sprint": 5.7,
+      "developer_satisfaction": 5.8
+    },
+    "with_wim": {
+      "context_restoration_minutes": 4,
+      "work_completion_rate": 0.92,
+      "daily_time_recovered_minutes": 75,
+      "incomplete_tasks_per_sprint": 1.2,
+      "developer_satisfaction": 8.7
+    },
+    "roi": {
+      "annual_value_per_developer": 47000,
+      "time_saved_per_day_minutes": 75,
+      "annual_hours_recovered": 313,
+      "flow_state_increase_percentage": 217
+    }
+  }
+}

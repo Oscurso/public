@@ -1,0 +1,346 @@
+{
+  "concepts": [
+    {
+      "id": "c_code",
+      "name": "code",
+      "description": "Instructions written in a programming language",
+      "domain": "software",
+      "clarity": 0.9,
+      "attributes": {}
+    },
+    {
+      "id": "c_bug",
+      "name": "bug",
+      "description": "An error or flaw in software",
+      "domain": "software",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_architecture",
+      "name": "architecture",
+      "description": null,
+      "domain": "software",
+      "clarity": 0.3,
+      "attributes": {}
+    },
+    {
+      "id": "c_technical_debt",
+      "name": "technical debt",
+      "description": null,
+      "domain": "software",
+      "clarity": 0.25,
+      "attributes": {}
+    },
+    {
+      "id": "c_scalability",
+      "name": "scalability",
+      "description": null,
+      "domain": "software",
+      "clarity": 0.2,
+      "attributes": {}
+    },
+    {
+      "id": "c_security",
+      "name": "security",
+      "description": null,
+      "domain": "software",
+      "clarity": 0.25,
+      "attributes": {}
+    },
+    {
+      "id": "c_performance",
+      "name": "performance",
+      "description": "How well a system executes its functions",
+      "domain": "software",
+      "clarity": 0.75,
+      "attributes": {}
+    },
+    {
+      "id": "c_database",
+      "name": "database",
+      "description": "Organized collection of structured data",
+      "domain": "software",
+      "clarity": 0.9,
+      "attributes": {}
+    },
+    {
+      "id": "c_api",
+      "name": "API",
+      "description": "Interface allowing software components to communicate",
+      "domain": "software",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_user",
+      "name": "user",
+      "description": "Person who interacts with a system",
+      "domain": "software",
+      "clarity": 0.95,
+      "attributes": {}
+    },
+    {
+      "id": "c_testing",
+      "name": "testing",
+      "description": "Process of evaluating software to find defects",
+      "domain": "software",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_deployment",
+      "name": "deployment",
+      "description": "Process of making software available for use",
+      "domain": "devops",
+      "clarity": 0.8,
+      "attributes": {}
+    },
+    {
+      "id": "c_maintainability",
+      "name": "maintainability",
+      "description": null,
+      "domain": "software",
+      "clarity": 0.3,
+      "attributes": {}
+    },
+    {
+      "id": "c_refactoring",
+      "name": "refactoring",
+      "description": "Restructuring code without changing its behavior",
+      "domain": "software",
+      "clarity": 0.8,
+      "attributes": {}
+    },
+    {
+      "id": "c_microservices",
+      "name": "microservices",
+      "description": "Architectural style structuring application as collection of services",
+      "domain": "architecture",
+      "clarity": 0.7,
+      "attributes": {}
+    },
+    {
+      "id": "c_monolith",
+      "name": "monolith",
+      "description": "Single-tiered software application with unified codebase",
+      "domain": "architecture",
+      "clarity": 0.75,
+      "attributes": {}
+    },
+    {
+      "id": "c_latency",
+      "name": "latency",
+      "description": "Time delay between cause and effect in a system",
+      "domain": "software",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_availability",
+      "name": "availability",
+      "description": "Proportion of time a system is operational",
+      "domain": "software",
+      "clarity": 0.8,
+      "attributes": {}
+    },
+    {
+      "id": "c_complexity",
+      "name": "complexity",
+      "description": null,
+      "domain": "software",
+      "clarity": 0.2,
+      "attributes": {}
+    },
+    {
+      "id": "c_abstraction",
+      "name": "abstraction",
+      "description": null,
+      "domain": "software",
+      "clarity": 0.35,
+      "attributes": {}
+    }
+  ],
+  "relations": [
+    {
+      "id": "r_code_bug",
+      "from_concept": "c_code",
+      "to_concept": "c_bug",
+      "relation_type": "Contains",
+      "strength": 0.7,
+      "confidence": 0.95,
+      "explanation": "Code often contains bugs"
+    },
+    {
+      "id": "r_architecture_scalability",
+      "from_concept": "c_architecture",
+      "to_concept": "c_scalability",
+      "relation_type": "Determines",
+      "strength": 0.85,
+      "confidence": 0.7,
+      "explanation": "Architecture largely determines scalability"
+    },
+    {
+      "id": "r_technical_debt_maintainability",
+      "from_concept": "c_technical_debt",
+      "to_concept": "c_maintainability",
+      "relation_type": "Opposes",
+      "strength": 0.9,
+      "confidence": 0.85,
+      "explanation": "Technical debt reduces maintainability"
+    },
+    {
+      "id": "r_security_user",
+      "from_concept": "c_security",
+      "to_concept": "c_user",
+      "relation_type": "Protects",
+      "strength": 0.9,
+      "confidence": 0.85,
+      "explanation": "Security protects users"
+    },
+    {
+      "id": "r_performance_user",
+      "from_concept": "c_performance",
+      "to_concept": "c_user",
+      "relation_type": "Affects",
+      "strength": 0.85,
+      "confidence": 0.9,
+      "explanation": "Performance directly affects user experience"
+    },
+    {
+      "id": "r_database_performance",
+      "from_concept": "c_database",
+      "to_concept": "c_performance",
+      "relation_type": "Influences",
+      "strength": 0.8,
+      "confidence": 0.85,
+      "explanation": "Database design influences performance"
+    },
+    {
+      "id": "r_api_microservices",
+      "from_concept": "c_api",
+      "to_concept": "c_microservices",
+      "relation_type": "Enables",
+      "strength": 0.9,
+      "confidence": 0.9,
+      "explanation": "APIs enable microservices communication"
+    },
+    {
+      "id": "r_testing_bug",
+      "from_concept": "c_testing",
+      "to_concept": "c_bug",
+      "relation_type": "Opposes",
+      "strength": 0.8,
+      "confidence": 0.85,
+      "explanation": "Testing helps find and eliminate bugs"
+    },
+    {
+      "id": "r_deployment_availability",
+      "from_concept": "c_deployment",
+      "to_concept": "c_availability",
+      "relation_type": "Affects",
+      "strength": 0.75,
+      "confidence": 0.8,
+      "explanation": "Deployment practices affect availability"
+    },
+    {
+      "id": "r_refactoring_technical_debt",
+      "from_concept": "c_refactoring",
+      "to_concept": "c_technical_debt",
+      "relation_type": "Opposes",
+      "strength": 0.85,
+      "confidence": 0.9,
+      "explanation": "Refactoring reduces technical debt"
+    },
+    {
+      "id": "r_microservices_complexity",
+      "from_concept": "c_microservices",
+      "to_concept": "c_complexity",
+      "relation_type": "Influences",
+      "strength": 0.8,
+      "confidence": 0.75,
+      "explanation": "Microservices can increase operational complexity"
+    },
+    {
+      "id": "r_monolith_microservices",
+      "from_concept": "c_monolith",
+      "to_concept": "c_microservices",
+      "relation_type": "Opposes",
+      "strength": 0.7,
+      "confidence": 0.85,
+      "explanation": "Monolith and microservices are opposing architectural styles"
+    },
+    {
+      "id": "r_latency_performance",
+      "from_concept": "c_latency",
+      "to_concept": "c_performance",
+      "relation_type": "Opposes",
+      "strength": 0.9,
+      "confidence": 0.95,
+      "explanation": "High latency reduces performance"
+    },
+    {
+      "id": "r_complexity_bug",
+      "from_concept": "c_complexity",
+      "to_concept": "c_bug",
+      "relation_type": "Enables",
+      "strength": 0.75,
+      "confidence": 0.8,
+      "explanation": "Complexity enables bugs to hide"
+    },
+    {
+      "id": "r_abstraction_complexity",
+      "from_concept": "c_abstraction",
+      "to_concept": "c_complexity",
+      "relation_type": "RelatedTo",
+      "strength": 0.6,
+      "confidence": 0.5,
+      "explanation": "Abstraction can both hide and add complexity"
+    },
+    {
+      "id": "r_scalability_availability",
+      "from_concept": "c_scalability",
+      "to_concept": "c_availability",
+      "relation_type": "Enables",
+      "strength": 0.7,
+      "confidence": 0.7,
+      "explanation": "Scalability can enable higher availability"
+    },
+    {
+      "id": "r_security_database",
+      "from_concept": "c_security",
+      "to_concept": "c_database",
+      "relation_type": "Protects",
+      "strength": 0.95,
+      "confidence": 0.9,
+      "explanation": "Security measures protect databases"
+    },
+    {
+      "id": "r_architecture_maintainability",
+      "from_concept": "c_architecture",
+      "to_concept": "c_maintainability",
+      "relation_type": "Determines",
+      "strength": 0.8,
+      "confidence": 0.75,
+      "explanation": "Architecture determines maintainability"
+    },
+    {
+      "id": "r_abstraction_maintainability",
+      "from_concept": "c_abstraction",
+      "to_concept": "c_maintainability",
+      "relation_type": "Influences",
+      "strength": 0.7,
+      "confidence": 0.6,
+      "explanation": "Good abstractions improve maintainability"
+    },
+    {
+      "id": "r_testing_deployment",
+      "from_concept": "c_testing",
+      "to_concept": "c_deployment",
+      "relation_type": "RequiredFor",
+      "strength": 0.85,
+      "confidence": 0.9,
+      "explanation": "Testing is typically required before deployment"
+    }
+  ]
+}

@@ -1,0 +1,346 @@
+{
+  "concepts": [
+    {
+      "id": "c_transaction",
+      "name": "transaction",
+      "description": "Exchange of money, goods, or services",
+      "domain": "finance",
+      "clarity": 0.9,
+      "attributes": {}
+    },
+    {
+      "id": "c_risk",
+      "name": "risk",
+      "description": "Potential for financial loss",
+      "domain": "finance",
+      "clarity": 0.75,
+      "attributes": {}
+    },
+    {
+      "id": "c_fraud",
+      "name": "fraud",
+      "description": null,
+      "domain": "finance",
+      "clarity": 0.25,
+      "attributes": {}
+    },
+    {
+      "id": "c_creditworthiness",
+      "name": "creditworthiness",
+      "description": null,
+      "domain": "finance",
+      "clarity": 0.2,
+      "attributes": {}
+    },
+    {
+      "id": "c_compliance",
+      "name": "compliance",
+      "description": "Adherence to laws and regulations",
+      "domain": "finance",
+      "clarity": 0.8,
+      "attributes": {}
+    },
+    {
+      "id": "c_audit",
+      "name": "audit",
+      "description": "Systematic examination of financial records",
+      "domain": "finance",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_loan",
+      "name": "loan",
+      "description": "Money lent that must be repaid with interest",
+      "domain": "finance",
+      "clarity": 0.9,
+      "attributes": {}
+    },
+    {
+      "id": "c_interest",
+      "name": "interest",
+      "description": "Cost of borrowing money",
+      "domain": "finance",
+      "clarity": 0.9,
+      "attributes": {}
+    },
+    {
+      "id": "c_liquidity",
+      "name": "liquidity",
+      "description": null,
+      "domain": "finance",
+      "clarity": 0.3,
+      "attributes": {}
+    },
+    {
+      "id": "c_solvency",
+      "name": "solvency",
+      "description": null,
+      "domain": "finance",
+      "clarity": 0.35,
+      "attributes": {}
+    },
+    {
+      "id": "c_default",
+      "name": "default",
+      "description": "Failure to repay a loan",
+      "domain": "finance",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_collateral",
+      "name": "collateral",
+      "description": "Asset pledged as security for a loan",
+      "domain": "finance",
+      "clarity": 0.8,
+      "attributes": {}
+    },
+    {
+      "id": "c_volatility",
+      "name": "volatility",
+      "description": "Degree of variation in trading price over time",
+      "domain": "finance",
+      "clarity": 0.75,
+      "attributes": {}
+    },
+    {
+      "id": "c_diversification",
+      "name": "diversification",
+      "description": "Strategy of mixing investments to reduce risk",
+      "domain": "finance",
+      "clarity": 0.8,
+      "attributes": {}
+    },
+    {
+      "id": "c_aml",
+      "name": "anti-money laundering",
+      "description": null,
+      "domain": "compliance",
+      "clarity": 0.3,
+      "attributes": {}
+    },
+    {
+      "id": "c_kyc",
+      "name": "know your customer",
+      "description": null,
+      "domain": "compliance",
+      "clarity": 0.35,
+      "attributes": {}
+    },
+    {
+      "id": "c_exposure",
+      "name": "exposure",
+      "description": "Amount of money at risk in an investment",
+      "domain": "finance",
+      "clarity": 0.75,
+      "attributes": {}
+    },
+    {
+      "id": "c_leverage",
+      "name": "leverage",
+      "description": "Use of borrowed capital to increase potential return",
+      "domain": "finance",
+      "clarity": 0.7,
+      "attributes": {}
+    },
+    {
+      "id": "c_margin",
+      "name": "margin",
+      "description": "Borrowed money used to purchase securities",
+      "domain": "finance",
+      "clarity": 0.75,
+      "attributes": {}
+    },
+    {
+      "id": "c_systemic_risk",
+      "name": "systemic risk",
+      "description": null,
+      "domain": "finance",
+      "clarity": 0.15,
+      "attributes": {}
+    }
+  ],
+  "relations": [
+    {
+      "id": "r_transaction_risk",
+      "from_concept": "c_transaction",
+      "to_concept": "c_risk",
+      "relation_type": "Contains",
+      "strength": 0.7,
+      "confidence": 0.85,
+      "explanation": "Every transaction carries some risk"
+    },
+    {
+      "id": "r_fraud_transaction",
+      "from_concept": "c_fraud",
+      "to_concept": "c_transaction",
+      "relation_type": "Threatens",
+      "strength": 0.85,
+      "confidence": 0.8,
+      "explanation": "Fraud threatens transaction integrity"
+    },
+    {
+      "id": "r_creditworthiness_loan",
+      "from_concept": "c_creditworthiness",
+      "to_concept": "c_loan",
+      "relation_type": "Determines",
+      "strength": 0.9,
+      "confidence": 0.7,
+      "explanation": "Creditworthiness determines loan approval"
+    },
+    {
+      "id": "r_compliance_audit",
+      "from_concept": "c_compliance",
+      "to_concept": "c_audit",
+      "relation_type": "RequiredFor",
+      "strength": 0.9,
+      "confidence": 0.95,
+      "explanation": "Compliance is verified through audits"
+    },
+    {
+      "id": "r_loan_interest",
+      "from_concept": "c_loan",
+      "to_concept": "c_interest",
+      "relation_type": "Requires",
+      "strength": 0.95,
+      "confidence": 0.99,
+      "explanation": "Loans require interest payments"
+    },
+    {
+      "id": "r_liquidity_solvency",
+      "from_concept": "c_liquidity",
+      "to_concept": "c_solvency",
+      "relation_type": "RelatedTo",
+      "strength": 0.7,
+      "confidence": 0.6,
+      "explanation": "Liquidity and solvency are related but distinct concepts"
+    },
+    {
+      "id": "r_default_risk",
+      "from_concept": "c_default",
+      "to_concept": "c_risk",
+      "relation_type": "PartOf",
+      "strength": 0.9,
+      "confidence": 0.95,
+      "explanation": "Default is a type of financial risk"
+    },
+    {
+      "id": "r_collateral_loan",
+      "from_concept": "c_collateral",
+      "to_concept": "c_loan",
+      "relation_type": "Enables",
+      "strength": 0.8,
+      "confidence": 0.85,
+      "explanation": "Collateral enables loans by reducing lender risk"
+    },
+    {
+      "id": "r_volatility_risk",
+      "from_concept": "c_volatility",
+      "to_concept": "c_risk",
+      "relation_type": "Influences",
+      "strength": 0.85,
+      "confidence": 0.9,
+      "explanation": "High volatility increases risk"
+    },
+    {
+      "id": "r_diversification_risk",
+      "from_concept": "c_diversification",
+      "to_concept": "c_risk",
+      "relation_type": "Opposes",
+      "strength": 0.8,
+      "confidence": 0.85,
+      "explanation": "Diversification reduces risk"
+    },
+    {
+      "id": "r_aml_fraud",
+      "from_concept": "c_aml",
+      "to_concept": "c_fraud",
+      "relation_type": "Opposes",
+      "strength": 0.85,
+      "confidence": 0.75,
+      "explanation": "AML procedures oppose fraud"
+    },
+    {
+      "id": "r_kyc_creditworthiness",
+      "from_concept": "c_kyc",
+      "to_concept": "c_creditworthiness",
+      "relation_type": "Determines",
+      "strength": 0.7,
+      "confidence": 0.6,
+      "explanation": "KYC helps determine creditworthiness"
+    },
+    {
+      "id": "r_exposure_risk",
+      "from_concept": "c_exposure",
+      "to_concept": "c_risk",
+      "relation_type": "Determines",
+      "strength": 0.85,
+      "confidence": 0.9,
+      "explanation": "Exposure determines level of risk"
+    },
+    {
+      "id": "r_leverage_risk",
+      "from_concept": "c_leverage",
+      "to_concept": "c_risk",
+      "relation_type": "Influences",
+      "strength": 0.9,
+      "confidence": 0.9,
+      "explanation": "Leverage amplifies risk"
+    },
+    {
+      "id": "r_margin_leverage",
+      "from_concept": "c_margin",
+      "to_concept": "c_leverage",
+      "relation_type": "Enables",
+      "strength": 0.9,
+      "confidence": 0.95,
+      "explanation": "Margin trading enables leverage"
+    },
+    {
+      "id": "r_systemic_risk_default",
+      "from_concept": "c_systemic_risk",
+      "to_concept": "c_default",
+      "relation_type": "LeadsTo",
+      "strength": 0.7,
+      "confidence": 0.5,
+      "explanation": "Systemic risk can lead to defaults"
+    },
+    {
+      "id": "r_default_collateral",
+      "from_concept": "c_default",
+      "to_concept": "c_collateral",
+      "relation_type": "Triggers",
+      "strength": 0.85,
+      "confidence": 0.9,
+      "explanation": "Default triggers collateral seizure"
+    },
+    {
+      "id": "r_kyc_aml",
+      "from_concept": "c_kyc",
+      "to_concept": "c_aml",
+      "relation_type": "PartOf",
+      "strength": 0.8,
+      "confidence": 0.85,
+      "explanation": "KYC is part of AML procedures"
+    },
+    {
+      "id": "r_liquidity_default",
+      "from_concept": "c_liquidity",
+      "to_concept": "c_default",
+      "relation_type": "Opposes",
+      "strength": 0.75,
+      "confidence": 0.7,
+      "explanation": "Good liquidity helps prevent default"
+    },
+    {
+      "id": "r_compliance_fraud",
+      "from_concept": "c_compliance",
+      "to_concept": "c_fraud",
+      "relation_type": "Opposes",
+      "strength": 0.8,
+      "confidence": 0.8,
+      "explanation": "Compliance measures oppose fraud"
+    }
+  ]
+}

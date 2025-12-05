@@ -1,0 +1,290 @@
+{
+  "demo": {
+    "industry": "Cybersecurity & Threat Intelligence",
+    "title": "Threat Pattern Consolidation & Attack Vector Analysis",
+    "scenario": "Security operations center consolidating 9 months of threat intelligence to discover attack patterns, vulnerability correlations, and defense optimization strategies"
+  },
+  "concepts": {
+    "sec-001": {
+      "id": "sec-001",
+      "name": "Ransomware Campaigns",
+      "domain": "Threats/Malware",
+      "created_at": "2025-03-01T09:00:00Z",
+      "confidence": 0.94,
+      "access_count": 312,
+      "last_accessed": "2025-12-05T02:45:00Z"
+    },
+    "sec-002": {
+      "id": "sec-002",
+      "name": "Phishing Vectors",
+      "domain": "Threats/Social_Engineering",
+      "created_at": "2025-03-15T10:00:00Z",
+      "confidence": 0.91,
+      "access_count": 287,
+      "last_accessed": "2025-12-05T02:30:00Z"
+    },
+    "sec-003": {
+      "id": "sec-003",
+      "name": "Zero-Day Exploits",
+      "domain": "Vulnerabilities/Unknown",
+      "created_at": "2025-04-01T08:00:00Z",
+      "confidence": 0.87,
+      "access_count": 198,
+      "last_accessed": "2025-12-05T02:00:00Z"
+    },
+    "sec-004": {
+      "id": "sec-004",
+      "name": "APT Groups",
+      "domain": "Actors/Advanced_Persistent",
+      "created_at": "2025-04-15T09:00:00Z",
+      "confidence": 0.89,
+      "access_count": 245,
+      "last_accessed": "2025-12-05T02:15:00Z"
+    },
+    "sec-005": {
+      "id": "sec-005",
+      "name": "Lateral Movement",
+      "domain": "Tactics/Post_Compromise",
+      "created_at": "2025-05-01T10:00:00Z",
+      "confidence": 0.86,
+      "access_count": 223,
+      "last_accessed": "2025-12-05T02:00:00Z"
+    },
+    "sec-006": {
+      "id": "sec-006",
+      "name": "Privilege Escalation",
+      "domain": "Tactics/Access_Expansion",
+      "created_at": "2025-05-15T08:00:00Z",
+      "confidence": 0.88,
+      "access_count": 234,
+      "last_accessed": "2025-12-05T02:15:00Z"
+    },
+    "sec-007": {
+      "id": "sec-007",
+      "name": "Data Exfiltration",
+      "domain": "Tactics/Objectives",
+      "created_at": "2025-06-01T09:00:00Z",
+      "confidence": 0.92,
+      "access_count": 267,
+      "last_accessed": "2025-12-05T02:30:00Z"
+    },
+    "sec-008": {
+      "id": "sec-008",
+      "name": "EDR Solutions",
+      "domain": "Defenses/Endpoint",
+      "created_at": "2025-06-15T10:00:00Z",
+      "confidence": 0.90,
+      "access_count": 256,
+      "last_accessed": "2025-12-05T02:30:00Z"
+    },
+    "sec-009": {
+      "id": "sec-009",
+      "name": "SIEM Platforms",
+      "domain": "Defenses/Monitoring",
+      "created_at": "2025-07-01T08:00:00Z",
+      "confidence": 0.93,
+      "access_count": 289,
+      "last_accessed": "2025-12-05T02:45:00Z"
+    },
+    "sec-010": {
+      "id": "sec-010",
+      "name": "Threat Hunting",
+      "domain": "Operations/Proactive",
+      "created_at": "2025-07-15T09:00:00Z",
+      "confidence": 0.85,
+      "access_count": 212,
+      "last_accessed": "2025-12-05T02:00:00Z"
+    },
+    "sec-011": {
+      "id": "sec-011",
+      "name": "Incident Response",
+      "domain": "Operations/Reactive",
+      "created_at": "2025-08-01T10:00:00Z",
+      "confidence": 0.91,
+      "access_count": 278,
+      "last_accessed": "2025-12-05T02:30:00Z"
+    },
+    "sec-012": {
+      "id": "sec-012",
+      "name": "Threat Intelligence Feeds",
+      "domain": "Intelligence/Sources",
+      "created_at": "2025-08-15T08:00:00Z",
+      "confidence": 0.87,
+      "access_count": 234,
+      "last_accessed": "2025-12-05T02:15:00Z"
+    },
+    "sec-013": {
+      "id": "sec-013",
+      "name": "Attack Surface Mapping",
+      "domain": "Assessment/Exposure",
+      "created_at": "2025-09-01T09:00:00Z",
+      "confidence": 0.82,
+      "access_count": 189,
+      "last_accessed": "2025-12-05T01:45:00Z"
+    },
+    "sec-014": {
+      "id": "sec-014",
+      "name": "Vulnerability Scanning",
+      "domain": "Assessment/Weaknesses",
+      "created_at": "2025-09-15T10:00:00Z",
+      "confidence": 0.89,
+      "access_count": 245,
+      "last_accessed": "2025-12-05T02:15:00Z"
+    },
+    "sec-015": {
+      "id": "sec-015",
+      "name": "Security Automation",
+      "domain": "Operations/SOAR",
+      "created_at": "2025-10-01T08:00:00Z",
+      "confidence": 0.84,
+      "access_count": 198,
+      "last_accessed": "2025-12-05T02:00:00Z"
+    },
+    "sec-016": {
+      "id": "sec-016",
+      "name": "Zero Trust Architecture",
+      "domain": "Frameworks/Modern",
+      "created_at": "2025-10-15T09:00:00Z",
+      "confidence": 0.81,
+      "access_count": 167,
+      "last_accessed": "2025-12-05T01:30:00Z"
+    }
+  },
+  "relations": {
+    "rel-001": {
+      "id": "rel-001",
+      "from_concept": "sec-001",
+      "to_concept": "sec-002",
+      "relation_type": "delivered_via",
+      "strength": 0.89,
+      "created_at": "2025-03-20T10:00:00Z",
+      "access_count": 267
+    },
+    "rel-002": {
+      "id": "rel-002",
+      "from_concept": "sec-004",
+      "to_concept": "sec-001",
+      "relation_type": "deploys",
+      "strength": 0.86,
+      "created_at": "2025-04-20T09:00:00Z",
+      "access_count": 234
+    },
+    "rel-003": {
+      "id": "rel-003",
+      "from_concept": "sec-004",
+      "to_concept": "sec-003",
+      "relation_type": "exploits",
+      "strength": 0.91,
+      "created_at": "2025-04-25T10:00:00Z",
+      "access_count": 198
+    },
+    "rel-004": {
+      "id": "rel-004",
+      "from_concept": "sec-005",
+      "to_concept": "sec-006",
+      "relation_type": "enables",
+      "strength": 0.88,
+      "created_at": "2025-05-20T09:00:00Z",
+      "access_count": 223
+    },
+    "rel-005": {
+      "id": "rel-005",
+      "from_concept": "sec-006",
+      "to_concept": "sec-007",
+      "relation_type": "facilitates",
+      "strength": 0.84,
+      "created_at": "2025-06-05T10:00:00Z",
+      "access_count": 212
+    },
+    "rel-006": {
+      "id": "rel-006",
+      "from_concept": "sec-008",
+      "to_concept": "sec-001",
+      "relation_type": "detects",
+      "strength": 0.87,
+      "created_at": "2025-06-20T09:00:00Z",
+      "access_count": 245
+    },
+    "rel-007": {
+      "id": "rel-007",
+      "from_concept": "sec-008",
+      "to_concept": "sec-005",
+      "relation_type": "prevents",
+      "strength": 0.82,
+      "created_at": "2025-06-25T10:00:00Z",
+      "access_count": 198
+    },
+    "rel-008": {
+      "id": "rel-008",
+      "from_concept": "sec-009",
+      "to_concept": "sec-008",
+      "relation_type": "aggregates",
+      "strength": 0.93,
+      "created_at": "2025-07-05T09:00:00Z",
+      "access_count": 278
+    },
+    "rel-009": {
+      "id": "rel-009",
+      "from_concept": "sec-010",
+      "to_concept": "sec-009",
+      "relation_type": "uses",
+      "strength": 0.89,
+      "created_at": "2025-07-20T10:00:00Z",
+      "access_count": 234
+    },
+    "rel-010": {
+      "id": "rel-010",
+      "from_concept": "sec-011",
+      "to_concept": "sec-001",
+      "relation_type": "responds_to",
+      "strength": 0.94,
+      "created_at": "2025-08-05T09:00:00Z",
+      "access_count": 289
+    },
+    "rel-011": {
+      "id": "rel-011",
+      "from_concept": "sec-012",
+      "to_concept": "sec-010",
+      "relation_type": "informs",
+      "strength": 0.88,
+      "created_at": "2025-08-20T10:00:00Z",
+      "access_count": 256
+    },
+    "rel-012": {
+      "id": "rel-012",
+      "from_concept": "sec-013",
+      "to_concept": "sec-014",
+      "relation_type": "guides",
+      "strength": 0.85,
+      "created_at": "2025-09-10T09:00:00Z",
+      "access_count": 212
+    },
+    "rel-013": {
+      "id": "rel-013",
+      "from_concept": "sec-014",
+      "to_concept": "sec-003",
+      "relation_type": "identifies",
+      "strength": 0.79,
+      "created_at": "2025-09-20T10:00:00Z",
+      "access_count": 189
+    },
+    "rel-014": {
+      "id": "rel-014",
+      "from_concept": "sec-015",
+      "to_concept": "sec-011",
+      "relation_type": "accelerates",
+      "strength": 0.91,
+      "created_at": "2025-10-05T09:00:00Z",
+      "access_count": 267
+    },
+    "rel-015": {
+      "id": "rel-015",
+      "from_concept": "sec-016",
+      "to_concept": "sec-005",
+      "relation_type": "mitigates",
+      "strength": 0.86,
+      "created_at": "2025-10-20T10:00:00Z",
+      "access_count": 198
+    }
+  }
+}

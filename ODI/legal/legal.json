@@ -1,0 +1,281 @@
+{
+  "demo": {
+    "industry": "Legal Services & Law Firms",
+    "title": "Case Law Pattern Discovery & Precedent Analysis",
+    "scenario": "Law firm consolidating 12 months of case research to discover legal precedent patterns, argument strategies, and jurisdictional insights"
+  },
+  "concepts": {
+    "law-001": {
+      "id": "law-001",
+      "name": "Contract Breach",
+      "domain": "Case_Types/Commercial",
+      "created_at": "2024-12-01T09:00:00Z",
+      "confidence": 0.94,
+      "access_count": 187,
+      "last_accessed": "2025-12-05T02:30:00Z"
+    },
+    "law-002": {
+      "id": "law-002",
+      "name": "Fiduciary Duty",
+      "domain": "Legal_Principles/Corporate",
+      "created_at": "2024-12-02T10:00:00Z",
+      "confidence": 0.91,
+      "access_count": 156,
+      "last_accessed": "2025-12-05T02:15:00Z"
+    },
+    "law-003": {
+      "id": "law-003",
+      "name": "Reasonable Reliance",
+      "domain": "Legal_Principles/Common_Law",
+      "created_at": "2024-12-03T08:00:00Z",
+      "confidence": 0.87,
+      "access_count": 143,
+      "last_accessed": "2025-12-05T01:45:00Z"
+    },
+    "law-004": {
+      "id": "law-004",
+      "name": "Damages Calculation",
+      "domain": "Remedies/Monetary",
+      "created_at": "2024-12-04T09:00:00Z",
+      "confidence": 0.89,
+      "access_count": 198,
+      "last_accessed": "2025-12-05T02:45:00Z"
+    },
+    "law-005": {
+      "id": "law-005",
+      "name": "Specific Performance",
+      "domain": "Remedies/Equitable",
+      "created_at": "2024-12-05T10:00:00Z",
+      "confidence": 0.82,
+      "access_count": 134,
+      "last_accessed": "2025-12-05T01:30:00Z"
+    },
+    "law-006": {
+      "id": "law-006",
+      "name": "Summary Judgment",
+      "domain": "Procedures/Motions",
+      "created_at": "2024-12-06T08:00:00Z",
+      "confidence": 0.88,
+      "access_count": 167,
+      "last_accessed": "2025-12-05T02:00:00Z"
+    },
+    "law-007": {
+      "id": "law-007",
+      "name": "Discovery Disputes",
+      "domain": "Procedures/Pre_Trial",
+      "created_at": "2024-12-07T09:00:00Z",
+      "confidence": 0.79,
+      "access_count": 112,
+      "last_accessed": "2025-12-05T01:15:00Z"
+    },
+    "law-008": {
+      "id": "law-008",
+      "name": "Precedent Analysis",
+      "domain": "Research_Methods/Case_Law",
+      "created_at": "2024-12-08T10:00:00Z",
+      "confidence": 0.93,
+      "access_count": 221,
+      "last_accessed": "2025-12-05T02:30:00Z"
+    },
+    "law-009": {
+      "id": "law-009",
+      "name": "Statutory Interpretation",
+      "domain": "Research_Methods/Legislation",
+      "created_at": "2024-12-09T08:00:00Z",
+      "confidence": 0.86,
+      "access_count": 178,
+      "last_accessed": "2025-12-05T02:00:00Z"
+    },
+    "law-010": {
+      "id": "law-010",
+      "name": "Jurisdictional Variations",
+      "domain": "Legal_Systems/Comparative",
+      "created_at": "2024-12-10T09:00:00Z",
+      "confidence": 0.74,
+      "access_count": 98,
+      "last_accessed": "2025-12-04T23:45:00Z"
+    },
+    "law-011": {
+      "id": "law-011",
+      "name": "Alternative Dispute Resolution",
+      "domain": "Procedures/Settlement",
+      "created_at": "2024-12-11T10:00:00Z",
+      "confidence": 0.81,
+      "access_count": 145,
+      "last_accessed": "2025-12-05T01:30:00Z"
+    },
+    "law-012": {
+      "id": "law-012",
+      "name": "Expert Witness Testimony",
+      "domain": "Evidence/Expert_Opinion",
+      "created_at": "2024-12-12T08:00:00Z",
+      "confidence": 0.85,
+      "access_count": 189,
+      "last_accessed": "2025-12-05T02:15:00Z"
+    },
+    "law-013": {
+      "id": "law-013",
+      "name": "Class Action Certification",
+      "domain": "Procedures/Complex_Litigation",
+      "created_at": "2024-12-13T09:00:00Z",
+      "confidence": 0.77,
+      "access_count": 123,
+      "last_accessed": "2025-12-05T01:00:00Z"
+    },
+    "law-014": {
+      "id": "law-014",
+      "name": "Legal Tech Tools",
+      "domain": "Practice_Management/Technology",
+      "created_at": "2024-12-14T10:00:00Z",
+      "confidence": 0.71,
+      "access_count": 87,
+      "last_accessed": "2025-12-04T22:30:00Z"
+    },
+    "law-015": {
+      "id": "law-015",
+      "name": "Ethical Considerations",
+      "domain": "Professional_Responsibility/Ethics",
+      "created_at": "2024-12-15T08:00:00Z",
+      "confidence": 0.92,
+      "access_count": 203,
+      "last_accessed": "2025-12-05T02:30:00Z"
+    }
+  },
+  "relations": {
+    "rel-001": {
+      "id": "rel-001",
+      "from_concept": "law-001",
+      "to_concept": "law-004",
+      "relation_type": "remedied_by",
+      "strength": 0.93,
+      "created_at": "2024-12-04T10:00:00Z",
+      "access_count": 176
+    },
+    "rel-002": {
+      "id": "rel-002",
+      "from_concept": "law-001",
+      "to_concept": "law-005",
+      "relation_type": "may_require",
+      "strength": 0.74,
+      "created_at": "2024-12-05T11:00:00Z",
+      "access_count": 112
+    },
+    "rel-003": {
+      "id": "rel-003",
+      "from_concept": "law-002",
+      "to_concept": "law-001",
+      "relation_type": "establishes_basis_for",
+      "strength": 0.88,
+      "created_at": "2024-12-03T09:00:00Z",
+      "access_count": 145
+    },
+    "rel-004": {
+      "id": "rel-004",
+      "from_concept": "law-003",
+      "to_concept": "law-001",
+      "relation_type": "element_of",
+      "strength": 0.85,
+      "created_at": "2024-12-03T10:00:00Z",
+      "access_count": 134
+    },
+    "rel-005": {
+      "id": "rel-005",
+      "from_concept": "law-006",
+      "to_concept": "law-001",
+      "relation_type": "resolves",
+      "strength": 0.79,
+      "created_at": "2024-12-06T09:00:00Z",
+      "access_count": 156
+    },
+    "rel-006": {
+      "id": "rel-006",
+      "from_concept": "law-007",
+      "to_concept": "law-006",
+      "relation_type": "precedes",
+      "strength": 0.82,
+      "created_at": "2024-12-07T10:00:00Z",
+      "access_count": 98
+    },
+    "rel-007": {
+      "id": "rel-007",
+      "from_concept": "law-008",
+      "to_concept": "law-001",
+      "relation_type": "researches",
+      "strength": 0.91,
+      "created_at": "2024-12-08T11:00:00Z",
+      "access_count": 203
+    },
+    "rel-008": {
+      "id": "rel-008",
+      "from_concept": "law-008",
+      "to_concept": "law-010",
+      "relation_type": "considers",
+      "strength": 0.76,
+      "created_at": "2024-12-10T10:00:00Z",
+      "access_count": 87
+    },
+    "rel-009": {
+      "id": "rel-009",
+      "from_concept": "law-009",
+      "to_concept": "law-002",
+      "relation_type": "defines",
+      "strength": 0.84,
+      "created_at": "2024-12-09T09:00:00Z",
+      "access_count": 167
+    },
+    "rel-010": {
+      "id": "rel-010",
+      "from_concept": "law-011",
+      "to_concept": "law-001",
+      "relation_type": "alternative_to",
+      "strength": 0.71,
+      "created_at": "2024-12-11T11:00:00Z",
+      "access_count": 123
+    },
+    "rel-011": {
+      "id": "rel-011",
+      "from_concept": "law-012",
+      "to_concept": "law-004",
+      "relation_type": "supports",
+      "strength": 0.87,
+      "created_at": "2024-12-12T09:00:00Z",
+      "access_count": 178
+    },
+    "rel-012": {
+      "id": "rel-012",
+      "from_concept": "law-013",
+      "to_concept": "law-001",
+      "relation_type": "aggregates",
+      "strength": 0.69,
+      "created_at": "2024-12-13T10:00:00Z",
+      "access_count": 98
+    },
+    "rel-013": {
+      "id": "rel-013",
+      "from_concept": "law-014",
+      "to_concept": "law-008",
+      "relation_type": "automates",
+      "strength": 0.78,
+      "created_at": "2024-12-14T11:00:00Z",
+      "access_count": 76
+    },
+    "rel-014": {
+      "id": "rel-014",
+      "from_concept": "law-015",
+      "to_concept": "law-011",
+      "relation_type": "governs",
+      "strength": 0.89,
+      "created_at": "2024-12-15T09:00:00Z",
+      "access_count": 189
+    },
+    "rel-015": {
+      "id": "rel-015",
+      "from_concept": "law-015",
+      "to_concept": "law-014",
+      "relation_type": "constrains",
+      "strength": 0.83,
+      "created_at": "2024-12-15T10:00:00Z",
+      "access_count": 145
+    }
+  }
+}

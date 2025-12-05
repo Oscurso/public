@@ -1,0 +1,87 @@
+{
+  "title": "Detective Mystery: The Case of the Collapsed Alibi",
+  "description": "A murder investigation where key evidence proves false",
+  "crime": {
+    "victim": "Victor Blackwood",
+    "time": "8:00 PM, Friday night",
+    "cause": "Poisoning",
+    "location": "Mansion"
+  },
+  "suspects": [
+    {
+      "name": "James (the butler)",
+      "evidence": "had access to poison",
+      "observation": "James the butler had access to poison"
+    },
+    {
+      "name": "Sarah (business partner)",
+      "evidence": "financial motive",
+      "observation": "Sarah had financial motive"
+    },
+    {
+      "name": "Robert (nephew)",
+      "evidence": "inheritance motive",
+      "observation": "Robert had inheritance motive"
+    }
+  ],
+  "phases": [
+    {
+      "name": "Initial Investigation",
+      "description": "Collecting witness statements and initial evidence",
+      "observations": [
+        "Victor Blackwood died at 8:00 PM",
+        "Sarah was at home at 8 PM",
+        "Robert was at gym at 8 PM",
+        "James served dinner at 7 PM"
+      ],
+      "rules": [
+        {
+          "id": "alibi_rule",
+          "name": "Alibi Detection Rule",
+          "conditions": ["at 8 PM"],
+          "conclusion": "has an alibi for the murder",
+          "confidence": 0.85
+        },
+        {
+          "id": "innocence_from_alibi",
+          "name": "Innocence From Alibi Rule",
+          "conditions": ["has an alibi"],
+          "conclusion": "is unlikely to be the murderer",
+          "confidence": 0.80
+        },
+        {
+          "id": "butler_opportunity",
+          "name": "Butler Opportunity Rule",
+          "conditions": ["access to poison", "served dinner"],
+          "conclusion": "James had opportunity to poison the victim",
+          "confidence": 0.70
+        }
+      ]
+    },
+    {
+      "name": "Alibi Collapses",
+      "description": "Security footage reveals Sarah's alibi is false",
+      "observations": [
+        "Sarah's alibi is proven false",
+        "Security footage shows Sarah downtown at 8:15 PM",
+        "Sarah lied about her whereabouts"
+      ],
+      "rules": [
+        {
+          "id": "false_alibi_suspicious",
+          "name": "False Alibi Suspicion Rule",
+          "conditions": ["alibi is proven false"],
+          "conclusion": "lying about alibi indicates guilt",
+          "confidence": 0.85
+        },
+        {
+          "id": "guilt_from_lies_and_motive",
+          "name": "Guilt From Lies and Motive Rule",
+          "conditions": ["lied about", "financial motive"],
+          "conclusion": "Sarah is likely the murderer",
+          "confidence": 0.88
+        }
+      ]
+    }
+  ]
+}

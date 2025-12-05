@@ -1,0 +1,1057 @@
+{
+  "concepts": [
+    {
+      "id": "c_young_investor",
+      "name": "Young Investor",
+      "description": "Investor under 40 with long time horizon",
+      "domain": "investor_profile",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_near_retirement",
+      "name": "Near-Retirement Investor",
+      "description": "Investor within 5-10 years of retirement",
+      "domain": "investor_profile",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_risk_tolerant",
+      "name": "Risk-Tolerant Investor",
+      "description": "Investor comfortable with high volatility for potential returns",
+      "domain": "investor_profile",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_risk_averse",
+      "name": "Risk-Averse Investor",
+      "description": "Investor prioritizing capital preservation over growth",
+      "domain": "investor_profile",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_high_net_worth",
+      "name": "High Net Worth Investor",
+      "description": "Investor with substantial assets over $1M",
+      "domain": "investor_profile",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_stocks",
+      "name": "Stock Investment",
+      "description": "Equity ownership in companies",
+      "domain": "asset_class",
+      "clarity": 0.95,
+      "attributes": {}
+    },
+    {
+      "id": "c_bonds",
+      "name": "Bond Investment",
+      "description": "Fixed-income debt securities",
+      "domain": "asset_class",
+      "clarity": 0.95,
+      "attributes": {}
+    },
+    {
+      "id": "c_real_estate",
+      "name": "Real Estate Investment",
+      "description": "Property and land investments",
+      "domain": "asset_class",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_cash_equivalents",
+      "name": "Cash Equivalents",
+      "description": "Highly liquid low-risk assets like money market funds",
+      "domain": "asset_class",
+      "clarity": 0.95,
+      "attributes": {}
+    },
+    {
+      "id": "c_bull_market",
+      "name": "Bull Market Conditions",
+      "description": "Rising market with positive investor sentiment",
+      "domain": "market_condition",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_bear_market",
+      "name": "Bear Market Conditions",
+      "description": "Declining market with negative investor sentiment",
+      "domain": "market_condition",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_volatile_market",
+      "name": "Volatile Market Conditions",
+      "description": "Market with high price fluctuations",
+      "domain": "market_condition",
+      "clarity": 0.80,
+      "attributes": {}
+    },
+    {
+      "id": "c_stable_market",
+      "name": "Stable Market Conditions",
+      "description": "Market with low volatility and steady growth",
+      "domain": "market_condition",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_short_term",
+      "name": "Short-Term Investment",
+      "description": "Investment horizon under 3 years",
+      "domain": "timeframe",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_long_term",
+      "name": "Long-Term Investment",
+      "description": "Investment horizon over 10 years",
+      "domain": "timeframe",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_diversification",
+      "name": "Portfolio Diversification",
+      "description": "Spreading investments across different assets",
+      "domain": "strategy",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_concentration",
+      "name": "Concentrated Portfolio",
+      "description": "Focusing investments in few assets",
+      "domain": "strategy",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_dollar_cost_averaging",
+      "name": "Dollar-Cost Averaging",
+      "description": "Investing fixed amounts at regular intervals",
+      "domain": "strategy",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_lump_sum_investing",
+      "name": "Lump-Sum Investing",
+      "description": "Investing large amount all at once",
+      "domain": "strategy",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_active_management",
+      "name": "Active Portfolio Management",
+      "description": "Frequent trading to beat market returns",
+      "domain": "strategy",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_passive_indexing",
+      "name": "Passive Index Investing",
+      "description": "Tracking market index with minimal trading",
+      "domain": "strategy",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_value_investing",
+      "name": "Value Investing",
+      "description": "Buying undervalued assets",
+      "domain": "strategy",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_growth_investing",
+      "name": "Growth Investing",
+      "description": "Investing in high-growth potential companies",
+      "domain": "strategy",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_rebalancing",
+      "name": "Portfolio Rebalancing",
+      "description": "Adjusting portfolio back to target allocation",
+      "domain": "strategy",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_tax_loss_harvesting",
+      "name": "Tax-Loss Harvesting",
+      "description": "Selling losers to offset capital gains taxes",
+      "domain": "strategy",
+      "clarity": 0.80,
+      "attributes": {}
+    },
+    {
+      "id": "c_high_returns",
+      "name": "High Returns",
+      "description": "Above-average investment gains",
+      "domain": "outcome",
+      "clarity": 0.80,
+      "attributes": {}
+    },
+    {
+      "id": "c_low_risk",
+      "name": "Low Risk",
+      "description": "Minimal chance of significant loss",
+      "domain": "outcome",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_high_risk",
+      "name": "High Risk",
+      "description": "Significant chance of loss",
+      "domain": "outcome",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_capital_preservation",
+      "name": "Capital Preservation",
+      "description": "Protecting principal investment amount",
+      "domain": "goal",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_wealth_growth",
+      "name": "Wealth Growth",
+      "description": "Increasing portfolio value over time",
+      "domain": "goal",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_income_generation",
+      "name": "Income Generation",
+      "description": "Producing regular cash flow from investments",
+      "domain": "goal",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_market_timing",
+      "name": "Market Timing",
+      "description": "Attempting to predict market movements",
+      "domain": "strategy",
+      "clarity": 0.75,
+      "attributes": {}
+    },
+    {
+      "id": "c_buy_and_hold",
+      "name": "Buy and Hold Strategy",
+      "description": "Holding investments for extended periods",
+      "domain": "strategy",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_liquidity",
+      "name": "Portfolio Liquidity",
+      "description": "Ability to quickly convert investments to cash",
+      "domain": "characteristic",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_transaction_costs",
+      "name": "Transaction Costs",
+      "description": "Fees and expenses from trading",
+      "domain": "cost",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_tax_efficiency",
+      "name": "Tax Efficiency",
+      "description": "Minimizing tax burden on investments",
+      "domain": "goal",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_emergency_fund",
+      "name": "Emergency Fund",
+      "description": "Liquid reserves for unexpected expenses",
+      "domain": "financial_planning",
+      "clarity": 0.95,
+      "attributes": {}
+    },
+    {
+      "id": "c_inflation_protection",
+      "name": "Inflation Protection",
+      "description": "Maintaining purchasing power over time",
+      "domain": "goal",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_market_efficiency",
+      "name": "Market Efficiency",
+      "description": "Degree to which prices reflect all available information",
+      "domain": "theory",
+      "clarity": 0.70,
+      "attributes": {}
+    },
+    {
+      "id": "c_behavioral_bias",
+      "name": "Behavioral Bias",
+      "description": "Psychological factors affecting investment decisions",
+      "domain": "challenge",
+      "clarity": 0.75,
+      "attributes": {}
+    },
+    {
+      "id": "c_leverage",
+      "name": "Investment Leverage",
+      "description": "Using borrowed money to invest",
+      "domain": "strategy",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_retirement_income",
+      "name": "Retirement Income Stream",
+      "description": "Regular income during retirement years",
+      "domain": "goal",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_asset_allocation",
+      "name": "Strategic Asset Allocation",
+      "description": "Target mix of asset classes",
+      "domain": "strategy",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_individual_stocks",
+      "name": "Individual Stock Selection",
+      "description": "Picking specific company stocks",
+      "domain": "strategy",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_index_funds",
+      "name": "Index Funds",
+      "description": "Funds tracking market indices",
+      "domain": "investment_vehicle",
+      "clarity": 0.95,
+      "attributes": {}
+    },
+    {
+      "id": "c_professional_management",
+      "name": "Professional Money Management",
+      "description": "Hiring financial advisors to manage portfolio",
+      "domain": "service",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_diy_investing",
+      "name": "Self-Directed Investing",
+      "description": "Managing own portfolio without advisors",
+      "domain": "approach",
+      "clarity": 0.90,
+      "attributes": {}
+    }
+  ],
+  "relations": [
+    {
+      "id": "r_young_high_risk",
+      "from_concept": "c_young_investor",
+      "to_concept": "c_high_risk",
+      "relation_type": "Enables",
+      "strength": 0.80,
+      "confidence": 0.80,
+      "explanation": "Young investors can afford higher risk due to long time horizon"
+    },
+    {
+      "id": "r_young_stocks",
+      "from_concept": "c_young_investor",
+      "to_concept": "c_stocks",
+      "relation_type": "Requires",
+      "strength": 0.75,
+      "confidence": 0.80,
+      "explanation": "Young investors benefit from stock allocation for growth"
+    },
+    {
+      "id": "r_near_retirement_bonds",
+      "from_concept": "c_near_retirement",
+      "to_concept": "c_bonds",
+      "relation_type": "Requires",
+      "strength": 0.80,
+      "confidence": 0.85,
+      "explanation": "Near-retirement investors need bond allocation for stability"
+    },
+    {
+      "id": "r_near_retirement_low_risk",
+      "from_concept": "c_near_retirement",
+      "to_concept": "c_low_risk",
+      "relation_type": "Requires",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Near-retirement investors should prioritize lower risk"
+    },
+    {
+      "id": "r_risk_tolerant_stocks",
+      "from_concept": "c_risk_tolerant",
+      "to_concept": "c_stocks",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Risk-tolerant investors can pursue stock-heavy portfolios"
+    },
+    {
+      "id": "r_risk_averse_bonds",
+      "from_concept": "c_risk_averse",
+      "to_concept": "c_bonds",
+      "relation_type": "Requires",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Risk-averse investors should emphasize bonds"
+    },
+    {
+      "id": "r_risk_averse_cash",
+      "from_concept": "c_risk_averse",
+      "to_concept": "c_cash_equivalents",
+      "relation_type": "Requires",
+      "strength": 0.75,
+      "confidence": 0.80,
+      "explanation": "Risk-averse investors benefit from cash equivalent allocation"
+    },
+    {
+      "id": "r_stocks_high_risk",
+      "from_concept": "c_stocks",
+      "to_concept": "c_high_risk",
+      "relation_type": "Causes",
+      "strength": 0.80,
+      "confidence": 0.85,
+      "explanation": "Stocks carry higher risk due to volatility"
+    },
+    {
+      "id": "r_stocks_high_returns",
+      "from_concept": "c_stocks",
+      "to_concept": "c_high_returns",
+      "relation_type": "Enables",
+      "strength": 0.75,
+      "confidence": 0.75,
+      "explanation": "Stocks historically provide higher long-term returns"
+    },
+    {
+      "id": "r_bonds_low_risk",
+      "from_concept": "c_bonds",
+      "to_concept": "c_low_risk",
+      "relation_type": "Enables",
+      "strength": 0.80,
+      "confidence": 0.80,
+      "explanation": "Bonds generally have lower risk than stocks"
+    },
+    {
+      "id": "r_bonds_low_returns",
+      "from_concept": "c_bonds",
+      "to_concept": "c_high_returns",
+      "relation_type": "Opposes",
+      "strength": 0.70,
+      "confidence": 0.75,
+      "explanation": "Bonds typically provide lower returns than stocks"
+    },
+    {
+      "id": "r_diversification_low_risk",
+      "from_concept": "c_diversification",
+      "to_concept": "c_low_risk",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "Diversification reduces portfolio risk"
+    },
+    {
+      "id": "r_diversification_limits_returns",
+      "from_concept": "c_diversification",
+      "to_concept": "c_high_returns",
+      "relation_type": "Opposes",
+      "strength": 0.60,
+      "confidence": 0.65,
+      "explanation": "Diversification may limit maximum potential returns"
+    },
+    {
+      "id": "r_concentration_high_returns",
+      "from_concept": "c_concentration",
+      "to_concept": "c_high_returns",
+      "relation_type": "Enables",
+      "strength": 0.70,
+      "confidence": 0.65,
+      "explanation": "Concentrated portfolios can achieve higher returns if picks are good"
+    },
+    {
+      "id": "r_concentration_high_risk",
+      "from_concept": "c_concentration",
+      "to_concept": "c_high_risk",
+      "relation_type": "Causes",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Concentrated portfolios carry significantly higher risk"
+    },
+    {
+      "id": "r_long_term_stocks",
+      "from_concept": "c_long_term",
+      "to_concept": "c_stocks",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Long-term horizon allows riding out stock volatility"
+    },
+    {
+      "id": "r_short_term_cash",
+      "from_concept": "c_short_term",
+      "to_concept": "c_cash_equivalents",
+      "relation_type": "Requires",
+      "strength": 0.80,
+      "confidence": 0.80,
+      "explanation": "Short-term goals require liquid, stable investments"
+    },
+    {
+      "id": "r_short_term_stocks_oppose",
+      "from_concept": "c_short_term",
+      "to_concept": "c_stocks",
+      "relation_type": "Opposes",
+      "strength": 0.75,
+      "confidence": 0.75,
+      "explanation": "Short-term horizon unsuitable for volatile stock investments"
+    },
+    {
+      "id": "r_bull_market_stocks",
+      "from_concept": "c_bull_market",
+      "to_concept": "c_stocks",
+      "relation_type": "Enables",
+      "strength": 0.75,
+      "confidence": 0.70,
+      "explanation": "Bull markets favor stock investments"
+    },
+    {
+      "id": "r_bear_market_bonds",
+      "from_concept": "c_bear_market",
+      "to_concept": "c_bonds",
+      "relation_type": "Requires",
+      "strength": 0.70,
+      "confidence": 0.70,
+      "explanation": "Bear markets favor defensive bond allocation"
+    },
+    {
+      "id": "r_bear_market_cash",
+      "from_concept": "c_bear_market",
+      "to_concept": "c_cash_equivalents",
+      "relation_type": "Requires",
+      "strength": 0.65,
+      "confidence": 0.65,
+      "explanation": "Bear markets may warrant higher cash positions"
+    },
+    {
+      "id": "r_volatile_diversification",
+      "from_concept": "c_volatile_market",
+      "to_concept": "c_diversification",
+      "relation_type": "Requires",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Volatile markets require diversification"
+    },
+    {
+      "id": "r_dollar_cost_volatile",
+      "from_concept": "c_dollar_cost_averaging",
+      "to_concept": "c_volatile_market",
+      "relation_type": "Enables",
+      "strength": 0.80,
+      "confidence": 0.80,
+      "explanation": "Dollar-cost averaging reduces timing risk in volatile markets"
+    },
+    {
+      "id": "r_lump_sum_stable",
+      "from_concept": "c_lump_sum_investing",
+      "to_concept": "c_stable_market",
+      "relation_type": "Requires",
+      "strength": 0.70,
+      "confidence": 0.70,
+      "explanation": "Lump-sum investing works better in stable markets"
+    },
+    {
+      "id": "r_lump_sum_better_returns",
+      "from_concept": "c_lump_sum_investing",
+      "to_concept": "c_high_returns",
+      "relation_type": "Enables",
+      "strength": 0.65,
+      "confidence": 0.60,
+      "explanation": "Lump-sum historically outperforms dollar-cost averaging"
+    },
+    {
+      "id": "r_active_high_costs",
+      "from_concept": "c_active_management",
+      "to_concept": "c_transaction_costs",
+      "relation_type": "Causes",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "Active management incurs higher transaction costs"
+    },
+    {
+      "id": "r_active_beat_market",
+      "from_concept": "c_active_management",
+      "to_concept": "c_high_returns",
+      "relation_type": "Enables",
+      "strength": 0.50,
+      "confidence": 0.50,
+      "explanation": "Active management aims to beat market but rarely succeeds consistently"
+    },
+    {
+      "id": "r_passive_low_costs",
+      "from_concept": "c_passive_indexing",
+      "to_concept": "c_transaction_costs",
+      "relation_type": "Opposes",
+      "strength": 0.90,
+      "confidence": 0.95,
+      "explanation": "Passive indexing minimizes transaction costs"
+    },
+    {
+      "id": "r_passive_market_returns",
+      "from_concept": "c_passive_indexing",
+      "to_concept": "c_high_returns",
+      "relation_type": "Enables",
+      "strength": 0.70,
+      "confidence": 0.75,
+      "explanation": "Passive indexing captures market returns efficiently"
+    },
+    {
+      "id": "r_market_efficiency_passive",
+      "from_concept": "c_market_efficiency",
+      "to_concept": "c_passive_indexing",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.80,
+      "explanation": "Efficient markets favor passive indexing"
+    },
+    {
+      "id": "r_market_efficiency_active_oppose",
+      "from_concept": "c_market_efficiency",
+      "to_concept": "c_active_management",
+      "relation_type": "Opposes",
+      "strength": 0.80,
+      "confidence": 0.75,
+      "explanation": "Efficient markets make active management less effective"
+    },
+    {
+      "id": "r_value_bear_market",
+      "from_concept": "c_value_investing",
+      "to_concept": "c_bear_market",
+      "relation_type": "Enables",
+      "strength": 0.70,
+      "confidence": 0.70,
+      "explanation": "Value investing opportunities arise in bear markets"
+    },
+    {
+      "id": "r_growth_bull_market",
+      "from_concept": "c_growth_investing",
+      "to_concept": "c_bull_market",
+      "relation_type": "Requires",
+      "strength": 0.70,
+      "confidence": 0.70,
+      "explanation": "Growth investing thrives in bull markets"
+    },
+    {
+      "id": "r_rebalancing_discipline",
+      "from_concept": "c_rebalancing",
+      "to_concept": "c_asset_allocation",
+      "relation_type": "Requires",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Rebalancing maintains target asset allocation"
+    },
+    {
+      "id": "r_rebalancing_costs",
+      "from_concept": "c_rebalancing",
+      "to_concept": "c_transaction_costs",
+      "relation_type": "Causes",
+      "strength": 0.70,
+      "confidence": 0.75,
+      "explanation": "Frequent rebalancing increases transaction costs"
+    },
+    {
+      "id": "r_tax_loss_tax_efficiency",
+      "from_concept": "c_tax_loss_harvesting",
+      "to_concept": "c_tax_efficiency",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Tax-loss harvesting improves tax efficiency"
+    },
+    {
+      "id": "r_tax_loss_bear_market",
+      "from_concept": "c_tax_loss_harvesting",
+      "to_concept": "c_bear_market",
+      "relation_type": "Requires",
+      "strength": 0.75,
+      "confidence": 0.75,
+      "explanation": "Tax-loss harvesting opportunities arise in bear markets"
+    },
+    {
+      "id": "r_emergency_fund_cash",
+      "from_concept": "c_emergency_fund",
+      "to_concept": "c_cash_equivalents",
+      "relation_type": "Requires",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Emergency fund must be in liquid cash equivalents"
+    },
+    {
+      "id": "r_emergency_fund_liquidity",
+      "from_concept": "c_emergency_fund",
+      "to_concept": "c_liquidity",
+      "relation_type": "Requires",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Emergency fund requires high liquidity"
+    },
+    {
+      "id": "r_stocks_inflation",
+      "from_concept": "c_stocks",
+      "to_concept": "c_inflation_protection",
+      "relation_type": "Enables",
+      "strength": 0.75,
+      "confidence": 0.75,
+      "explanation": "Stocks provide inflation protection over long term"
+    },
+    {
+      "id": "r_cash_inflation_oppose",
+      "from_concept": "c_cash_equivalents",
+      "to_concept": "c_inflation_protection",
+      "relation_type": "Opposes",
+      "strength": 0.80,
+      "confidence": 0.80,
+      "explanation": "Cash loses purchasing power to inflation"
+    },
+    {
+      "id": "r_real_estate_inflation",
+      "from_concept": "c_real_estate",
+      "to_concept": "c_inflation_protection",
+      "relation_type": "Enables",
+      "strength": 0.80,
+      "confidence": 0.80,
+      "explanation": "Real estate provides inflation hedge"
+    },
+    {
+      "id": "r_real_estate_illiquid",
+      "from_concept": "c_real_estate",
+      "to_concept": "c_liquidity",
+      "relation_type": "Opposes",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Real estate is relatively illiquid"
+    },
+    {
+      "id": "r_market_timing_difficulty",
+      "from_concept": "c_market_timing",
+      "to_concept": "c_behavioral_bias",
+      "relation_type": "RelatedTo",
+      "strength": 0.80,
+      "confidence": 0.80,
+      "explanation": "Market timing often fails due to behavioral biases"
+    },
+    {
+      "id": "r_market_timing_oppose_buy_hold",
+      "from_concept": "c_market_timing",
+      "to_concept": "c_buy_and_hold",
+      "relation_type": "Opposes",
+      "strength": 0.90,
+      "confidence": 0.85,
+      "explanation": "Market timing contradicts buy-and-hold philosophy"
+    },
+    {
+      "id": "r_buy_hold_long_term",
+      "from_concept": "c_buy_and_hold",
+      "to_concept": "c_long_term",
+      "relation_type": "Requires",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Buy-and-hold requires long-term commitment"
+    },
+    {
+      "id": "r_buy_hold_low_costs",
+      "from_concept": "c_buy_and_hold",
+      "to_concept": "c_transaction_costs",
+      "relation_type": "Opposes",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "Buy-and-hold minimizes transaction costs"
+    },
+    {
+      "id": "r_leverage_high_returns",
+      "from_concept": "c_leverage",
+      "to_concept": "c_high_returns",
+      "relation_type": "Enables",
+      "strength": 0.75,
+      "confidence": 0.70,
+      "explanation": "Leverage amplifies potential returns"
+    },
+    {
+      "id": "r_leverage_high_risk",
+      "from_concept": "c_leverage",
+      "to_concept": "c_high_risk",
+      "relation_type": "Causes",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Leverage significantly increases risk"
+    },
+    {
+      "id": "r_leverage_young_maybe",
+      "from_concept": "c_leverage",
+      "to_concept": "c_young_investor",
+      "relation_type": "RelatedTo",
+      "strength": 0.60,
+      "confidence": 0.55,
+      "explanation": "Young investors might consider limited leverage but requires caution"
+    },
+    {
+      "id": "r_leverage_near_retirement_oppose",
+      "from_concept": "c_leverage",
+      "to_concept": "c_near_retirement",
+      "relation_type": "Opposes",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Near-retirement investors should avoid leverage"
+    },
+    {
+      "id": "r_retirement_income_bonds",
+      "from_concept": "c_retirement_income",
+      "to_concept": "c_bonds",
+      "relation_type": "Requires",
+      "strength": 0.80,
+      "confidence": 0.80,
+      "explanation": "Bonds provide reliable income for retirement"
+    },
+    {
+      "id": "r_retirement_income_generation",
+      "from_concept": "c_retirement_income",
+      "to_concept": "c_income_generation",
+      "relation_type": "PartOf",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Retirement requires income generation strategy"
+    },
+    {
+      "id": "r_near_retirement_income",
+      "from_concept": "c_near_retirement",
+      "to_concept": "c_retirement_income",
+      "relation_type": "Requires",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Near-retirement investors need income planning"
+    },
+    {
+      "id": "r_capital_preservation_bonds",
+      "from_concept": "c_capital_preservation",
+      "to_concept": "c_bonds",
+      "relation_type": "Requires",
+      "strength": 0.80,
+      "confidence": 0.80,
+      "explanation": "Capital preservation favors bonds"
+    },
+    {
+      "id": "r_capital_preservation_growth_oppose",
+      "from_concept": "c_capital_preservation",
+      "to_concept": "c_wealth_growth",
+      "relation_type": "Opposes",
+      "strength": 0.70,
+      "confidence": 0.70,
+      "explanation": "Capital preservation conflicts with aggressive growth"
+    },
+    {
+      "id": "r_wealth_growth_stocks",
+      "from_concept": "c_wealth_growth",
+      "to_concept": "c_stocks",
+      "relation_type": "Requires",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Wealth growth requires stock allocation"
+    },
+    {
+      "id": "r_young_wealth_growth",
+      "from_concept": "c_young_investor",
+      "to_concept": "c_wealth_growth",
+      "relation_type": "Requires",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Young investors should prioritize wealth growth"
+    },
+    {
+      "id": "r_near_retirement_preservation",
+      "from_concept": "c_near_retirement",
+      "to_concept": "c_capital_preservation",
+      "relation_type": "Requires",
+      "strength": 0.80,
+      "confidence": 0.80,
+      "explanation": "Near-retirement investors prioritize preservation"
+    },
+    {
+      "id": "r_individual_stocks_concentration",
+      "from_concept": "c_individual_stocks",
+      "to_concept": "c_concentration",
+      "relation_type": "Causes",
+      "strength": 0.75,
+      "confidence": 0.75,
+      "explanation": "Individual stock picking often leads to concentration"
+    },
+    {
+      "id": "r_index_funds_diversification",
+      "from_concept": "c_index_funds",
+      "to_concept": "c_diversification",
+      "relation_type": "Enables",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Index funds provide instant diversification"
+    },
+    {
+      "id": "r_index_funds_passive",
+      "from_concept": "c_index_funds",
+      "to_concept": "c_passive_indexing",
+      "relation_type": "PartOf",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Index funds are core of passive investing"
+    },
+    {
+      "id": "r_professional_management_costs",
+      "from_concept": "c_professional_management",
+      "to_concept": "c_transaction_costs",
+      "relation_type": "Causes",
+      "strength": 0.80,
+      "confidence": 0.85,
+      "explanation": "Professional management adds advisory fees"
+    },
+    {
+      "id": "r_professional_high_net_worth",
+      "from_concept": "c_professional_management",
+      "to_concept": "c_high_net_worth",
+      "relation_type": "Requires",
+      "strength": 0.70,
+      "confidence": 0.70,
+      "explanation": "Professional management cost-effective for high net worth"
+    },
+    {
+      "id": "r_diy_low_costs",
+      "from_concept": "c_diy_investing",
+      "to_concept": "c_transaction_costs",
+      "relation_type": "Opposes",
+      "strength": 0.75,
+      "confidence": 0.75,
+      "explanation": "DIY investing minimizes advisory costs"
+    },
+    {
+      "id": "r_diy_behavioral_bias",
+      "from_concept": "c_diy_investing",
+      "to_concept": "c_behavioral_bias",
+      "relation_type": "Causes",
+      "strength": 0.70,
+      "confidence": 0.70,
+      "explanation": "DIY investing more susceptible to behavioral errors"
+    },
+    {
+      "id": "r_high_net_worth_diversification",
+      "from_concept": "c_high_net_worth",
+      "to_concept": "c_diversification",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "High net worth enables broader diversification"
+    },
+    {
+      "id": "r_high_net_worth_real_estate",
+      "from_concept": "c_high_net_worth",
+      "to_concept": "c_real_estate",
+      "relation_type": "Enables",
+      "strength": 0.75,
+      "confidence": 0.75,
+      "explanation": "High net worth allows real estate investment"
+    },
+    {
+      "id": "r_risk_tolerant_concentration",
+      "from_concept": "c_risk_tolerant",
+      "to_concept": "c_concentration",
+      "relation_type": "Enables",
+      "strength": 0.70,
+      "confidence": 0.65,
+      "explanation": "Risk-tolerant investors might accept concentration"
+    },
+    {
+      "id": "r_risk_averse_diversification",
+      "from_concept": "c_risk_averse",
+      "to_concept": "c_diversification",
+      "relation_type": "Requires",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Risk-averse investors require diversification"
+    },
+    {
+      "id": "r_behavioral_bias_active",
+      "from_concept": "c_behavioral_bias",
+      "to_concept": "c_active_management",
+      "relation_type": "Causes",
+      "strength": 0.65,
+      "confidence": 0.65,
+      "explanation": "Behavioral biases drive overconfidence in active management"
+    },
+    {
+      "id": "r_tax_efficiency_index",
+      "from_concept": "c_tax_efficiency",
+      "to_concept": "c_index_funds",
+      "relation_type": "Requires",
+      "strength": 0.80,
+      "confidence": 0.80,
+      "explanation": "Index funds are tax-efficient due to low turnover"
+    },
+    {
+      "id": "r_asset_allocation_diversification",
+      "from_concept": "c_asset_allocation",
+      "to_concept": "c_diversification",
+      "relation_type": "Requires",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Asset allocation implements diversification"
+    },
+    {
+      "id": "r_long_term_buy_hold",
+      "from_concept": "c_long_term",
+      "to_concept": "c_buy_and_hold",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Long-term horizon suits buy-and-hold strategy"
+    },
+    {
+      "id": "r_short_term_timing",
+      "from_concept": "c_short_term",
+      "to_concept": "c_market_timing",
+      "relation_type": "RelatedTo",
+      "strength": 0.60,
+      "confidence": 0.55,
+      "explanation": "Short-term focus may tempt market timing"
+    }
+  ]
+}

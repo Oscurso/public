@@ -1,0 +1,330 @@
+{
+  "concepts": [
+    {
+      "id": "c_cell",
+      "name": "cell",
+      "description": "The basic structural unit of all living organisms",
+      "domain": "biology",
+      "clarity": 0.9,
+      "attributes": {}
+    },
+    {
+      "id": "c_dna",
+      "name": "DNA",
+      "description": "Molecule carrying genetic instructions for development and functioning",
+      "domain": "biology",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_protein",
+      "name": "protein",
+      "description": "Large biomolecules performing vast array of functions within organisms",
+      "domain": "biology",
+      "clarity": 0.8,
+      "attributes": {}
+    },
+    {
+      "id": "c_evolution",
+      "name": "evolution",
+      "description": "Change in heritable characteristics over successive generations",
+      "domain": "biology",
+      "clarity": 0.75,
+      "attributes": {}
+    },
+    {
+      "id": "c_consciousness",
+      "name": "consciousness",
+      "description": null,
+      "domain": "philosophy",
+      "clarity": 0.15,
+      "attributes": {}
+    },
+    {
+      "id": "c_life",
+      "name": "life",
+      "description": null,
+      "domain": "biology",
+      "clarity": 0.25,
+      "attributes": {}
+    },
+    {
+      "id": "c_death",
+      "name": "death",
+      "description": "Permanent cessation of biological functions",
+      "domain": "biology",
+      "clarity": 0.7,
+      "attributes": {}
+    },
+    {
+      "id": "c_metabolism",
+      "name": "metabolism",
+      "description": "Chemical processes that occur within a living organism",
+      "domain": "biology",
+      "clarity": 0.8,
+      "attributes": {}
+    },
+    {
+      "id": "c_photosynthesis",
+      "name": "photosynthesis",
+      "description": "Process by which plants convert light to chemical energy",
+      "domain": "biology",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_ecosystem",
+      "name": "ecosystem",
+      "description": "Community of living organisms interacting with their environment",
+      "domain": "ecology",
+      "clarity": 0.75,
+      "attributes": {}
+    },
+    {
+      "id": "c_instinct",
+      "name": "instinct",
+      "description": null,
+      "domain": "biology",
+      "clarity": 0.3,
+      "attributes": {}
+    },
+    {
+      "id": "c_intelligence",
+      "name": "intelligence",
+      "description": null,
+      "domain": "psychology",
+      "clarity": 0.2,
+      "attributes": {}
+    },
+    {
+      "id": "c_reproduction",
+      "name": "reproduction",
+      "description": "Biological process by which new organisms are produced",
+      "domain": "biology",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_mutation",
+      "name": "mutation",
+      "description": "Alteration in the nucleotide sequence of a genome",
+      "domain": "genetics",
+      "clarity": 0.8,
+      "attributes": {}
+    },
+    {
+      "id": "c_adaptation",
+      "name": "adaptation",
+      "description": "Process of change by which an organism becomes better suited to its environment",
+      "domain": "biology",
+      "clarity": 0.75,
+      "attributes": {}
+    },
+    {
+      "id": "c_sentience",
+      "name": "sentience",
+      "description": null,
+      "domain": "philosophy",
+      "clarity": 0.1,
+      "attributes": {}
+    },
+    {
+      "id": "c_energy",
+      "name": "energy",
+      "description": "The capacity to do work",
+      "domain": "physics",
+      "clarity": 0.9,
+      "attributes": {}
+    },
+    {
+      "id": "c_organism",
+      "name": "organism",
+      "description": "An individual living thing",
+      "domain": "biology",
+      "clarity": 0.85,
+      "attributes": {}
+    }
+  ],
+  "relations": [
+    {
+      "id": "r_cell_life",
+      "from_concept": "c_cell",
+      "to_concept": "c_life",
+      "relation_type": "Enables",
+      "strength": 0.9,
+      "confidence": 0.85,
+      "explanation": "Cells are the fundamental units that enable life"
+    },
+    {
+      "id": "r_dna_protein",
+      "from_concept": "c_dna",
+      "to_concept": "c_protein",
+      "relation_type": "Produces",
+      "strength": 0.95,
+      "confidence": 0.99,
+      "explanation": "DNA contains instructions for protein synthesis"
+    },
+    {
+      "id": "r_dna_evolution",
+      "from_concept": "c_dna",
+      "to_concept": "c_evolution",
+      "relation_type": "Enables",
+      "strength": 0.9,
+      "confidence": 0.95,
+      "explanation": "DNA mutations drive evolutionary change"
+    },
+    {
+      "id": "r_consciousness_life",
+      "from_concept": "c_consciousness",
+      "to_concept": "c_life",
+      "relation_type": "RelatedTo",
+      "strength": 0.4,
+      "confidence": 0.3,
+      "explanation": "The relationship between consciousness and life is debated"
+    },
+    {
+      "id": "r_life_death",
+      "from_concept": "c_life",
+      "to_concept": "c_death",
+      "relation_type": "Opposes",
+      "strength": 0.95,
+      "confidence": 0.9,
+      "explanation": "Life and death are opposing states"
+    },
+    {
+      "id": "r_metabolism_life",
+      "from_concept": "c_metabolism",
+      "to_concept": "c_life",
+      "relation_type": "RequiredFor",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Metabolism is required for life to exist"
+    },
+    {
+      "id": "r_photosynthesis_energy",
+      "from_concept": "c_photosynthesis",
+      "to_concept": "c_energy",
+      "relation_type": "Produces",
+      "strength": 0.9,
+      "confidence": 0.99,
+      "explanation": "Photosynthesis converts light into chemical energy"
+    },
+    {
+      "id": "r_organism_ecosystem",
+      "from_concept": "c_organism",
+      "to_concept": "c_ecosystem",
+      "relation_type": "PartOf",
+      "strength": 0.85,
+      "confidence": 0.95,
+      "explanation": "Organisms are parts of ecosystems"
+    },
+    {
+      "id": "r_instinct_intelligence",
+      "from_concept": "c_instinct",
+      "to_concept": "c_intelligence",
+      "relation_type": "RelatedTo",
+      "strength": 0.5,
+      "confidence": 0.4,
+      "explanation": "The relationship between instinct and intelligence is unclear"
+    },
+    {
+      "id": "r_intelligence_consciousness",
+      "from_concept": "c_intelligence",
+      "to_concept": "c_consciousness",
+      "relation_type": "RelatedTo",
+      "strength": 0.6,
+      "confidence": 0.35,
+      "explanation": "Intelligence may or may not require consciousness"
+    },
+    {
+      "id": "r_reproduction_evolution",
+      "from_concept": "c_reproduction",
+      "to_concept": "c_evolution",
+      "relation_type": "Enables",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Reproduction enables evolution through inheritance"
+    },
+    {
+      "id": "r_mutation_adaptation",
+      "from_concept": "c_mutation",
+      "to_concept": "c_adaptation",
+      "relation_type": "LeadsTo",
+      "strength": 0.7,
+      "confidence": 0.8,
+      "explanation": "Mutations can lead to adaptations"
+    },
+    {
+      "id": "r_adaptation_evolution",
+      "from_concept": "c_adaptation",
+      "to_concept": "c_evolution",
+      "relation_type": "PartOf",
+      "strength": 0.85,
+      "confidence": 0.9,
+      "explanation": "Adaptation is part of the evolutionary process"
+    },
+    {
+      "id": "r_sentience_consciousness",
+      "from_concept": "c_sentience",
+      "to_concept": "c_consciousness",
+      "relation_type": "RelatedTo",
+      "strength": 0.7,
+      "confidence": 0.25,
+      "explanation": "Sentience and consciousness may be related but distinction is unclear"
+    },
+    {
+      "id": "r_energy_metabolism",
+      "from_concept": "c_energy",
+      "to_concept": "c_metabolism",
+      "relation_type": "RequiredFor",
+      "strength": 0.95,
+      "confidence": 0.99,
+      "explanation": "Energy is required for metabolic processes"
+    },
+    {
+      "id": "r_cell_organism",
+      "from_concept": "c_cell",
+      "to_concept": "c_organism",
+      "relation_type": "PartOf",
+      "strength": 0.95,
+      "confidence": 0.99,
+      "explanation": "Cells make up organisms"
+    },
+    {
+      "id": "r_protein_cell",
+      "from_concept": "c_protein",
+      "to_concept": "c_cell",
+      "relation_type": "PartOf",
+      "strength": 0.9,
+      "confidence": 0.95,
+      "explanation": "Proteins are essential components of cells"
+    },
+    {
+      "id": "r_dna_reproduction",
+      "from_concept": "c_dna",
+      "to_concept": "c_reproduction",
+      "relation_type": "Enables",
+      "strength": 0.95,
+      "confidence": 0.99,
+      "explanation": "DNA replication enables reproduction"
+    },
+    {
+      "id": "r_life_intelligence",
+      "from_concept": "c_life",
+      "to_concept": "c_intelligence",
+      "relation_type": "RelatedTo",
+      "strength": 0.5,
+      "confidence": 0.4,
+      "explanation": "Not all life has intelligence, relationship is complex"
+    },
+    {
+      "id": "r_sentience_life",
+      "from_concept": "c_sentience",
+      "to_concept": "c_life",
+      "relation_type": "Requires",
+      "strength": 0.8,
+      "confidence": 0.6,
+      "explanation": "Sentience seems to require life, but definition is debated"
+    }
+  ]
+}

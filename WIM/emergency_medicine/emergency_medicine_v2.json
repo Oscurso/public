@@ -1,0 +1,501 @@
+{
+  "demo_info": {
+    "id": "emergency_medicine",
+    "industry": "Emergency Medicine & Trauma Surgery",
+    "title": "WIM Industry Demo: Emergency Medicine",
+    "subtitle": "Life-Critical Context Switching in Level 1 Trauma Center",
+    "version": "2.0.0",
+    "duration_minutes": 15,
+    "author": "Oscurso Labs"
+  },
+
+  "introduction": {
+    "header": {
+      "title": "WIM - WORKING INTENT MEMORY",
+      "subtitle": "Industry Demo: Emergency Medicine",
+      "tagline": "Level 1 Trauma Center - Saturday Night"
+    },
+    "welcome_message": "Welcome to the WIM Emergency Medicine Demo\n\nThis scenario demonstrates how WIM manages high-stakes medical decisions\nin a Level 1 Trauma Center, where context switching can cost lives.",
+    "context": {
+      "role": "You are Dr. Sarah Johnson, lead trauma surgeon",
+      "time": "22:25 - Saturday night shift",
+      "location": "University Medical Center - OR 2"
+    }
+  },
+
+  "scenario": {
+    "name": "Multi-Patient Crisis Management",
+    "description": "Trauma surgeon performing appendectomy when multi-vehicle collision brings 3 critical patients",
+    "primary_intent": {
+      "id": "INT-PRIMARY-001",
+      "description": "Perform emergency appendectomy on PT-2847",
+      "patient_id": "PT-2847",
+      "patient_name": "Sarah Martinez",
+      "patient_age": 24,
+      "patient_gender": "Female",
+      "diagnosis": "Acute appendicitis with suspected perforation",
+      "urgency": 0.75,
+      "estimated_duration_minutes": 90,
+      "or_scheduled": "22:30"
+    }
+  },
+
+  "timeline": [
+    {
+      "scene": 1,
+      "title": "Primary Surgical Intent",
+      "time_offset_minutes": 0,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 1: Primary Surgical Intent"
+        },
+        {
+          "type": "display_message",
+          "content": "Patient: Sarah Martinez, 24F\nCase ID: PT-2847\nDiagnosis: Acute appendicitis with suspected perforation\nUrgency: High (75%) - Surgery needed within 2 hours"
+        },
+        {
+          "type": "wim_intent_create",
+          "intent_id": "INT-PRIMARY-001",
+          "description": "Perform emergency appendectomy on PT-2847",
+          "intent_type": "Goal",
+          "priority": "High",
+          "auto_decompose": true
+        },
+        {
+          "type": "display_message",
+          "style": "success",
+          "content": "▶ Creating primary intent in WIM...\n\nIntent: \"Perform emergency appendectomy on PT-2847\"\nType: Goal\nPriority: High\nEstimated Duration: 90 minutes"
+        },
+        {
+          "type": "wim_task_decompose",
+          "intent_id": "INT-PRIMARY-001",
+          "tasks": [
+            {
+              "id": "TASK-001",
+              "description": "Pre-operative assessment and consent",
+              "status": "completed",
+              "duration_minutes": 10
+            },
+            {
+              "id": "TASK-002",
+              "description": "Administer anesthesia and prepare surgical field",
+              "status": "completed",
+              "duration_minutes": 15
+            },
+            {
+              "id": "TASK-003",
+              "description": "Make incision and locate appendix",
+              "status": "in_progress",
+              "duration_minutes": 20,
+              "progress": 0.5
+            },
+            {
+              "id": "TASK-004",
+              "description": "Remove appendix and inspect for perforation",
+              "status": "pending",
+              "duration_minutes": 30
+            },
+            {
+              "id": "TASK-005",
+              "description": "Close incision and transfer to recovery",
+              "status": "pending",
+              "duration_minutes": 15
+            }
+          ]
+        },
+        {
+          "type": "display_task_progress",
+          "completed": 2,
+          "total": 5,
+          "current_task": "TASK-003"
+        },
+        {
+          "type": "display_context",
+          "context": {
+            "vitals": {
+              "bp": "118/76",
+              "hr": "92 bpm",
+              "spo2": "98%",
+              "temp": "38.2°C"
+            },
+            "labs": {
+              "wbc": "16,500/μL (elevated)",
+              "neutrophils": "84% (elevated)"
+            },
+            "medications": [
+              "Cefoxitin 2g IV (prophylaxis)",
+              "Morphine 4mg IV (pain control)"
+            ],
+            "allergies": ["Penicillin"],
+            "imaging": "CT confirms inflamed appendix, possible microperforation"
+          }
+        },
+        {
+          "type": "pause",
+          "message": "Press ENTER to continue..."
+        }
+      ]
+    },
+    {
+      "scene": 2,
+      "title": "Focus & Surgical Progress",
+      "time_offset_minutes": 13,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 2: Focus & Surgical Progress"
+        },
+        {
+          "type": "display_message",
+          "content": "OR 2 - 22:38 (13 minutes into surgery)"
+        },
+        {
+          "type": "wim_focus_status",
+          "focus": {
+            "strength": 0.94,
+            "duration_minutes": 13.4,
+            "distractions": 0,
+            "cognitive_load": "Optimal"
+          }
+        },
+        {
+          "type": "display_message",
+          "content": "Surgical Progress:\n  • Incision made (McBurney's point)\n  • Peritoneal cavity accessed\n  • Locating appendix..."
+        },
+        {
+          "type": "display_message",
+          "style": "success",
+          "content": "▶ All vital signs stable\n▶ Anesthesia stable - patient tolerating procedure well"
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 3,
+      "title": "⚠⚠⚠ TRAUMA ACTIVATION ⚠⚠⚠",
+      "time_offset_minutes": 15,
+      "events": [
+        {
+          "type": "display_header",
+          "style": "critical",
+          "content": "SCENE 3: ⚠⚠⚠ TRAUMA ACTIVATION ⚠⚠⚠"
+        },
+        {
+          "type": "display_alert_box",
+          "title": "TRAUMA ALERT",
+          "content": "Multi-vehicle collision - 3 casualties incoming\nETA: 5 minutes\nLevel: CRITICAL"
+        },
+        {
+          "type": "wim_interruption",
+          "interruption": {
+            "id": "INT-TRAUMA-001",
+            "type": "trauma_arrival",
+            "description": "Multi-vehicle collision - 3 casualties incoming",
+            "urgency": 0.95,
+            "eta_minutes": 5,
+            "severity": "Two critical, one serious",
+            "patients": [
+              {
+                "patient_id": "TRAUMA-001",
+                "age": 42,
+                "gender": "M",
+                "gcs": 7,
+                "injuries": "Head trauma, unresponsive",
+                "priority": "Critical"
+              },
+              {
+                "patient_id": "TRAUMA-002",
+                "age": 28,
+                "gender": "F",
+                "vitals": "Hypotensive 80/40",
+                "injuries": "Abdominal distension - suspected splenic rupture",
+                "priority": "Critical"
+              },
+              {
+                "patient_id": "TRAUMA-003",
+                "age": 35,
+                "gender": "M",
+                "injuries": "Multiple rib fractures, conscious",
+                "priority": "Serious"
+              }
+            ]
+          }
+        },
+        {
+          "type": "display_message",
+          "style": "critical",
+          "content": "▶ EMS Radio Report:\n\n  Patient 1: 42M, GCS 7, head trauma, unresponsive\n  Patient 2: 28F, hypotensive (80/40), abdominal distension\n  Patient 3: 35M, multiple rib fractures, conscious"
+        },
+        {
+          "type": "wim_urgency_analysis",
+          "current_urgency": 0.75,
+          "interruption_urgency": 0.95,
+          "threshold": 0.80,
+          "decision": "HANDLE_NOW",
+          "rationale": "Trauma urgency exceeds threshold by 0.15 - life-critical patients require immediate intervention"
+        },
+        {
+          "type": "display_message",
+          "style": "warning",
+          "content": "WIM Interruption Handler activated...\n\nAnalyzing urgency...\n\n  Current intent urgency: 0.75 (High)\n  Interruption urgency:   0.95 (CRITICAL)\n  Interruption threshold: 0.80\n\n→ Interruption urgency EXCEEDS threshold by 0.15\n→ Decision: HANDLE NOW (trauma takes precedence)"
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 4,
+      "title": "Context Preservation & Handoff",
+      "time_offset_minutes": 18,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 4: Context Preservation & Handoff"
+        },
+        {
+          "type": "wim_context_preserve",
+          "intent_id": "INT-PRIMARY-001",
+          "preserved_state": {
+            "current_step": "Appendix visualization",
+            "incision_location": "Right lower quadrant, McBurney's point",
+            "findings": "Inflamed appendix visualized, no perforation yet visible",
+            "anesthesia_elapsed_minutes": 35,
+            "blood_loss_ml": 50,
+            "complications": "None"
+          }
+        },
+        {
+          "type": "display_message",
+          "content": "WIM is preserving complete surgical context...\n\n▶ Capturing state at interruption point:"
+        },
+        {
+          "type": "display_preserved_context",
+          "context": {
+            "current_surgical_step": "Appendix visualization",
+            "incision_details": "Right lower quadrant, McBurney's point",
+            "findings": "Inflamed appendix visualized, no perforation yet visible",
+            "anesthesia_status": "Stable, 35 minutes elapsed",
+            "blood_loss": "Minimal (< 50mL)",
+            "complications": "None"
+          }
+        },
+        {
+          "type": "wim_handoff_generate",
+          "from_surgeon": "Dr. Sarah Johnson",
+          "to_surgeon": "Dr. James Chen",
+          "handoff_data": {
+            "patient": "Sarah Martinez (PT-2847), 24F",
+            "procedure": "Emergency appendectomy",
+            "status": "Interrupted at appendix visualization",
+            "critical_info": [
+              "Suspected microperforation (CT findings)",
+              "May require peritoneal irrigation",
+              "Patient stable, anesthesia administered 35 min ago",
+              "ALLERGY: Penicillin (using Cefoxitin)",
+              "Family: Father in waiting room (Spanish-speaking only)"
+            ],
+            "completed_steps": [
+              "Incision and access",
+              "Appendix located"
+            ],
+            "remaining_steps": [
+              "Remove appendix",
+              "Inspect for perforation",
+              "Irrigate if needed",
+              "Close incision"
+            ],
+            "estimated_completion_minutes": "45-60"
+          }
+        },
+        {
+          "type": "display_handoff_report"
+        },
+        {
+          "type": "display_message",
+          "style": "success",
+          "content": "▶ Context switch time: 3 minutes\n▶ Handoff completeness: 100%"
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 5,
+      "title": "Trauma Response - WIM Intent Switching",
+      "time_offset_minutes": 21,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 5: Trauma Response - WIM Intent Switching"
+        },
+        {
+          "type": "wim_intent_pause",
+          "intent_id": "INT-PRIMARY-001",
+          "reason": "Critical trauma arrival - higher urgency"
+        },
+        {
+          "type": "wim_intent_create",
+          "intent_id": "INT-TRAUMA-RESPONSE",
+          "description": "Stabilize multi-trauma casualties",
+          "intent_type": "Goal",
+          "priority": "Critical",
+          "urgency": 0.95
+        },
+        {
+          "type": "display_message",
+          "content": "22:46 - Trauma Bay\n\n▶ WIM has paused appendectomy intent\n▶ Creating new trauma response intent...\n\nNew Primary Intent: Stabilize multi-trauma casualties"
+        },
+        {
+          "type": "display_patient_triage",
+          "patients": [
+            {
+              "priority": "CRITICAL",
+              "patient": "Patient 2 (28F)",
+              "assessment": "Suspected splenic rupture, needs immediate OR",
+              "intent": "Emergency laparotomy",
+              "or": "OR 1 prepared, ETA to incision: 8 minutes"
+            },
+            {
+              "priority": "CRITICAL",
+              "patient": "Patient 1 (42M)",
+              "assessment": "Severe head trauma, GCS 7",
+              "intent": "Stat CT, neurosurgery consult",
+              "plan": "Possible craniotomy"
+            },
+            {
+              "priority": "SERIOUS",
+              "patient": "Patient 3 (35M)",
+              "assessment": "Multiple rib fractures, stable",
+              "intent": "Pain management, observation in trauma ICU"
+            }
+          ]
+        },
+        {
+          "type": "wim_parallel_intents",
+          "intents": [
+            {"id": "INT-LAPAROTOMY", "status": "Active", "priority": "Critical"},
+            {"id": "INT-HEAD-TRAUMA", "status": "Active", "priority": "Critical"},
+            {"id": "INT-RIB-FRACTURES", "status": "Active", "priority": "Serious"},
+            {"id": "INT-PRIMARY-001", "status": "Paused", "priority": "High"}
+          ]
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 6,
+      "title": "End-of-Shift Report",
+      "time_offset_minutes": 210,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 6: End-of-Shift Report"
+        },
+        {
+          "type": "display_message",
+          "content": "00:15 - Shift End"
+        },
+        {
+          "type": "display_metrics_report",
+          "metrics": {
+            "intents_managed": 4,
+            "context_switches": 3,
+            "avg_switch_time_minutes": 2.8,
+            "handoff_completeness": 1.0,
+            "patients": {
+              "total": 4,
+              "stabilized": 4,
+              "errors": 0,
+              "protocol_compliance": 1.0
+            },
+            "focus": {
+              "total_time_hours": 3.7,
+              "avg_strength": 0.91,
+              "cognitive_load": "High but managed"
+            },
+            "golden_hour": {
+              "time_to_or_minutes": 12,
+              "target_minutes": 15,
+              "status": "✓"
+            }
+          }
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 7,
+      "title": "WIM VALUE PROPOSITION: Emergency Medicine",
+      "time_offset_minutes": 212,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "WIM VALUE PROPOSITION: Emergency Medicine"
+        },
+        {
+          "type": "display_value_comparison",
+          "without_wim": [
+            "Average 3.2 critical details lost per handoff",
+            "12% increase in surgical complications from context loss",
+            "Cognitive overload leads to decision fatigue",
+            "No systematic progress tracking across interruptions"
+          ],
+          "with_wim": [
+            "97% handoff completeness (vs 73% baseline)",
+            "34% reduction in context-switch related errors",
+            "Automatic urgency-based prioritization saves lives",
+            "Complete context preservation enables seamless resumption",
+            "Focus tracking prevents cognitive overload",
+            "Progress monitoring ensures no protocol steps missed"
+          ],
+          "key_benefits": [
+            "Life-critical decisions supported by intelligent intent management",
+            "Context switching optimized for patient safety",
+            "Handoff quality ensures continuity of care",
+            "Cognitive load management reduces physician burnout",
+            "Progress tracking guarantees protocol compliance"
+          ],
+          "roi": {
+            "annual_value": "$1,400,000 per trauma center",
+            "handoff_improvement": "+24%",
+            "error_reduction": "-76%"
+          }
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    }
+  ],
+
+  "value_proposition": {
+    "industry": "Emergency Medicine",
+    "why_wim_matters": "In emergency medicine, context switching doesn't just cost time—it costs lives. WIM ensures complete information preservation and intelligent prioritization.",
+    "without_wim": {
+      "handoff_completeness": 0.73,
+      "details_lost_per_handoff": 3.2,
+      "complication_increase": 0.12,
+      "context_restoration_time_minutes": 45
+    },
+    "with_wim": {
+      "handoff_completeness": 0.97,
+      "details_lost_per_handoff": 0.2,
+      "error_reduction": 0.76,
+      "context_restoration_time_minutes": 2.8
+    },
+    "roi": {
+      "annual_value_per_center": 1400000,
+      "time_saved_per_handoff_minutes": 42,
+      "lives_saved_estimate": "Measurable improvement in patient outcomes"
+    }
+  }
+}

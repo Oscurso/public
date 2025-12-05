@@ -1,0 +1,290 @@
+{
+  "demo": {
+    "industry": "Financial Services & Trading",
+    "title": "Market Pattern Discovery & Risk Analysis",
+    "scenario": "Investment firm consolidating 6 months of trading data to discover market patterns, correlation insights, and risk optimization strategies"
+  },
+  "concepts": {
+    "fin-001": {
+      "id": "fin-001",
+      "name": "Market Volatility",
+      "domain": "Market_Indicators/Risk",
+      "created_at": "2025-06-01T09:00:00Z",
+      "confidence": 0.91,
+      "access_count": 234,
+      "last_accessed": "2025-12-05T02:30:00Z"
+    },
+    "fin-002": {
+      "id": "fin-002",
+      "name": "VIX Index",
+      "domain": "Market_Indicators/Volatility",
+      "created_at": "2025-06-01T09:30:00Z",
+      "confidence": 0.88,
+      "access_count": 198,
+      "last_accessed": "2025-12-05T02:15:00Z"
+    },
+    "fin-003": {
+      "id": "fin-003",
+      "name": "Interest Rate Movements",
+      "domain": "Macroeconomic/Monetary_Policy",
+      "created_at": "2025-06-02T10:00:00Z",
+      "confidence": 0.94,
+      "access_count": 267,
+      "last_accessed": "2025-12-05T02:45:00Z"
+    },
+    "fin-004": {
+      "id": "fin-004",
+      "name": "Tech Sector Performance",
+      "domain": "Sectors/Technology",
+      "created_at": "2025-06-03T08:00:00Z",
+      "confidence": 0.87,
+      "access_count": 189,
+      "last_accessed": "2025-12-05T01:30:00Z"
+    },
+    "fin-005": {
+      "id": "fin-005",
+      "name": "Energy Sector Performance",
+      "domain": "Sectors/Energy",
+      "created_at": "2025-06-03T09:00:00Z",
+      "confidence": 0.83,
+      "access_count": 156,
+      "last_accessed": "2025-12-05T01:15:00Z"
+    },
+    "fin-006": {
+      "id": "fin-006",
+      "name": "Momentum Trading Signals",
+      "domain": "Strategies/Technical",
+      "created_at": "2025-06-04T10:00:00Z",
+      "confidence": 0.79,
+      "access_count": 143,
+      "last_accessed": "2025-12-05T00:45:00Z"
+    },
+    "fin-007": {
+      "id": "fin-007",
+      "name": "Mean Reversion Patterns",
+      "domain": "Strategies/Statistical",
+      "created_at": "2025-06-04T11:00:00Z",
+      "confidence": 0.81,
+      "access_count": 167,
+      "last_accessed": "2025-12-05T01:00:00Z"
+    },
+    "fin-008": {
+      "id": "fin-008",
+      "name": "Portfolio Diversification",
+      "domain": "Risk_Management/Optimization",
+      "created_at": "2025-06-05T09:00:00Z",
+      "confidence": 0.92,
+      "access_count": 221,
+      "last_accessed": "2025-12-05T02:00:00Z"
+    },
+    "fin-009": {
+      "id": "fin-009",
+      "name": "Correlation Analysis",
+      "domain": "Analytics/Relationships",
+      "created_at": "2025-06-05T10:00:00Z",
+      "confidence": 0.86,
+      "access_count": 178,
+      "last_accessed": "2025-12-05T01:45:00Z"
+    },
+    "fin-010": {
+      "id": "fin-010",
+      "name": "Sentiment Analysis",
+      "domain": "Analytics/Behavioral",
+      "created_at": "2025-06-06T08:00:00Z",
+      "confidence": 0.74,
+      "access_count": 134,
+      "last_accessed": "2025-12-04T23:30:00Z"
+    },
+    "fin-011": {
+      "id": "fin-011",
+      "name": "Earnings Announcements",
+      "domain": "Events/Corporate",
+      "created_at": "2025-06-07T09:00:00Z",
+      "confidence": 0.89,
+      "access_count": 203,
+      "last_accessed": "2025-12-05T02:15:00Z"
+    },
+    "fin-012": {
+      "id": "fin-012",
+      "name": "Liquidity Risk",
+      "domain": "Risk_Management/Market_Risk",
+      "created_at": "2025-06-08T10:00:00Z",
+      "confidence": 0.82,
+      "access_count": 145,
+      "last_accessed": "2025-12-05T01:00:00Z"
+    },
+    "fin-013": {
+      "id": "fin-013",
+      "name": "Algorithmic Trading",
+      "domain": "Execution/Automation",
+      "created_at": "2025-06-09T09:00:00Z",
+      "confidence": 0.85,
+      "access_count": 167,
+      "last_accessed": "2025-12-05T01:30:00Z"
+    },
+    "fin-014": {
+      "id": "fin-014",
+      "name": "ESG Investment Criteria",
+      "domain": "Strategies/Sustainable",
+      "created_at": "2025-06-10T08:00:00Z",
+      "confidence": 0.71,
+      "access_count": 98,
+      "last_accessed": "2025-12-04T22:45:00Z"
+    },
+    "fin-015": {
+      "id": "fin-015",
+      "name": "Regulatory Compliance",
+      "domain": "Operations/Governance",
+      "created_at": "2025-06-11T09:00:00Z",
+      "confidence": 0.93,
+      "access_count": 187,
+      "last_accessed": "2025-12-05T02:00:00Z"
+    },
+    "fin-016": {
+      "id": "fin-016",
+      "name": "Market Microstructure",
+      "domain": "Analytics/Trading_Dynamics",
+      "created_at": "2025-06-12T10:00:00Z",
+      "confidence": 0.78,
+      "access_count": 112,
+      "last_accessed": "2025-12-05T00:30:00Z"
+    }
+  },
+  "relations": {
+    "rel-001": {
+      "id": "rel-001",
+      "from_concept": "fin-001",
+      "to_concept": "fin-002",
+      "relation_type": "measured_by",
+      "strength": 0.96,
+      "created_at": "2025-06-01T10:00:00Z",
+      "access_count": 212
+    },
+    "rel-002": {
+      "id": "rel-002",
+      "from_concept": "fin-003",
+      "to_concept": "fin-001",
+      "relation_type": "influences",
+      "strength": 0.89,
+      "created_at": "2025-06-02T11:00:00Z",
+      "access_count": 198
+    },
+    "rel-003": {
+      "id": "rel-003",
+      "from_concept": "fin-004",
+      "to_concept": "fin-003",
+      "relation_type": "sensitive_to",
+      "strength": 0.84,
+      "created_at": "2025-06-03T09:30:00Z",
+      "access_count": 167
+    },
+    "rel-004": {
+      "id": "rel-004",
+      "from_concept": "fin-005",
+      "to_concept": "fin-001",
+      "relation_type": "correlated_with",
+      "strength": 0.73,
+      "created_at": "2025-06-03T10:00:00Z",
+      "access_count": 134
+    },
+    "rel-005": {
+      "id": "rel-005",
+      "from_concept": "fin-006",
+      "to_concept": "fin-001",
+      "relation_type": "triggers_on",
+      "strength": 0.81,
+      "created_at": "2025-06-04T11:30:00Z",
+      "access_count": 156
+    },
+    "rel-006": {
+      "id": "rel-006",
+      "from_concept": "fin-007",
+      "to_concept": "fin-006",
+      "relation_type": "complements",
+      "strength": 0.77,
+      "created_at": "2025-06-04T12:00:00Z",
+      "access_count": 143
+    },
+    "rel-007": {
+      "id": "rel-007",
+      "from_concept": "fin-008",
+      "to_concept": "fin-009",
+      "relation_type": "requires",
+      "strength": 0.92,
+      "created_at": "2025-06-05T11:00:00Z",
+      "access_count": 201
+    },
+    "rel-008": {
+      "id": "rel-008",
+      "from_concept": "fin-009",
+      "to_concept": "fin-004",
+      "relation_type": "analyzes",
+      "strength": 0.86,
+      "created_at": "2025-06-05T12:00:00Z",
+      "access_count": 178
+    },
+    "rel-009": {
+      "id": "rel-009",
+      "from_concept": "fin-010",
+      "to_concept": "fin-001",
+      "relation_type": "predicts",
+      "strength": 0.71,
+      "created_at": "2025-06-06T09:00:00Z",
+      "access_count": 123
+    },
+    "rel-010": {
+      "id": "rel-010",
+      "from_concept": "fin-011",
+      "to_concept": "fin-001",
+      "relation_type": "triggers",
+      "strength": 0.88,
+      "created_at": "2025-06-07T10:00:00Z",
+      "access_count": 189
+    },
+    "rel-011": {
+      "id": "rel-011",
+      "from_concept": "fin-012",
+      "to_concept": "fin-008",
+      "relation_type": "mitigated_by",
+      "strength": 0.84,
+      "created_at": "2025-06-08T11:00:00Z",
+      "access_count": 167
+    },
+    "rel-012": {
+      "id": "rel-012",
+      "from_concept": "fin-013",
+      "to_concept": "fin-006",
+      "relation_type": "executes",
+      "strength": 0.91,
+      "created_at": "2025-06-09T10:00:00Z",
+      "access_count": 154
+    },
+    "rel-013": {
+      "id": "rel-013",
+      "from_concept": "fin-014",
+      "to_concept": "fin-008",
+      "relation_type": "constrains",
+      "strength": 0.69,
+      "created_at": "2025-06-10T09:00:00Z",
+      "access_count": 87
+    },
+    "rel-014": {
+      "id": "rel-014",
+      "from_concept": "fin-015",
+      "to_concept": "fin-013",
+      "relation_type": "governs",
+      "strength": 0.94,
+      "created_at": "2025-06-11T10:00:00Z",
+      "access_count": 176
+    },
+    "rel-015": {
+      "id": "rel-015",
+      "from_concept": "fin-016",
+      "to_concept": "fin-013",
+      "relation_type": "optimizes",
+      "strength": 0.82,
+      "created_at": "2025-06-12T11:00:00Z",
+      "access_count": 98
+    }
+  }
+}

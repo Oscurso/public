@@ -1,0 +1,346 @@
+{
+  "concepts": [
+    {
+      "id": "c_revenue",
+      "name": "revenue",
+      "description": "Income generated from business operations",
+      "domain": "business",
+      "clarity": 0.9,
+      "attributes": {}
+    },
+    {
+      "id": "c_profit",
+      "name": "profit",
+      "description": "Financial gain after expenses are deducted",
+      "domain": "finance",
+      "clarity": 0.9,
+      "attributes": {}
+    },
+    {
+      "id": "c_customer",
+      "name": "customer",
+      "description": "Person or organization that purchases goods or services",
+      "domain": "business",
+      "clarity": 0.95,
+      "attributes": {}
+    },
+    {
+      "id": "c_market",
+      "name": "market",
+      "description": "Environment where buyers and sellers interact",
+      "domain": "economics",
+      "clarity": 0.8,
+      "attributes": {}
+    },
+    {
+      "id": "c_product_market_fit",
+      "name": "product-market fit",
+      "description": null,
+      "domain": "startup",
+      "clarity": 0.2,
+      "attributes": {}
+    },
+    {
+      "id": "c_scaling",
+      "name": "scaling",
+      "description": null,
+      "domain": "business",
+      "clarity": 0.25,
+      "attributes": {}
+    },
+    {
+      "id": "c_innovation",
+      "name": "innovation",
+      "description": null,
+      "domain": "business",
+      "clarity": 0.3,
+      "attributes": {}
+    },
+    {
+      "id": "c_competition",
+      "name": "competition",
+      "description": "Rivalry between companies for market share",
+      "domain": "business",
+      "clarity": 0.8,
+      "attributes": {}
+    },
+    {
+      "id": "c_moat",
+      "name": "competitive moat",
+      "description": null,
+      "domain": "strategy",
+      "clarity": 0.15,
+      "attributes": {}
+    },
+    {
+      "id": "c_value_proposition",
+      "name": "value proposition",
+      "description": "Promise of value to be delivered to customers",
+      "domain": "business",
+      "clarity": 0.7,
+      "attributes": {}
+    },
+    {
+      "id": "c_burn_rate",
+      "name": "burn rate",
+      "description": "Rate at which company spends money before generating positive cash flow",
+      "domain": "finance",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_runway",
+      "name": "runway",
+      "description": "Amount of time before company runs out of money",
+      "domain": "finance",
+      "clarity": 0.8,
+      "attributes": {}
+    },
+    {
+      "id": "c_funding",
+      "name": "funding",
+      "description": "Capital provided to finance a business",
+      "domain": "finance",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_valuation",
+      "name": "valuation",
+      "description": null,
+      "domain": "finance",
+      "clarity": 0.35,
+      "attributes": {}
+    },
+    {
+      "id": "c_traction",
+      "name": "traction",
+      "description": null,
+      "domain": "startup",
+      "clarity": 0.25,
+      "attributes": {}
+    },
+    {
+      "id": "c_pivot",
+      "name": "pivot",
+      "description": "Fundamental change in business strategy",
+      "domain": "startup",
+      "clarity": 0.7,
+      "attributes": {}
+    },
+    {
+      "id": "c_mvp",
+      "name": "MVP",
+      "description": "Minimum viable product - simplest version that delivers value",
+      "domain": "startup",
+      "clarity": 0.75,
+      "attributes": {}
+    },
+    {
+      "id": "c_churn",
+      "name": "churn",
+      "description": "Rate at which customers stop doing business with a company",
+      "domain": "business",
+      "clarity": 0.8,
+      "attributes": {}
+    },
+    {
+      "id": "c_ltv",
+      "name": "lifetime value",
+      "description": "Total revenue expected from a customer over their relationship",
+      "domain": "business",
+      "clarity": 0.75,
+      "attributes": {}
+    },
+    {
+      "id": "c_cac",
+      "name": "customer acquisition cost",
+      "description": "Cost to acquire a new customer",
+      "domain": "business",
+      "clarity": 0.8,
+      "attributes": {}
+    }
+  ],
+  "relations": [
+    {
+      "id": "r_customer_revenue",
+      "from_concept": "c_customer",
+      "to_concept": "c_revenue",
+      "relation_type": "Produces",
+      "strength": 0.95,
+      "confidence": 0.99,
+      "explanation": "Customers generate revenue through purchases"
+    },
+    {
+      "id": "r_revenue_profit",
+      "from_concept": "c_revenue",
+      "to_concept": "c_profit",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.9,
+      "explanation": "Revenue enables profit after costs"
+    },
+    {
+      "id": "r_pmf_scaling",
+      "from_concept": "c_product_market_fit",
+      "to_concept": "c_scaling",
+      "relation_type": "RequiredFor",
+      "strength": 0.9,
+      "confidence": 0.7,
+      "explanation": "Product-market fit is generally required before scaling"
+    },
+    {
+      "id": "r_innovation_moat",
+      "from_concept": "c_innovation",
+      "to_concept": "c_moat",
+      "relation_type": "Enables",
+      "strength": 0.6,
+      "confidence": 0.5,
+      "explanation": "Innovation may create competitive moats"
+    },
+    {
+      "id": "r_moat_competition",
+      "from_concept": "c_moat",
+      "to_concept": "c_competition",
+      "relation_type": "Opposes",
+      "strength": 0.8,
+      "confidence": 0.6,
+      "explanation": "Competitive moats protect against competition"
+    },
+    {
+      "id": "r_value_customer",
+      "from_concept": "c_value_proposition",
+      "to_concept": "c_customer",
+      "relation_type": "Attracts",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Strong value propositions attract customers"
+    },
+    {
+      "id": "r_burn_runway",
+      "from_concept": "c_burn_rate",
+      "to_concept": "c_runway",
+      "relation_type": "Determines",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Burn rate directly determines runway"
+    },
+    {
+      "id": "r_funding_runway",
+      "from_concept": "c_funding",
+      "to_concept": "c_runway",
+      "relation_type": "Enables",
+      "strength": 0.9,
+      "confidence": 0.95,
+      "explanation": "Funding extends runway"
+    },
+    {
+      "id": "r_traction_valuation",
+      "from_concept": "c_traction",
+      "to_concept": "c_valuation",
+      "relation_type": "Influences",
+      "strength": 0.8,
+      "confidence": 0.6,
+      "explanation": "Traction influences valuation but relationship is complex"
+    },
+    {
+      "id": "r_traction_funding",
+      "from_concept": "c_traction",
+      "to_concept": "c_funding",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.7,
+      "explanation": "Traction helps secure funding"
+    },
+    {
+      "id": "r_pmf_traction",
+      "from_concept": "c_product_market_fit",
+      "to_concept": "c_traction",
+      "relation_type": "LeadsTo",
+      "strength": 0.85,
+      "confidence": 0.65,
+      "explanation": "Product-market fit leads to traction"
+    },
+    {
+      "id": "r_mvp_pmf",
+      "from_concept": "c_mvp",
+      "to_concept": "c_product_market_fit",
+      "relation_type": "LeadsTo",
+      "strength": 0.6,
+      "confidence": 0.5,
+      "explanation": "MVP helps find product-market fit"
+    },
+    {
+      "id": "r_pivot_pmf",
+      "from_concept": "c_pivot",
+      "to_concept": "c_product_market_fit",
+      "relation_type": "LeadsTo",
+      "strength": 0.5,
+      "confidence": 0.4,
+      "explanation": "Pivoting may lead to product-market fit"
+    },
+    {
+      "id": "r_churn_ltv",
+      "from_concept": "c_churn",
+      "to_concept": "c_ltv",
+      "relation_type": "Opposes",
+      "strength": 0.9,
+      "confidence": 0.95,
+      "explanation": "High churn reduces lifetime value"
+    },
+    {
+      "id": "r_cac_profit",
+      "from_concept": "c_cac",
+      "to_concept": "c_profit",
+      "relation_type": "Opposes",
+      "strength": 0.85,
+      "confidence": 0.9,
+      "explanation": "High customer acquisition cost reduces profit"
+    },
+    {
+      "id": "r_ltv_cac",
+      "from_concept": "c_ltv",
+      "to_concept": "c_cac",
+      "relation_type": "RelatedTo",
+      "strength": 0.9,
+      "confidence": 0.85,
+      "explanation": "LTV to CAC ratio is key business metric"
+    },
+    {
+      "id": "r_scaling_burn",
+      "from_concept": "c_scaling",
+      "to_concept": "c_burn_rate",
+      "relation_type": "Influences",
+      "strength": 0.8,
+      "confidence": 0.75,
+      "explanation": "Scaling typically increases burn rate"
+    },
+    {
+      "id": "r_market_competition",
+      "from_concept": "c_market",
+      "to_concept": "c_competition",
+      "relation_type": "Contains",
+      "strength": 0.9,
+      "confidence": 0.95,
+      "explanation": "Markets contain competition"
+    },
+    {
+      "id": "r_innovation_value",
+      "from_concept": "c_innovation",
+      "to_concept": "c_value_proposition",
+      "relation_type": "Enables",
+      "strength": 0.7,
+      "confidence": 0.6,
+      "explanation": "Innovation can create new value propositions"
+    },
+    {
+      "id": "r_valuation_funding",
+      "from_concept": "c_valuation",
+      "to_concept": "c_funding",
+      "relation_type": "Influences",
+      "strength": 0.85,
+      "confidence": 0.8,
+      "explanation": "Valuation affects funding terms"
+    }
+  ]
+}

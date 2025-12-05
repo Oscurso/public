@@ -1,0 +1,607 @@
+{
+  "domain": "software_architecture",
+  "concepts": [
+    {
+      "id": "c_small_team",
+      "name": "Small Development Team",
+      "description": "Team of fewer than 10 developers",
+      "domain": "context",
+      "clarity": 0.90,
+      "attributes": {"team_size": "small"}
+    },
+    {
+      "id": "c_large_organization",
+      "name": "Large Organization",
+      "description": "Multiple teams with 50+ developers",
+      "domain": "context",
+      "clarity": 0.85,
+      "attributes": {"team_size": "large"}
+    },
+    {
+      "id": "c_startup_phase",
+      "name": "Early Startup Phase",
+      "description": "Product validation stage with high uncertainty",
+      "domain": "context",
+      "clarity": 0.85,
+      "attributes": {"maturity": "early"}
+    },
+    {
+      "id": "c_monolith",
+      "name": "Monolithic Architecture",
+      "description": "Single deployable unit with all functionality",
+      "domain": "pattern",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_microservices",
+      "name": "Microservices Architecture",
+      "description": "Distributed system of independent services",
+      "domain": "pattern",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_modular_monolith",
+      "name": "Modular Monolith",
+      "description": "Monolith with well-defined internal module boundaries",
+      "domain": "pattern",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_limited_budget",
+      "name": "Limited Budget",
+      "description": "Financial constraints on infrastructure and operational costs",
+      "domain": "constraint",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_tight_deadline",
+      "name": "Tight Time Constraint",
+      "description": "Pressure to deliver quickly",
+      "domain": "constraint",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_high_scale_requirement",
+      "name": "High Scale Requirement",
+      "description": "System must handle millions of requests per day",
+      "domain": "requirement",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_strong_consistency_requirement",
+      "name": "Strong Consistency Requirement",
+      "description": "Business requires immediate consistency (banking, inventory)",
+      "domain": "requirement",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_rapid_initial_development",
+      "name": "Rapid Initial Development",
+      "description": "Fast time-to-market for first version",
+      "domain": "goal",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_long_term_maintainability",
+      "name": "Long-term Maintainability",
+      "description": "System designed for years of evolution",
+      "domain": "goal",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_team_autonomy",
+      "name": "Team Autonomy",
+      "description": "Teams independently own and deploy their components",
+      "domain": "capability",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_independent_deployment",
+      "name": "Independent Deployment Capability",
+      "description": "Ability to deploy components without coordinating releases",
+      "domain": "capability",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_horizontal_scaling",
+      "name": "Horizontal Scaling Capability",
+      "description": "Adding more instances to handle load",
+      "domain": "capability",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_simple_deployment",
+      "name": "Simple Deployment",
+      "description": "Straightforward deployment with few moving parts",
+      "domain": "characteristic",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_low_operational_cost",
+      "name": "Low Operational Cost",
+      "description": "Minimal infrastructure and maintenance costs",
+      "domain": "characteristic",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_strong_consistency",
+      "name": "Strong Consistency",
+      "description": "Immediate consistency across all components",
+      "domain": "characteristic",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_eventual_consistency",
+      "name": "Eventual Consistency",
+      "description": "Consistency achieved over time through propagation",
+      "domain": "characteristic",
+      "clarity": 0.80,
+      "attributes": {}
+    },
+    {
+      "id": "c_distributed_system_complexity",
+      "name": "Distributed System Complexity",
+      "description": "Complexity from managing multiple independent services",
+      "domain": "challenge",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_network_dependency",
+      "name": "Network Dependency",
+      "description": "Reliability depends on network communication",
+      "domain": "challenge",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_fault_isolation",
+      "name": "Fault Isolation",
+      "description": "Failures contained to individual components",
+      "domain": "benefit",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_tech_stack_flexibility",
+      "name": "Technology Stack Flexibility",
+      "description": "Using different technologies per component",
+      "domain": "benefit",
+      "clarity": 0.80,
+      "attributes": {}
+    },
+    {
+      "id": "c_shared_database",
+      "name": "Shared Database",
+      "description": "All components access same database",
+      "domain": "pattern",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_database_per_service",
+      "name": "Database Per Service",
+      "description": "Each service owns its data store",
+      "domain": "pattern",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_coupling_between_services",
+      "name": "Coupling Between Services",
+      "description": "Services depend on each other's implementation details",
+      "domain": "anti_pattern",
+      "clarity": 0.80,
+      "attributes": {}
+    },
+    {
+      "id": "c_distributed_transactions",
+      "name": "Distributed Transaction Challenge",
+      "description": "Managing consistency across multiple databases",
+      "domain": "challenge",
+      "clarity": 0.75,
+      "attributes": {}
+    },
+    {
+      "id": "c_saga_pattern",
+      "name": "Saga Pattern",
+      "description": "Managing distributed transactions through compensating actions",
+      "domain": "solution",
+      "clarity": 0.75,
+      "attributes": {}
+    },
+    {
+      "id": "c_strangler_migration",
+      "name": "Strangler Fig Migration",
+      "description": "Gradually replacing monolith by routing traffic to new services",
+      "domain": "migration_strategy",
+      "clarity": 0.80,
+      "attributes": {}
+    },
+    {
+      "id": "c_observability_tooling",
+      "name": "Observability Tooling",
+      "description": "Distributed tracing, metrics, and logging infrastructure",
+      "domain": "infrastructure",
+      "clarity": 0.80,
+      "attributes": {}
+    }
+  ],
+  "relations": [
+    {
+      "id": "r_small_team_monolith",
+      "from_concept": "c_small_team",
+      "to_concept": "c_monolith",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "Small teams can effectively work on monoliths without coordination overhead"
+    },
+    {
+      "id": "r_large_org_microservices",
+      "from_concept": "c_large_organization",
+      "to_concept": "c_microservices",
+      "relation_type": "Enables",
+      "strength": 0.80,
+      "confidence": 0.85,
+      "explanation": "Large organizations benefit from team autonomy of microservices"
+    },
+    {
+      "id": "r_startup_monolith",
+      "from_concept": "c_startup_phase",
+      "to_concept": "c_monolith",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Startups need rapid iteration that monoliths provide"
+    },
+    {
+      "id": "r_monolith_simple_deploy",
+      "from_concept": "c_monolith",
+      "to_concept": "c_simple_deployment",
+      "relation_type": "PartOf",
+      "strength": 0.90,
+      "confidence": 0.95,
+      "explanation": "Monoliths inherently have simple deployment (single unit)"
+    },
+    {
+      "id": "r_monolith_low_cost",
+      "from_concept": "c_monolith",
+      "to_concept": "c_low_operational_cost",
+      "relation_type": "PartOf",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "Monoliths inherently have lower operational costs (fewer servers, simpler ops)"
+    },
+    {
+      "id": "r_monolith_strong_consistency",
+      "from_concept": "c_monolith",
+      "to_concept": "c_strong_consistency",
+      "relation_type": "PartOf",
+      "strength": 0.90,
+      "confidence": 0.95,
+      "explanation": "Monoliths naturally provide strong consistency (single database, ACID transactions)"
+    },
+    {
+      "id": "r_monolith_shared_db",
+      "from_concept": "c_monolith",
+      "to_concept": "c_shared_database",
+      "relation_type": "PartOf",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Monoliths inherently use shared database architecture"
+    },
+    {
+      "id": "r_monolith_rapid_initial",
+      "from_concept": "c_monolith",
+      "to_concept": "c_rapid_initial_development",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Monoliths enable fast initial development (no distributed complexity)"
+    },
+    {
+      "id": "r_monolith_limited_scale",
+      "from_concept": "c_monolith",
+      "to_concept": "c_high_scale_requirement",
+      "relation_type": "Opposes",
+      "strength": 0.70,
+      "confidence": 0.75,
+      "explanation": "Monoliths struggle with extreme scale (vertical scaling limits)"
+    },
+    {
+      "id": "r_microservices_horizontal_scale",
+      "from_concept": "c_microservices",
+      "to_concept": "c_horizontal_scaling",
+      "relation_type": "PartOf",
+      "strength": 0.90,
+      "confidence": 0.95,
+      "explanation": "Microservices inherently enable independent horizontal scaling"
+    },
+    {
+      "id": "r_microservices_eventual_consistency",
+      "from_concept": "c_microservices",
+      "to_concept": "c_eventual_consistency",
+      "relation_type": "PartOf",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "Distributed microservices inherently use eventual consistency patterns"
+    },
+    {
+      "id": "r_microservices_distributed_complexity",
+      "from_concept": "c_microservices",
+      "to_concept": "c_distributed_system_complexity",
+      "relation_type": "PartOf",
+      "strength": 0.90,
+      "confidence": 0.95,
+      "explanation": "Microservices inherently have distributed system complexity"
+    },
+    {
+      "id": "r_microservices_network_dependency",
+      "from_concept": "c_microservices",
+      "to_concept": "c_network_dependency",
+      "relation_type": "PartOf",
+      "strength": 0.90,
+      "confidence": 0.95,
+      "explanation": "Microservices inherently depend on network for inter-service communication"
+    },
+    {
+      "id": "r_microservices_team_autonomy",
+      "from_concept": "c_microservices",
+      "to_concept": "c_team_autonomy",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "Microservices enable independent team ownership"
+    },
+    {
+      "id": "r_microservices_independent_deploy",
+      "from_concept": "c_microservices",
+      "to_concept": "c_independent_deployment",
+      "relation_type": "Enables",
+      "strength": 0.90,
+      "confidence": 0.95,
+      "explanation": "Microservices enable deploying services independently"
+    },
+    {
+      "id": "r_microservices_fault_isolation",
+      "from_concept": "c_microservices",
+      "to_concept": "c_fault_isolation",
+      "relation_type": "Enables",
+      "strength": 0.80,
+      "confidence": 0.85,
+      "explanation": "Microservices can isolate failures to individual services"
+    },
+    {
+      "id": "r_microservices_tech_flex",
+      "from_concept": "c_microservices",
+      "to_concept": "c_tech_stack_flexibility",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Microservices allow choosing different tech per service"
+    },
+    {
+      "id": "r_microservices_slow_initial",
+      "from_concept": "c_microservices",
+      "to_concept": "c_rapid_initial_development",
+      "relation_type": "Opposes",
+      "strength": 0.75,
+      "confidence": 0.80,
+      "explanation": "Microservices have slower initial development (infrastructure setup)"
+    },
+    {
+      "id": "r_microservices_db_per_service",
+      "from_concept": "c_microservices",
+      "to_concept": "c_database_per_service",
+      "relation_type": "Requires",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Microservices best practice is database per service for autonomy"
+    },
+    {
+      "id": "r_limited_budget_low_cost",
+      "from_concept": "c_limited_budget",
+      "to_concept": "c_low_operational_cost",
+      "relation_type": "Requires",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Limited budget requires minimizing operational costs"
+    },
+    {
+      "id": "r_tight_deadline_rapid_dev",
+      "from_concept": "c_tight_deadline",
+      "to_concept": "c_rapid_initial_development",
+      "relation_type": "Requires",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Tight deadlines require fast initial delivery"
+    },
+    {
+      "id": "r_high_scale_horizontal",
+      "from_concept": "c_high_scale_requirement",
+      "to_concept": "c_horizontal_scaling",
+      "relation_type": "Requires",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "High scale requires horizontal scaling capability"
+    },
+    {
+      "id": "r_strong_consistency_req_characteristic",
+      "from_concept": "c_strong_consistency_requirement",
+      "to_concept": "c_strong_consistency",
+      "relation_type": "Requires",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Strong consistency requirement mandates strong consistency implementation"
+    },
+    {
+      "id": "r_strong_consistency_req_opposes_eventual",
+      "from_concept": "c_strong_consistency_requirement",
+      "to_concept": "c_eventual_consistency",
+      "relation_type": "Opposes",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Strong consistency requirement incompatible with eventual consistency"
+    },
+    {
+      "id": "r_shared_db_strong_consistency",
+      "from_concept": "c_shared_database",
+      "to_concept": "c_strong_consistency",
+      "relation_type": "Enables",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Shared database enables ACID transactions and strong consistency"
+    },
+    {
+      "id": "r_shared_db_coupling",
+      "from_concept": "c_shared_database",
+      "to_concept": "c_coupling_between_services",
+      "relation_type": "Causes",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Shared database creates coupling through schema dependencies"
+    },
+    {
+      "id": "r_shared_db_opposes_independent_deploy",
+      "from_concept": "c_shared_database",
+      "to_concept": "c_independent_deployment",
+      "relation_type": "Opposes",
+      "strength": 0.80,
+      "confidence": 0.80,
+      "explanation": "Shared database limits independent deployment due to schema changes"
+    },
+    {
+      "id": "r_db_per_service_distributed_tx",
+      "from_concept": "c_database_per_service",
+      "to_concept": "c_distributed_transactions",
+      "relation_type": "Causes",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Separate databases create distributed transaction challenges"
+    },
+    {
+      "id": "r_db_per_service_eventual",
+      "from_concept": "c_database_per_service",
+      "to_concept": "c_eventual_consistency",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Database per service typically uses eventual consistency patterns"
+    },
+    {
+      "id": "r_saga_distributed_tx",
+      "from_concept": "c_saga_pattern",
+      "to_concept": "c_distributed_transactions",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Saga pattern solves distributed transaction challenges"
+    },
+    {
+      "id": "r_modular_monolith_migration",
+      "from_concept": "c_modular_monolith",
+      "to_concept": "c_strangler_migration",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Modular monolith makes strangler migration easier (clear boundaries)"
+    },
+    {
+      "id": "r_strangler_long_term",
+      "from_concept": "c_strangler_migration",
+      "to_concept": "c_long_term_maintainability",
+      "relation_type": "Enables",
+      "strength": 0.75,
+      "confidence": 0.75,
+      "explanation": "Strangler migration enables gradual evolution to maintainable architecture"
+    },
+    {
+      "id": "r_microservices_observability",
+      "from_concept": "c_microservices",
+      "to_concept": "c_observability_tooling",
+      "relation_type": "Requires",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Microservices require distributed tracing and observability for debugging"
+    },
+    {
+      "id": "r_observability_cost",
+      "from_concept": "c_observability_tooling",
+      "to_concept": "c_low_operational_cost",
+      "relation_type": "Opposes",
+      "strength": 0.75,
+      "confidence": 0.75,
+      "explanation": "Observability tooling adds infrastructure and operational costs"
+    },
+    {
+      "id": "r_team_autonomy_independent_deploy",
+      "from_concept": "c_team_autonomy",
+      "to_concept": "c_independent_deployment",
+      "relation_type": "Requires",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Team autonomy requires ability to deploy independently"
+    },
+    {
+      "id": "r_large_org_team_autonomy",
+      "from_concept": "c_large_organization",
+      "to_concept": "c_team_autonomy",
+      "relation_type": "Requires",
+      "strength": 0.80,
+      "confidence": 0.80,
+      "explanation": "Large organizations need team autonomy to avoid bottlenecks"
+    },
+    {
+      "id": "r_distributed_complexity_cost",
+      "from_concept": "c_distributed_system_complexity",
+      "to_concept": "c_low_operational_cost",
+      "relation_type": "Opposes",
+      "strength": 0.80,
+      "confidence": 0.80,
+      "explanation": "Distributed complexity increases operational costs"
+    },
+    {
+      "id": "r_rapid_vs_long_term",
+      "from_concept": "c_rapid_initial_development",
+      "to_concept": "c_long_term_maintainability",
+      "relation_type": "Opposes",
+      "strength": 0.60,
+      "confidence": 0.70,
+      "explanation": "Optimizing for rapid initial development can compromise long-term maintainability"
+    },
+    {
+      "id": "r_modular_monolith_simple_deploy",
+      "from_concept": "c_modular_monolith",
+      "to_concept": "c_simple_deployment",
+      "relation_type": "PartOf",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Modular monolith maintains simple deployment of monolith"
+    },
+    {
+      "id": "r_modular_monolith_long_term",
+      "from_concept": "c_modular_monolith",
+      "to_concept": "c_long_term_maintainability",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Modular boundaries improve long-term maintainability"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "title": "Bug Analysis: User Photos Not Displaying",
+  "description": "Root cause analysis of production issue #2847",
+  "bug_report": {
+    "id": 2847,
+    "title": "User profile photos not displaying",
+    "severity": "HIGH",
+    "reporter": "Product Team"
+  },
+  "phases": [
+    {
+      "name": "Gathering Symptoms",
+      "description": "Initial observations of the bug",
+      "observations": [
+        "Frontend displays broken image icons for user photos",
+        "Browser console shows HTTP 404 errors",
+        "Photo URLs use path /uploads/user-photos/",
+        "Photo file paths are stored correctly in database"
+      ],
+      "rules": [
+        {
+          "id": "404_means_not_found",
+          "name": "404 Means Not Found Rule",
+          "conditions": ["404 errors"],
+          "conclusion": "Files are not found at the requested URLs",
+          "confidence": 0.95
+        },
+        {
+          "id": "path_mismatch",
+          "name": "Path Mismatch Rule",
+          "conditions": ["Files are not found", "stored correctly in database"],
+          "conclusion": "Path mismatch between database and filesystem",
+          "confidence": 0.85
+        }
+      ]
+    },
+    {
+      "name": "Checking Assumptions",
+      "description": "Validating initial assumptions about the system",
+      "observations": [
+        "Web server is configured to serve /uploads/ directory",
+        "Upload code saves files to /uploads/user-photos/",
+        "No deployment changes in past 24 hours"
+      ],
+      "rules": [
+        {
+          "id": "should_work",
+          "name": "Should Work Rule",
+          "conditions": ["serves /uploads/", "saves files to /uploads/"],
+          "conclusion": "Photo serving should work correctly",
+          "confidence": 0.80
+        },
+        {
+          "id": "assumption_wrong",
+          "name": "Assumption Wrong Rule",
+          "conditions": ["should work", "Files are not found"],
+          "conclusion": "One of our assumptions is incorrect",
+          "confidence": 0.90
+        }
+      ]
+    },
+    {
+      "name": "Root Cause Discovery",
+      "description": "Found the actual cause via git history",
+      "observations": [
+        "Recent code change moved uploads to /media/ directory",
+        "Web server still configured for /uploads/ directory",
+        "Configuration mismatch between code and server"
+      ],
+      "rules": [
+        {
+          "id": "config_mismatch",
+          "name": "Configuration Mismatch Rule",
+          "conditions": ["moved uploads to /media/", "configured for /uploads/"],
+          "conclusion": "ROOT CAUSE: Configuration mismatch after code deployment",
+          "confidence": 0.95
+        },
+        {
+          "id": "fix_needed",
+          "name": "Fix Needed Rule",
+          "conditions": ["Configuration mismatch"],
+          "conclusion": "FIX: Update web server config to serve /media/ directory",
+          "confidence": 0.90
+        }
+      ]
+    }
+  ]
+}

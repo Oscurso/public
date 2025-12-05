@@ -1,0 +1,281 @@
+{
+  "demo": {
+    "industry": "Healthcare & Medical Research",
+    "title": "Patient Treatment Pattern Discovery",
+    "scenario": "Hospital system consolidating 3 months of patient data to discover treatment patterns, drug interactions, and care pathway optimizations"
+  },
+  "concepts": {
+    "med-001": {
+      "id": "med-001",
+      "name": "Type 2 Diabetes",
+      "domain": "Conditions/Endocrine",
+      "created_at": "2025-09-15T08:00:00Z",
+      "confidence": 0.92,
+      "access_count": 145,
+      "last_accessed": "2025-12-05T02:00:00Z"
+    },
+    "med-002": {
+      "id": "med-002",
+      "name": "Hypertension",
+      "domain": "Conditions/Cardiovascular",
+      "created_at": "2025-09-15T08:30:00Z",
+      "confidence": 0.89,
+      "access_count": 167,
+      "last_accessed": "2025-12-05T02:15:00Z"
+    },
+    "med-003": {
+      "id": "med-003",
+      "name": "Metformin",
+      "domain": "Treatments/Medications",
+      "created_at": "2025-09-15T09:00:00Z",
+      "confidence": 0.88,
+      "access_count": 134,
+      "last_accessed": "2025-12-05T01:45:00Z"
+    },
+    "med-004": {
+      "id": "med-004",
+      "name": "ACE Inhibitors",
+      "domain": "Treatments/Medications",
+      "created_at": "2025-09-15T09:30:00Z",
+      "confidence": 0.85,
+      "access_count": 156,
+      "last_accessed": "2025-12-05T02:30:00Z"
+    },
+    "med-005": {
+      "id": "med-005",
+      "name": "Kidney Function Monitoring",
+      "domain": "Procedures/Diagnostics",
+      "created_at": "2025-09-16T10:00:00Z",
+      "confidence": 0.78,
+      "access_count": 89,
+      "last_accessed": "2025-12-05T01:30:00Z"
+    },
+    "med-006": {
+      "id": "med-006",
+      "name": "HbA1c Testing",
+      "domain": "Procedures/Diagnostics",
+      "created_at": "2025-09-16T11:00:00Z",
+      "confidence": 0.91,
+      "access_count": 198,
+      "last_accessed": "2025-12-05T02:45:00Z"
+    },
+    "med-007": {
+      "id": "med-007",
+      "name": "Dietary Counseling",
+      "domain": "Treatments/Lifestyle",
+      "created_at": "2025-09-17T08:00:00Z",
+      "confidence": 0.72,
+      "access_count": 67,
+      "last_accessed": "2025-12-04T23:00:00Z"
+    },
+    "med-008": {
+      "id": "med-008",
+      "name": "Exercise Programs",
+      "domain": "Treatments/Lifestyle",
+      "created_at": "2025-09-17T09:00:00Z",
+      "confidence": 0.68,
+      "access_count": 54,
+      "last_accessed": "2025-12-04T22:30:00Z"
+    },
+    "med-009": {
+      "id": "med-009",
+      "name": "Chronic Kidney Disease",
+      "domain": "Conditions/Renal",
+      "created_at": "2025-09-18T10:00:00Z",
+      "confidence": 0.82,
+      "access_count": 112,
+      "last_accessed": "2025-12-05T01:15:00Z"
+    },
+    "med-010": {
+      "id": "med-010",
+      "name": "Cardiovascular Risk Assessment",
+      "domain": "Procedures/Risk_Analysis",
+      "created_at": "2025-09-18T14:00:00Z",
+      "confidence": 0.86,
+      "access_count": 143,
+      "last_accessed": "2025-12-05T02:00:00Z"
+    },
+    "med-011": {
+      "id": "med-011",
+      "name": "Patient Adherence Tracking",
+      "domain": "Systems/Monitoring",
+      "created_at": "2025-09-19T08:00:00Z",
+      "confidence": 0.65,
+      "access_count": 78,
+      "last_accessed": "2025-12-05T00:45:00Z"
+    },
+    "med-012": {
+      "id": "med-012",
+      "name": "Clinical Decision Support",
+      "domain": "Systems/AI_Tools",
+      "created_at": "2025-09-19T10:00:00Z",
+      "confidence": 0.74,
+      "access_count": 95,
+      "last_accessed": "2025-12-05T01:30:00Z"
+    },
+    "med-013": {
+      "id": "med-013",
+      "name": "Polypharmacy Management",
+      "domain": "Clinical_Practices/Safety",
+      "created_at": "2025-09-20T09:00:00Z",
+      "confidence": 0.71,
+      "access_count": 88,
+      "last_accessed": "2025-12-05T01:00:00Z"
+    },
+    "med-014": {
+      "id": "med-014",
+      "name": "Multidisciplinary Care Teams",
+      "domain": "Clinical_Practices/Care_Delivery",
+      "created_at": "2025-09-20T11:00:00Z",
+      "confidence": 0.79,
+      "access_count": 104,
+      "last_accessed": "2025-12-05T01:45:00Z"
+    },
+    "med-015": {
+      "id": "med-015",
+      "name": "Readmission Prevention",
+      "domain": "Outcomes/Quality_Metrics",
+      "created_at": "2025-09-21T08:00:00Z",
+      "confidence": 0.83,
+      "access_count": 127,
+      "last_accessed": "2025-12-05T02:15:00Z"
+    }
+  },
+  "relations": {
+    "rel-001": {
+      "id": "rel-001",
+      "from_concept": "med-001",
+      "to_concept": "med-003",
+      "relation_type": "treated_by",
+      "strength": 0.94,
+      "created_at": "2025-09-15T09:15:00Z",
+      "access_count": 128
+    },
+    "rel-002": {
+      "id": "rel-002",
+      "from_concept": "med-002",
+      "to_concept": "med-004",
+      "relation_type": "treated_by",
+      "strength": 0.91,
+      "created_at": "2025-09-15T10:00:00Z",
+      "access_count": 142
+    },
+    "rel-003": {
+      "id": "rel-003",
+      "from_concept": "med-001",
+      "to_concept": "med-006",
+      "relation_type": "monitored_by",
+      "strength": 0.96,
+      "created_at": "2025-09-16T11:30:00Z",
+      "access_count": 186
+    },
+    "rel-004": {
+      "id": "rel-004",
+      "from_concept": "med-001",
+      "to_concept": "med-002",
+      "relation_type": "comorbid_with",
+      "strength": 0.87,
+      "created_at": "2025-09-16T14:00:00Z",
+      "access_count": 156
+    },
+    "rel-005": {
+      "id": "rel-005",
+      "from_concept": "med-003",
+      "to_concept": "med-005",
+      "relation_type": "requires_monitoring",
+      "strength": 0.83,
+      "created_at": "2025-09-17T08:30:00Z",
+      "access_count": 98
+    },
+    "rel-006": {
+      "id": "rel-006",
+      "from_concept": "med-004",
+      "to_concept": "med-005",
+      "relation_type": "requires_monitoring",
+      "strength": 0.88,
+      "created_at": "2025-09-17T09:00:00Z",
+      "access_count": 134
+    },
+    "rel-007": {
+      "id": "rel-007",
+      "from_concept": "med-001",
+      "to_concept": "med-007",
+      "relation_type": "improved_by",
+      "strength": 0.79,
+      "created_at": "2025-09-17T10:00:00Z",
+      "access_count": 67
+    },
+    "rel-008": {
+      "id": "rel-008",
+      "from_concept": "med-002",
+      "to_concept": "med-008",
+      "relation_type": "improved_by",
+      "strength": 0.82,
+      "created_at": "2025-09-17T11:00:00Z",
+      "access_count": 54
+    },
+    "rel-009": {
+      "id": "rel-009",
+      "from_concept": "med-001",
+      "to_concept": "med-009",
+      "relation_type": "risk_factor_for",
+      "strength": 0.76,
+      "created_at": "2025-09-18T10:30:00Z",
+      "access_count": 89
+    },
+    "rel-010": {
+      "id": "rel-010",
+      "from_concept": "med-002",
+      "to_concept": "med-009",
+      "relation_type": "risk_factor_for",
+      "strength": 0.81,
+      "created_at": "2025-09-18T11:00:00Z",
+      "access_count": 102
+    },
+    "rel-011": {
+      "id": "rel-011",
+      "from_concept": "med-002",
+      "to_concept": "med-010",
+      "relation_type": "assessed_by",
+      "strength": 0.92,
+      "created_at": "2025-09-18T14:30:00Z",
+      "access_count": 138
+    },
+    "rel-012": {
+      "id": "rel-012",
+      "from_concept": "med-011",
+      "to_concept": "med-003",
+      "relation_type": "monitors",
+      "strength": 0.72,
+      "created_at": "2025-09-19T09:00:00Z",
+      "access_count": 64
+    },
+    "rel-013": {
+      "id": "rel-013",
+      "from_concept": "med-012",
+      "to_concept": "med-013",
+      "relation_type": "supports",
+      "strength": 0.85,
+      "created_at": "2025-09-20T10:00:00Z",
+      "access_count": 76
+    },
+    "rel-014": {
+      "id": "rel-014",
+      "from_concept": "med-014",
+      "to_concept": "med-001",
+      "relation_type": "manages",
+      "strength": 0.88,
+      "created_at": "2025-09-20T12:00:00Z",
+      "access_count": 94
+    },
+    "rel-015": {
+      "id": "rel-015",
+      "from_concept": "med-015",
+      "to_concept": "med-011",
+      "relation_type": "depends_on",
+      "strength": 0.77,
+      "created_at": "2025-09-21T09:00:00Z",
+      "access_count": 82
+    }
+  }
+}

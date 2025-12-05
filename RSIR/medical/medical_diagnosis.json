@@ -1,0 +1,70 @@
+{
+  "title": "Medical Diagnosis Scenario",
+  "description": "Patient with ambiguous respiratory symptoms",
+  "phases": [
+    {
+      "name": "Initial Symptoms",
+      "description": "Patient presents with symptoms that could indicate multiple conditions",
+      "observations": [
+        "Patient has high fever",
+        "Patient has persistent cough",
+        "Patient has fatigue",
+        "Patient has muscle aches"
+      ],
+      "rules": [
+        {
+          "id": "flu_diagnosis",
+          "name": "Flu Diagnosis Rule",
+          "conditions": ["high fever", "cough", "fatigue", "muscle aches"],
+          "conclusion": "Possible diagnosis: Influenza (Flu)",
+          "confidence": 0.75
+        },
+        {
+          "id": "covid_diagnosis",
+          "name": "COVID-19 Diagnosis Rule",
+          "conditions": ["high fever", "cough", "fatigue"],
+          "conclusion": "Possible diagnosis: COVID-19",
+          "confidence": 0.72
+        },
+        {
+          "id": "pneumonia_diagnosis",
+          "name": "Pneumonia Diagnosis Rule",
+          "conditions": ["high fever", "cough"],
+          "conclusion": "Possible diagnosis: Pneumonia",
+          "confidence": 0.68
+        },
+        {
+          "id": "diagnosis_conflict",
+          "name": "Diagnosis Conflict Detection",
+          "conditions": ["Possible diagnosis:"],
+          "conclusion": "Multiple diagnoses possible - need more tests",
+          "confidence": 0.50
+        }
+      ]
+    },
+    {
+      "name": "New Test Results",
+      "description": "Lab tests provide definitive evidence",
+      "observations": [
+        "COVID-19 test result is positive",
+        "Influenza test result is negative"
+      ],
+      "rules": [
+        {
+          "id": "covid_confirmation",
+          "name": "COVID-19 Confirmation Rule",
+          "conditions": ["COVID-19 test result is positive"],
+          "conclusion": "CONFIRMED DIAGNOSIS: COVID-19",
+          "confidence": 0.95
+        },
+        {
+          "id": "flu_exclusion",
+          "name": "Flu Exclusion Rule",
+          "conditions": ["Influenza test result is negative"],
+          "conclusion": "Influenza diagnosis excluded",
+          "confidence": 0.90
+        }
+      ]
+    }
+  ]
+}

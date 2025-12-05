@@ -1,0 +1,390 @@
+{
+  "demo_info": {
+    "id": "wedding_planning",
+    "industry": "Wedding Planning & Event Coordination",
+    "title": "WIM Industry Demo: Wedding Planning",
+    "subtitle": "Luxury Event Coordination - Crisis Management",
+    "version": "2.0.0",
+    "duration_minutes": 10,
+    "author": "Oscurso Labs"
+  },
+
+  "introduction": {
+    "header": {
+      "title": "WIM - WORKING INTENT MEMORY",
+      "subtitle": "Industry Demo: Wedding Planning",
+      "tagline": "Luxury Event Coordination - Crisis Management"
+    },
+    "welcome_message": "Welcome to the WIM Wedding Planning Demo\n\nThis scenario demonstrates how WIM manages the beautiful chaos of\nluxury wedding coordination, where vendor crises and emotional clients\nrequire constant context switching without losing critical details.",
+    "context": {
+      "role": "Lead Wedding Planner - Luxury Events",
+      "time": "Friday afternoon, 3 weeks before wedding",
+      "location": "Active Weddings: 5 concurrent events"
+    }
+  },
+
+  "scenario": {
+    "name": "Final Preparations Disrupted by Florist Cancellation",
+    "description": "Finalizing seating chart when florist's owner is hospitalized, requiring immediate replacement 23 days before $145K wedding",
+    "primary_intent": {
+      "id": "INT-WEDDING-EXEC",
+      "description": "Execute Anderson-Chen wedding flawlessly",
+      "wedding_id": "WED-2024-127",
+      "couple": "Rebecca Anderson & David Chen",
+      "date": "2024-12-28",
+      "days_until": 23,
+      "guest_count": 220,
+      "budget": "$145,000",
+      "venue": "Rosewood Estate Vineyards",
+      "urgency": 0.75
+    }
+  },
+
+  "timeline": [
+    {
+      "scene": 1,
+      "title": "Wedding Coordination - Final Details",
+      "time_offset_minutes": 0,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 1: Anderson-Chen Wedding - Final Details"
+        },
+        {
+          "type": "display_message",
+          "content": "Wedding: Anderson-Chen\nDate: December 28, 2024 (23 days away)\nVenue: Rosewood Estate Vineyards\nGuests: 220 (218 confirmed)\nBudget: $145,000"
+        },
+        {
+          "type": "wim_intent_create",
+          "intent_id": "INT-WEDDING-EXEC",
+          "description": "Execute Anderson-Chen wedding flawlessly",
+          "intent_type": "Goal",
+          "priority": "High",
+          "urgency": 0.75
+        },
+        {
+          "type": "display_message",
+          "style": "success",
+          "content": "▶ Creating primary intent in WIM...\n\nIntent: \"Execute Anderson-Chen wedding flawlessly\""
+        },
+        {
+          "type": "wim_task_decompose",
+          "intent_id": "INT-WEDDING-EXEC",
+          "tasks": [
+            {
+              "id": "WED-FINAL-01",
+              "description": "Confirm final headcount with caterer and venue",
+              "status": "completed",
+              "vendor": "Savory Affairs Catering",
+              "confirmed_count": 218
+            },
+            {
+              "id": "WED-FINAL-02",
+              "description": "Finalize seating chart and escort card calligraphy",
+              "status": "in_progress",
+              "progress": 0.75,
+              "issue": "Table 8 - family politics"
+            },
+            {
+              "id": "WED-FINAL-03",
+              "description": "Final walkthrough with photographer and videographer",
+              "status": "pending",
+              "scheduled": "2024-12-20"
+            },
+            {
+              "id": "WED-FINAL-04",
+              "description": "Coordinate day-of timeline with all 14 vendors",
+              "status": "pending"
+            },
+            {
+              "id": "WED-FINAL-05",
+              "description": "Final dress fitting and emergency kit prep",
+              "status": "pending",
+              "scheduled": "2024-12-22"
+            }
+          ]
+        },
+        {
+          "type": "display_message",
+          "content": "Task Progress:\n  ✓ WED-FINAL-01: Confirm final headcount\n  → WED-FINAL-02: Finalize seating chart [IN PROGRESS - 75%]\n  • WED-FINAL-03: Final venue walkthrough\n  • WED-FINAL-04: Coordinate day-of timeline (14 vendors)\n  • WED-FINAL-05: Final dress fitting"
+        },
+        {
+          "type": "display_task_progress",
+          "completed": 1,
+          "total": 5
+        },
+        {
+          "type": "display_context",
+          "context": {
+            "current_task": {
+              "file": "anderson_chen_seating_v8.xlsx",
+              "tables_finalized": "1-7, 9-15 (14 of 15)",
+              "issue": "Table 8 - Aunt Margaret vs Uncle Tom (divorce drama)",
+              "solution": "Move Uncle Tom to Table 12 with college friends",
+              "status": "Awaiting bride's text approval"
+            },
+            "bride_stress_level": 3,
+            "emotional_state": "Everything going smoothly"
+          }
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 2,
+      "title": "💐 VENDOR CRISIS ALERT 💐",
+      "time_offset_minutes": 45,
+      "events": [
+        {
+          "type": "display_header",
+          "style": "critical",
+          "content": "SCENE 2: 💐 VENDOR CRISIS ALERT 💐"
+        },
+        {
+          "type": "display_alert_box",
+          "title": "FLORIST EMERGENCY",
+          "content": "Bella Flora (florist) just CANCELED\nOwner hospitalized - business temporarily closed\nTime to find replacement: 48 hours"
+        },
+        {
+          "type": "display_message",
+          "content": "Floral Arrangements Affected:\n  • Bridal bouquet (white peonies, garden roses, eucalyptus)\n  • 6 bridesmaid bouquets\n  • 12 boutonnieres\n  • Ceremony arch (3ft × 8ft floral installation)\n  • 14 reception centerpieces (tall and low alternating)\n  • Cake table, gift table, restroom arrangements\n  • Contract value: $8,500"
+        },
+        {
+          "type": "wim_urgency_analysis",
+          "current_urgency": 0.75,
+          "interruption_urgency": 0.88,
+          "threshold": 0.80,
+          "decision": "HANDLE_NOW",
+          "rationale": "Quality florists book fast - 48-hour window critical"
+        },
+        {
+          "type": "display_message",
+          "style": "warning",
+          "content": "WIM Interruption Handler analyzing...\n\n  Current intent urgency: 0.75 (Seating chart - important)\n  Interruption urgency:   0.88 (Florist crisis - time-sensitive)\n  Interruption threshold: 0.80\n\n→ Vendor crisis EXCEEDS threshold by 0.08\n→ Decision: HANDLE IMMEDIATELY - Quality vendors book fast\n\nBride's stress level: 3/10 → 8/10 (CRISIS MODE)"
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 3,
+      "title": "Context Preservation - Wedding Details",
+      "time_offset_minutes": 48,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 3: Context Preservation - Wedding Details"
+        },
+        {
+          "type": "wim_context_preserve",
+          "intent_id": "INT-WEDDING-EXEC",
+          "preserved_state": {
+            "spreadsheet": "anderson_chen_seating_v8.xlsx",
+            "tables_finalized": "1-7, 9-15 (14/15)",
+            "table_8_issue": "Aunt Margaret vs Uncle Tom",
+            "solution_proposed": "Move Tom to Table 12",
+            "awaiting": "Bride's approval via text"
+          }
+        },
+        {
+          "type": "display_message",
+          "content": "WIM is preserving wedding coordination context...\n\n▶ Capturing seating chart state:\n\n  ✓ Spreadsheet: anderson_chen_seating_v8.xlsx\n  ✓ Tables 1-7, 9-15 finalized (14/15)\n  ✓ Table 8 issue: Aunt Margaret vs Uncle Tom\n  ✓ Solution proposed: Move Tom to Table 12\n  ✓ Pending: Bride's approval via text"
+        },
+        {
+          "type": "display_message",
+          "style": "success",
+          "content": "▶ Florist research already started:\n  • Backup option 1: Garden of Eden ($9,200 - +$700)\n  • Backup option 2: Petal & Stem ($8,800 - +$300)\n  • Backup option 3: Moonlight Florals (unavailable - booked)"
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 4,
+      "title": "Crisis Resolution - Florist Search",
+      "time_offset_minutes": 60,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 4: Florist Crisis Resolution"
+        },
+        {
+          "type": "display_message",
+          "content": "Rapid-fire vendor search in progress...\n\nEvaluating replacement florists:"
+        },
+        {
+          "type": "display_message",
+          "style": "info",
+          "content": "Garden of Eden Florals:\n  • Available: ✓\n  • Quote: $9,200 (+$700 over original)\n  • Style match: 85% - different rose variety needed\n  • Can replicate design: Yes, with substitutions\n\nPetal & Stem:\n  • Available: ✓\n  • Quote: $8,800 (+$300 over original)\n  • Style match: 92% - exact match possible\n  • Can replicate design: Yes, exact colors and flowers\n  • Portfolio: Stunning, bride will love this"
+        },
+        {
+          "type": "display_message",
+          "style": "success",
+          "content": "→ WIM Decision: Petal & Stem\n    Best style match, reasonable price increase, available immediately"
+        },
+        {
+          "type": "display_message",
+          "content": "Actions completed:\n  ✓ Called Petal & Stem (2:47 PM)\n  ✓ Sent bride's Pinterest inspo board\n  ✓ Received mock-ups (3:15 PM)\n  ✓ Bride approved via video call (3:42 PM)\n  ✓ Contract signed (4:18 PM)\n  ✓ Deposit paid ($3,500)\n\nCrisis resolved in 4 hours\n\nBride's stress level: 8/10 → 3/10 (RELIEVED!)\n\n\"Thank you SO much! I was panicking but you fixed it so fast!\"\n- Rebecca (bride)"
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 5,
+      "title": "Returning to Seating Chart",
+      "time_offset_minutes": 300,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 5: Returning to Seating Chart"
+        },
+        {
+          "type": "display_message",
+          "content": "6:45 PM - Crisis resolved, resuming normal work"
+        },
+        {
+          "type": "display_message",
+          "style": "info",
+          "content": "▶ WIM restoring seating chart context:\n\n  ✓ Reopened: anderson_chen_seating_v8.xlsx\n  ✓ Highlighted: Table 8 (the problem table)\n  ✓ Restored note: 'Move Uncle Tom to Table 12 - awaiting approval'\n  ✓ Bride's text arrived: 'Yes! Move Tom. Perfect solution!'"
+        },
+        {
+          "type": "display_message",
+          "style": "success",
+          "content": "▶ Completing seating chart:\n  ✓ Uncle Tom moved to Table 12\n  ✓ Added college friend group to Table 12\n  ✓ Aunt Margaret stays at Table 8 with bride's family\n  ✓ Final chart complete (15/15 tables)\n  ✓ Sent to venue coordinator\n  ✓ Ordered escort cards (calligraphy deadline met)"
+        },
+        {
+          "type": "display_task_progress",
+          "completed": 2,
+          "total": 5
+        },
+        {
+          "type": "display_message",
+          "content": "▶ Context restoration time: 1 minute\n\nWithout WIM: 15-20 minutes to remember where you were\nWith WIM: 1 minute - perfect continuity"
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 6,
+      "title": "End-of-Day Wedding Coordination Report",
+      "time_offset_minutes": 360,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 6: End-of-Day Report"
+        },
+        {
+          "type": "display_metrics_report",
+          "metrics": {
+            "wedding": "Anderson-Chen (23 days until 'I do')",
+            "crisis_management": {
+              "vendor_crisis": "Florist cancellation",
+              "time_to_resolution_hours": 4,
+              "replacement_quality": "92% style match",
+              "budget_impact": "+$300 (2% over - acceptable)",
+              "bride_stress_managed": "8/10 → 3/10"
+            },
+            "task_completion": {
+              "seating_chart": "✓ Completed despite crisis",
+              "context_switches": 3,
+              "details_lost": 0,
+              "vendor_coordination": "15 vendors managed simultaneously"
+            },
+            "client_satisfaction": {
+              "response_time_minutes": 5,
+              "crisis_confidence": "You saved my wedding!",
+              "stress_reduction": "63% (8/10 to 3/10)"
+            },
+            "timeline_performance": {
+              "deadlines_met": "✓ (venue, calligrapher, florist)",
+              "days_ahead_of_schedule": 3,
+              "contingency_plans": "Weather backup activated"
+            }
+          }
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 7,
+      "title": "WIM VALUE PROPOSITION: Wedding Planning",
+      "time_offset_minutes": 362,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "WIM VALUE PROPOSITION: Wedding Planning"
+        },
+        {
+          "type": "display_value_comparison",
+          "without_wim": [
+            "15-20 minutes to remember coordination state",
+            "Critical details forgotten during crisis (guest allergies, preferences)",
+            "Client stress escalates without quick responses",
+            "Average 18 hours to manage vendor crisis",
+            "Multiple weddings blur together",
+            "Vendor relationship context lost"
+          ],
+          "with_wim": [
+            "1-minute context restoration",
+            "Zero details lost (guest needs, vendor specs, family dynamics)",
+            "4-hour crisis resolution (78% faster)",
+            "Client stress reduced by 63% through confidence",
+            "Complete isolation between 5 concurrent weddings",
+            "Vendor history and preferences automatically recalled"
+          ],
+          "key_benefits": [
+            "Vendor crises resolved 78% faster (18h → 4h)",
+            "Client confidence maintained during emergencies",
+            "Family dynamics preserved (who can't sit with whom)",
+            "Timeline coordination across 14+ vendors",
+            "Emotional context tracking (bride stress levels)",
+            "Pinterest boards and inspiration linked to tasks"
+          ],
+          "roi": {
+            "annual_value": "156% revenue increase per planner",
+            "client_satisfaction": "9.2/10 (industry avg: 7.4)",
+            "referral_rate": "67% (industry avg: 32%)"
+          }
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    }
+  ],
+
+  "value_proposition": {
+    "industry": "Wedding Planning",
+    "why_wim_matters": "Every detail matters on a bride's special day. Vendor crises are inevitable, but losing track of details is not. WIM ensures nothing falls through the cracks.",
+    "without_wim": {
+      "context_restoration_minutes": 18,
+      "details_lost_percentage": 0.12,
+      "crisis_resolution_hours": 18,
+      "client_stress_level": 8.2
+    },
+    "with_wim": {
+      "context_restoration_minutes": 1,
+      "details_lost_percentage": 0.0,
+      "crisis_resolution_hours": 4,
+      "client_stress_level": 3.1
+    },
+    "roi": {
+      "revenue_increase_percentage": 156,
+      "client_satisfaction": 9.2,
+      "industry_avg_satisfaction": 7.4,
+      "referral_rate": 0.67,
+      "industry_avg_referral": 0.32,
+      "crisis_resolution_improvement": 0.78
+    }
+  }
+}

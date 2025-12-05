@@ -1,0 +1,958 @@
+{
+  "domain": "legal_contracts",
+  "concepts": [
+    {
+      "id": "c_common_law_jurisdiction",
+      "name": "Common Law Jurisdiction",
+      "description": "Legal system based on case law and precedent (US, UK, Commonwealth)",
+      "domain": "jurisdiction",
+      "clarity": 0.90,
+      "attributes": {"legal_tradition": "common_law", "precedent_binding": true}
+    },
+    {
+      "id": "c_civil_law_jurisdiction",
+      "name": "Civil Law Jurisdiction",
+      "description": "Legal system based on codified statutes (Continental Europe, Latin America)",
+      "domain": "jurisdiction",
+      "clarity": 0.90,
+      "attributes": {"legal_tradition": "civil_law", "code_based": true}
+    },
+    {
+      "id": "c_b2b_contract",
+      "name": "Business-to-Business Contract",
+      "description": "Contract between commercial entities with equal bargaining power",
+      "domain": "contract_type",
+      "clarity": 0.85,
+      "attributes": {"party_type": "business", "commercial": true}
+    },
+    {
+      "id": "c_b2c_contract",
+      "name": "Business-to-Consumer Contract",
+      "description": "Contract between business and individual consumer (consumer protections apply)",
+      "domain": "contract_type",
+      "clarity": 0.85,
+      "attributes": {"party_type": "consumer", "consumer_protection": true}
+    },
+    {
+      "id": "c_written_contract",
+      "name": "Written Contract",
+      "description": "Contract documented in writing with signatures",
+      "domain": "contract_form",
+      "clarity": 0.95,
+      "attributes": {"form": "written", "evidence_strength": "high"}
+    },
+    {
+      "id": "c_oral_contract",
+      "name": "Oral Contract",
+      "description": "Contract formed through verbal agreement only",
+      "domain": "contract_form",
+      "clarity": 0.70,
+      "attributes": {"form": "oral", "evidence_strength": "low"}
+    },
+    {
+      "id": "c_contract_over_500",
+      "name": "Contract Over $500",
+      "description": "Contract with value exceeding $500 (Statute of Frauds threshold)",
+      "domain": "contract_value",
+      "clarity": 0.90,
+      "attributes": {"value_threshold": "high", "statute_of_frauds": true}
+    },
+    {
+      "id": "c_contract_under_500",
+      "name": "Contract Under $500",
+      "description": "Contract with value below $500 (exempt from Statute of Frauds)",
+      "domain": "contract_value",
+      "clarity": 0.90,
+      "attributes": {"value_threshold": "low", "statute_of_frauds": false}
+    },
+    {
+      "id": "c_adult_party",
+      "name": "Adult Party (Age of Majority)",
+      "description": "Party who has reached age of majority (18+ in most jurisdictions)",
+      "domain": "party_capacity",
+      "clarity": 0.95,
+      "attributes": {"age": "adult", "legal_capacity": true}
+    },
+    {
+      "id": "c_minor_party",
+      "name": "Minor Party",
+      "description": "Party under age of majority (generally lacks contractual capacity)",
+      "domain": "party_capacity",
+      "clarity": 0.85,
+      "attributes": {"age": "minor", "legal_capacity": false}
+    },
+    {
+      "id": "c_necessities_contract",
+      "name": "Contract for Necessities",
+      "description": "Contract for essential goods/services (food, shelter, medical care)",
+      "domain": "contract_purpose",
+      "clarity": 0.80,
+      "attributes": {"purpose": "necessities", "essential": true}
+    },
+    {
+      "id": "c_luxury_contract",
+      "name": "Contract for Luxury Items",
+      "description": "Contract for non-essential goods or services",
+      "domain": "contract_purpose",
+      "clarity": 0.85,
+      "attributes": {"purpose": "luxury", "essential": false}
+    },
+    {
+      "id": "c_offer",
+      "name": "Offer",
+      "description": "Clear proposal to enter into a contract with definite terms",
+      "domain": "formation",
+      "clarity": 0.90,
+      "attributes": {"formation_element": "offer", "required": true}
+    },
+    {
+      "id": "c_acceptance",
+      "name": "Acceptance",
+      "description": "Unqualified agreement to all terms of the offer",
+      "domain": "formation",
+      "clarity": 0.90,
+      "attributes": {"formation_element": "acceptance", "required": true}
+    },
+    {
+      "id": "c_consideration",
+      "name": "Consideration",
+      "description": "Something of value exchanged between parties (required in common law)",
+      "domain": "formation",
+      "clarity": 0.85,
+      "attributes": {"formation_element": "consideration", "common_law_required": true}
+    },
+    {
+      "id": "c_mutual_assent",
+      "name": "Mutual Assent (Meeting of Minds)",
+      "description": "Both parties understand and agree to the same terms",
+      "domain": "formation",
+      "clarity": 0.85,
+      "attributes": {"formation_element": "assent", "required": true}
+    },
+    {
+      "id": "c_legal_capacity",
+      "name": "Legal Capacity",
+      "description": "Party has legal ability to enter into contracts",
+      "domain": "formation",
+      "clarity": 0.90,
+      "attributes": {"formation_element": "capacity", "required": true}
+    },
+    {
+      "id": "c_legal_purpose",
+      "name": "Legal Purpose",
+      "description": "Contract purpose is lawful and not against public policy",
+      "domain": "formation",
+      "clarity": 0.85,
+      "attributes": {"formation_element": "legality", "required": true}
+    },
+    {
+      "id": "c_valid_contract",
+      "name": "Valid Contract",
+      "description": "Contract meeting all formation requirements and legally enforceable",
+      "domain": "contract_status",
+      "clarity": 0.95,
+      "attributes": {"status": "valid", "enforceable": true}
+    },
+    {
+      "id": "c_voidable_contract",
+      "name": "Voidable Contract",
+      "description": "Contract valid unless party with right chooses to void it",
+      "domain": "contract_status",
+      "clarity": 0.75,
+      "attributes": {"status": "voidable", "party_option": true}
+    },
+    {
+      "id": "c_void_contract",
+      "name": "Void Contract",
+      "description": "Contract with no legal effect from the beginning",
+      "domain": "contract_status",
+      "clarity": 0.90,
+      "attributes": {"status": "void", "enforceable": false}
+    },
+    {
+      "id": "c_material_breach",
+      "name": "Material Breach",
+      "description": "Significant breach that defeats contract purpose",
+      "domain": "breach",
+      "clarity": 0.80,
+      "attributes": {"breach_type": "material", "severity": "high"}
+    },
+    {
+      "id": "c_minor_breach",
+      "name": "Minor Breach",
+      "description": "Breach that doesn't defeat contract purpose",
+      "domain": "breach",
+      "clarity": 0.80,
+      "attributes": {"breach_type": "minor", "severity": "low"}
+    },
+    {
+      "id": "c_anticipatory_breach",
+      "name": "Anticipatory Breach",
+      "description": "Party indicates they won't perform before performance is due",
+      "domain": "breach",
+      "clarity": 0.75,
+      "attributes": {"breach_type": "anticipatory", "timing": "pre_performance"}
+    },
+    {
+      "id": "c_complete_performance",
+      "name": "Complete Performance",
+      "description": "Full performance of all contractual obligations",
+      "domain": "execution",
+      "clarity": 0.95,
+      "attributes": {"performance_level": "complete"}
+    },
+    {
+      "id": "c_substantial_performance",
+      "name": "Substantial Performance",
+      "description": "Performance with minor deviations that don't defeat purpose",
+      "domain": "execution",
+      "clarity": 0.75,
+      "attributes": {"performance_level": "substantial"}
+    },
+    {
+      "id": "c_specific_performance",
+      "name": "Specific Performance",
+      "description": "Equitable remedy requiring actual performance of contract terms",
+      "domain": "remedy",
+      "clarity": 0.80,
+      "attributes": {"remedy_type": "equitable", "unique_goods": true}
+    },
+    {
+      "id": "c_monetary_damages",
+      "name": "Monetary Damages",
+      "description": "Legal remedy of monetary compensation for breach",
+      "domain": "remedy",
+      "clarity": 0.90,
+      "attributes": {"remedy_type": "legal", "compensation": true}
+    },
+    {
+      "id": "c_compensatory_damages",
+      "name": "Compensatory Damages",
+      "description": "Damages to make non-breaching party whole",
+      "domain": "remedy",
+      "clarity": 0.85,
+      "attributes": {"damage_type": "compensatory", "purpose": "make_whole"}
+    },
+    {
+      "id": "c_punitive_damages",
+      "name": "Punitive Damages",
+      "description": "Damages to punish egregious conduct (rare in contract law)",
+      "domain": "remedy",
+      "clarity": 0.80,
+      "attributes": {"damage_type": "punitive", "purpose": "punishment"}
+    },
+    {
+      "id": "c_liquidated_damages",
+      "name": "Liquidated Damages Clause",
+      "description": "Pre-agreed damages amount specified in contract",
+      "domain": "remedy",
+      "clarity": 0.85,
+      "attributes": {"damage_type": "liquidated", "pre_agreed": true}
+    },
+    {
+      "id": "c_rescission",
+      "name": "Rescission",
+      "description": "Canceling contract and restoring parties to pre-contract positions",
+      "domain": "remedy",
+      "clarity": 0.80,
+      "attributes": {"remedy_type": "equitable", "cancel_contract": true}
+    },
+    {
+      "id": "c_frustration_of_purpose",
+      "name": "Frustration of Purpose",
+      "description": "Unforeseen event destroys contract's underlying purpose",
+      "domain": "termination",
+      "clarity": 0.70,
+      "attributes": {"termination_type": "frustration", "excuse_performance": true}
+    },
+    {
+      "id": "c_impossibility",
+      "name": "Impossibility of Performance",
+      "description": "Performance becomes objectively impossible due to unforeseen event",
+      "domain": "termination",
+      "clarity": 0.75,
+      "attributes": {"termination_type": "impossibility", "excuse_performance": true}
+    },
+    {
+      "id": "c_mutual_termination",
+      "name": "Mutual Termination",
+      "description": "Both parties agree to terminate contract",
+      "domain": "termination",
+      "clarity": 0.95,
+      "attributes": {"termination_type": "mutual", "consent": true}
+    },
+    {
+      "id": "c_unilateral_termination",
+      "name": "Unilateral Termination",
+      "description": "One party terminates without other's consent (requires contractual right)",
+      "domain": "termination",
+      "clarity": 0.85,
+      "attributes": {"termination_type": "unilateral", "requires_right": true}
+    },
+    {
+      "id": "c_force_majeure_clause",
+      "name": "Force Majeure Clause",
+      "description": "Contract provision excusing performance due to extraordinary events",
+      "domain": "contract_term",
+      "clarity": 0.80,
+      "attributes": {"clause_type": "force_majeure", "excuse_performance": true}
+    },
+    {
+      "id": "c_arbitration_clause",
+      "name": "Arbitration Clause",
+      "description": "Contract provision requiring arbitration instead of litigation",
+      "domain": "contract_term",
+      "clarity": 0.85,
+      "attributes": {"clause_type": "dispute_resolution", "binding": true}
+    },
+    {
+      "id": "c_choice_of_law_clause",
+      "name": "Choice of Law Clause",
+      "description": "Contract provision specifying which jurisdiction's law applies",
+      "domain": "contract_term",
+      "clarity": 0.85,
+      "attributes": {"clause_type": "choice_of_law"}
+    },
+    {
+      "id": "c_non_compete_clause",
+      "name": "Non-Compete Clause",
+      "description": "Contract provision restricting party's future competitive activities",
+      "domain": "contract_term",
+      "clarity": 0.75,
+      "attributes": {"clause_type": "restrictive_covenant", "enforceability": "varies"}
+    },
+    {
+      "id": "c_unconscionable_terms",
+      "name": "Unconscionable Terms",
+      "description": "Terms so unfair that enforcement would be unjust",
+      "domain": "contract_defect",
+      "clarity": 0.70,
+      "attributes": {"defect_type": "unconscionability", "voidability": true}
+    },
+    {
+      "id": "c_fraud",
+      "name": "Fraudulent Misrepresentation",
+      "description": "Intentional false statement inducing contract formation",
+      "domain": "contract_defect",
+      "clarity": 0.85,
+      "attributes": {"defect_type": "fraud", "voidability": true}
+    },
+    {
+      "id": "c_duress",
+      "name": "Duress",
+      "description": "Contract formed under improper threat or coercion",
+      "domain": "contract_defect",
+      "clarity": 0.80,
+      "attributes": {"defect_type": "duress", "voidability": true}
+    },
+    {
+      "id": "c_undue_influence",
+      "name": "Undue Influence",
+      "description": "Contract formed through exploitation of special relationship",
+      "domain": "contract_defect",
+      "clarity": 0.75,
+      "attributes": {"defect_type": "undue_influence", "voidability": true}
+    },
+    {
+      "id": "c_mistake_mutual",
+      "name": "Mutual Mistake",
+      "description": "Both parties share same mistaken belief about material fact",
+      "domain": "contract_defect",
+      "clarity": 0.75,
+      "attributes": {"defect_type": "mutual_mistake", "voidability": true}
+    },
+    {
+      "id": "c_unique_goods",
+      "name": "Unique Goods (Real Estate, Art)",
+      "description": "Goods that cannot be replaced with equivalent substitutes",
+      "domain": "subject_matter",
+      "clarity": 0.90,
+      "attributes": {"uniqueness": "high", "fungible": false}
+    },
+    {
+      "id": "c_fungible_goods",
+      "name": "Fungible Goods",
+      "description": "Goods that can be replaced with equivalent substitutes",
+      "domain": "subject_matter",
+      "clarity": 0.90,
+      "attributes": {"uniqueness": "low", "fungible": true}
+    },
+    {
+      "id": "c_good_faith_dealing",
+      "name": "Good Faith and Fair Dealing",
+      "description": "Implied covenant requiring honest and fair performance",
+      "domain": "implied_term",
+      "clarity": 0.85,
+      "attributes": {"implied": true, "universal": true}
+    }
+  ],
+  "relations": [
+    {
+      "id": "r_common_law_consideration",
+      "from_concept": "c_common_law_jurisdiction",
+      "to_concept": "c_consideration",
+      "relation_type": "Requires",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Common law requires consideration for enforceable contracts"
+    },
+    {
+      "id": "r_civil_law_consideration_optional",
+      "from_concept": "c_civil_law_jurisdiction",
+      "to_concept": "c_consideration",
+      "relation_type": "Opposes",
+      "strength": 0.60,
+      "confidence": 0.80,
+      "explanation": "Civil law systems don't require consideration (causa doctrine instead)"
+    },
+    {
+      "id": "r_b2c_consumer_protection",
+      "from_concept": "c_b2c_contract",
+      "to_concept": "c_unconscionable_terms",
+      "relation_type": "Opposes",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "B2C contracts have higher scrutiny for unconscionable terms"
+    },
+    {
+      "id": "r_b2b_unconscionable_rare",
+      "from_concept": "c_b2b_contract",
+      "to_concept": "c_unconscionable_terms",
+      "relation_type": "Opposes",
+      "strength": 0.50,
+      "confidence": 0.70,
+      "explanation": "B2B contracts between sophisticated parties rarely unconscionable"
+    },
+    {
+      "id": "r_written_contract_over_500",
+      "from_concept": "c_contract_over_500",
+      "to_concept": "c_written_contract",
+      "relation_type": "Requires",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Statute of Frauds requires writing for contracts over $500"
+    },
+    {
+      "id": "r_oral_contract_over_500_invalid",
+      "from_concept": "c_contract_over_500",
+      "to_concept": "c_oral_contract",
+      "relation_type": "Opposes",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Oral contracts over $500 generally unenforceable"
+    },
+    {
+      "id": "r_oral_contract_under_500_valid",
+      "from_concept": "c_contract_under_500",
+      "to_concept": "c_oral_contract",
+      "relation_type": "Enables",
+      "strength": 0.80,
+      "confidence": 0.85,
+      "explanation": "Oral contracts under $500 generally valid (Statute of Frauds exception)"
+    },
+    {
+      "id": "r_adult_legal_capacity",
+      "from_concept": "c_adult_party",
+      "to_concept": "c_legal_capacity",
+      "relation_type": "Enables",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Adults have full legal capacity to contract"
+    },
+    {
+      "id": "r_minor_lacks_capacity",
+      "from_concept": "c_minor_party",
+      "to_concept": "c_legal_capacity",
+      "relation_type": "Opposes",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "Minors generally lack legal capacity to contract"
+    },
+    {
+      "id": "r_minor_necessities_exception",
+      "from_concept": "c_minor_party",
+      "to_concept": "c_necessities_contract",
+      "relation_type": "Enables",
+      "strength": 0.75,
+      "confidence": 0.85,
+      "explanation": "Minors CAN contract for necessities (food, shelter, medical care)"
+    },
+    {
+      "id": "r_minor_luxury_voidable",
+      "from_concept": "c_minor_party",
+      "to_concept": "c_luxury_contract",
+      "relation_type": "Causes",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Minor's luxury contracts are voidable at minor's option"
+    },
+    {
+      "id": "r_offer_acceptance_valid",
+      "from_concept": "c_offer",
+      "to_concept": "c_acceptance",
+      "relation_type": "Requires",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Offer requires acceptance to form contract"
+    },
+    {
+      "id": "r_acceptance_offer_mutual_assent",
+      "from_concept": "c_acceptance",
+      "to_concept": "c_mutual_assent",
+      "relation_type": "Enables",
+      "strength": 0.90,
+      "confidence": 0.95,
+      "explanation": "Offer plus acceptance creates mutual assent"
+    },
+    {
+      "id": "r_formation_elements_valid",
+      "from_concept": "c_mutual_assent",
+      "to_concept": "c_valid_contract",
+      "relation_type": "Enables",
+      "strength": 0.80,
+      "confidence": 0.85,
+      "explanation": "Mutual assent plus other elements creates valid contract"
+    },
+    {
+      "id": "r_consideration_valid_common_law",
+      "from_concept": "c_consideration",
+      "to_concept": "c_valid_contract",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "Consideration is essential for valid common law contract"
+    },
+    {
+      "id": "r_capacity_valid",
+      "from_concept": "c_legal_capacity",
+      "to_concept": "c_valid_contract",
+      "relation_type": "Enables",
+      "strength": 0.90,
+      "confidence": 0.95,
+      "explanation": "Legal capacity required for valid contract"
+    },
+    {
+      "id": "r_legal_purpose_valid",
+      "from_concept": "c_legal_purpose",
+      "to_concept": "c_valid_contract",
+      "relation_type": "Enables",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Legal purpose required for valid contract"
+    },
+    {
+      "id": "r_fraud_voidable",
+      "from_concept": "c_fraud",
+      "to_concept": "c_voidable_contract",
+      "relation_type": "Causes",
+      "strength": 0.90,
+      "confidence": 0.95,
+      "explanation": "Fraud makes contract voidable at victim's option"
+    },
+    {
+      "id": "r_duress_voidable",
+      "from_concept": "c_duress",
+      "to_concept": "c_voidable_contract",
+      "relation_type": "Causes",
+      "strength": 0.90,
+      "confidence": 0.95,
+      "explanation": "Duress makes contract voidable at victim's option"
+    },
+    {
+      "id": "r_undue_influence_voidable",
+      "from_concept": "c_undue_influence",
+      "to_concept": "c_voidable_contract",
+      "relation_type": "Causes",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "Undue influence makes contract voidable"
+    },
+    {
+      "id": "r_mutual_mistake_voidable",
+      "from_concept": "c_mistake_mutual",
+      "to_concept": "c_voidable_contract",
+      "relation_type": "Causes",
+      "strength": 0.80,
+      "confidence": 0.85,
+      "explanation": "Mutual mistake about material fact makes contract voidable"
+    },
+    {
+      "id": "r_unconscionable_void",
+      "from_concept": "c_unconscionable_terms",
+      "to_concept": "c_void_contract",
+      "relation_type": "Causes",
+      "strength": 0.75,
+      "confidence": 0.80,
+      "explanation": "Unconscionable terms may render contract void"
+    },
+    {
+      "id": "r_illegal_purpose_void",
+      "from_concept": "c_legal_purpose",
+      "to_concept": "c_void_contract",
+      "relation_type": "Opposes",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Illegal purpose makes contract void from inception"
+    },
+    {
+      "id": "r_material_breach_damages",
+      "from_concept": "c_material_breach",
+      "to_concept": "c_monetary_damages",
+      "relation_type": "Enables",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Material breach entitles non-breaching party to damages"
+    },
+    {
+      "id": "r_material_breach_rescission",
+      "from_concept": "c_material_breach",
+      "to_concept": "c_rescission",
+      "relation_type": "Enables",
+      "strength": 0.80,
+      "confidence": 0.85,
+      "explanation": "Material breach may justify rescission"
+    },
+    {
+      "id": "r_minor_breach_substantial_performance",
+      "from_concept": "c_minor_breach",
+      "to_concept": "c_substantial_performance",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Minor breach still constitutes substantial performance"
+    },
+    {
+      "id": "r_minor_breach_limited_damages",
+      "from_concept": "c_minor_breach",
+      "to_concept": "c_compensatory_damages",
+      "relation_type": "Enables",
+      "strength": 0.75,
+      "confidence": 0.80,
+      "explanation": "Minor breach entitles to damages but not rescission"
+    },
+    {
+      "id": "r_anticipatory_breach_immediate_remedy",
+      "from_concept": "c_anticipatory_breach",
+      "to_concept": "c_monetary_damages",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "Anticipatory breach allows immediate claim for damages"
+    },
+    {
+      "id": "r_complete_performance_no_breach",
+      "from_concept": "c_complete_performance",
+      "to_concept": "c_material_breach",
+      "relation_type": "Opposes",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Complete performance precludes breach claims"
+    },
+    {
+      "id": "r_substantial_performance_payment",
+      "from_concept": "c_substantial_performance",
+      "to_concept": "c_monetary_damages",
+      "relation_type": "Enables",
+      "strength": 0.80,
+      "confidence": 0.85,
+      "explanation": "Substantial performance entitles to contract price minus damages for minor deviations"
+    },
+    {
+      "id": "r_unique_goods_specific_performance",
+      "from_concept": "c_unique_goods",
+      "to_concept": "c_specific_performance",
+      "relation_type": "Enables",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Unique goods justify specific performance (money can't replace)"
+    },
+    {
+      "id": "r_fungible_goods_monetary_damages",
+      "from_concept": "c_fungible_goods",
+      "to_concept": "c_monetary_damages",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "Fungible goods remedied by monetary damages (can buy replacement)"
+    },
+    {
+      "id": "r_fungible_goods_no_specific_performance",
+      "from_concept": "c_fungible_goods",
+      "to_concept": "c_specific_performance",
+      "relation_type": "Opposes",
+      "strength": 0.80,
+      "confidence": 0.85,
+      "explanation": "Specific performance not available for fungible goods (adequate remedy at law)"
+    },
+    {
+      "id": "r_liquidated_damages_reasonable",
+      "from_concept": "c_liquidated_damages",
+      "to_concept": "c_compensatory_damages",
+      "relation_type": "Enables",
+      "strength": 0.75,
+      "confidence": 0.80,
+      "explanation": "Liquidated damages enforceable if reasonable pre-estimate of harm"
+    },
+    {
+      "id": "r_punitive_damages_rare_contract",
+      "from_concept": "c_punitive_damages",
+      "to_concept": "c_material_breach",
+      "relation_type": "Opposes",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "Punitive damages generally not available for contract breach"
+    },
+    {
+      "id": "r_punitive_damages_fraud_exception",
+      "from_concept": "c_fraud",
+      "to_concept": "c_punitive_damages",
+      "relation_type": "Enables",
+      "strength": 0.70,
+      "confidence": 0.75,
+      "explanation": "Fraud may justify punitive damages (tort exception)"
+    },
+    {
+      "id": "r_frustration_excuse_performance",
+      "from_concept": "c_frustration_of_purpose",
+      "to_concept": "c_complete_performance",
+      "relation_type": "Opposes",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Frustration of purpose excuses performance obligations"
+    },
+    {
+      "id": "r_impossibility_excuse_performance",
+      "from_concept": "c_impossibility",
+      "to_concept": "c_complete_performance",
+      "relation_type": "Opposes",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Impossibility excuses performance obligations"
+    },
+    {
+      "id": "r_force_majeure_impossibility",
+      "from_concept": "c_force_majeure_clause",
+      "to_concept": "c_impossibility",
+      "relation_type": "Enables",
+      "strength": 0.80,
+      "confidence": 0.85,
+      "explanation": "Force majeure clause provides contractual excuse for impossibility"
+    },
+    {
+      "id": "r_mutual_termination_no_breach",
+      "from_concept": "c_mutual_termination",
+      "to_concept": "c_material_breach",
+      "relation_type": "Opposes",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Mutual termination is not a breach (consensual ending)"
+    },
+    {
+      "id": "r_unilateral_termination_breach_risk",
+      "from_concept": "c_unilateral_termination",
+      "to_concept": "c_material_breach",
+      "relation_type": "Causes",
+      "strength": 0.75,
+      "confidence": 0.80,
+      "explanation": "Unilateral termination without contractual right constitutes breach"
+    },
+    {
+      "id": "r_arbitration_clause_enforceability",
+      "from_concept": "c_arbitration_clause",
+      "to_concept": "c_valid_contract",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "Arbitration clauses generally enforceable"
+    },
+    {
+      "id": "r_arbitration_b2c_scrutiny",
+      "from_concept": "c_arbitration_clause",
+      "to_concept": "c_b2c_contract",
+      "relation_type": "Opposes",
+      "strength": 0.60,
+      "confidence": 0.70,
+      "explanation": "Arbitration clauses in B2C contracts face higher scrutiny"
+    },
+    {
+      "id": "r_choice_of_law_b2b",
+      "from_concept": "c_choice_of_law_clause",
+      "to_concept": "c_b2b_contract",
+      "relation_type": "Enables",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Choice of law clauses generally enforceable in B2B contracts"
+    },
+    {
+      "id": "r_non_compete_reasonableness",
+      "from_concept": "c_non_compete_clause",
+      "to_concept": "c_unconscionable_terms",
+      "relation_type": "Causes",
+      "strength": 0.65,
+      "confidence": 0.70,
+      "explanation": "Non-compete clauses must be reasonable in scope, duration, geography"
+    },
+    {
+      "id": "r_non_compete_b2b_enforceable",
+      "from_concept": "c_non_compete_clause",
+      "to_concept": "c_b2b_contract",
+      "relation_type": "Enables",
+      "strength": 0.75,
+      "confidence": 0.80,
+      "explanation": "Non-compete clauses more likely enforceable in B2B context"
+    },
+    {
+      "id": "r_good_faith_universal",
+      "from_concept": "c_good_faith_dealing",
+      "to_concept": "c_valid_contract",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "Good faith and fair dealing implied in all contracts"
+    },
+    {
+      "id": "r_good_faith_opposes_fraud",
+      "from_concept": "c_good_faith_dealing",
+      "to_concept": "c_fraud",
+      "relation_type": "Opposes",
+      "strength": 0.90,
+      "confidence": 0.95,
+      "explanation": "Good faith dealing is incompatible with fraudulent conduct"
+    },
+    {
+      "id": "r_written_evidence_strength",
+      "from_concept": "c_written_contract",
+      "to_concept": "c_valid_contract",
+      "relation_type": "Enables",
+      "strength": 0.90,
+      "confidence": 0.95,
+      "explanation": "Written contracts provide strong evidence of terms and formation"
+    },
+    {
+      "id": "r_oral_evidence_weak",
+      "from_concept": "c_oral_contract",
+      "to_concept": "c_valid_contract",
+      "relation_type": "Enables",
+      "strength": 0.60,
+      "confidence": 0.70,
+      "explanation": "Oral contracts valid but harder to prove terms"
+    },
+    {
+      "id": "r_necessities_minor_valid",
+      "from_concept": "c_necessities_contract",
+      "to_concept": "c_valid_contract",
+      "relation_type": "Enables",
+      "strength": 0.80,
+      "confidence": 0.85,
+      "explanation": "Contracts for necessities valid even with minors"
+    },
+    {
+      "id": "r_compensatory_material_breach",
+      "from_concept": "c_material_breach",
+      "to_concept": "c_compensatory_damages",
+      "relation_type": "Enables",
+      "strength": 0.90,
+      "confidence": 0.95,
+      "explanation": "Material breach entitles non-breaching party to full compensatory damages"
+    },
+    {
+      "id": "r_b2b_equal_bargaining",
+      "from_concept": "c_b2b_contract",
+      "to_concept": "c_good_faith_dealing",
+      "relation_type": "Requires",
+      "strength": 0.80,
+      "confidence": 0.85,
+      "explanation": "B2B contracts assume equal bargaining power and good faith"
+    },
+    {
+      "id": "r_b2c_protection_standard",
+      "from_concept": "c_b2c_contract",
+      "to_concept": "c_good_faith_dealing",
+      "relation_type": "Requires",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "B2C contracts require higher good faith standard from business"
+    },
+    {
+      "id": "r_voidable_rescission",
+      "from_concept": "c_voidable_contract",
+      "to_concept": "c_rescission",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "Party with voidable contract may choose rescission"
+    },
+    {
+      "id": "r_void_no_enforcement",
+      "from_concept": "c_void_contract",
+      "to_concept": "c_specific_performance",
+      "relation_type": "Opposes",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Void contracts cannot be enforced by any party"
+    },
+    {
+      "id": "r_void_no_damages",
+      "from_concept": "c_void_contract",
+      "to_concept": "c_monetary_damages",
+      "relation_type": "Opposes",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Void contracts provide no basis for damages claims"
+    },
+    {
+      "id": "r_common_law_precedent",
+      "from_concept": "c_common_law_jurisdiction",
+      "to_concept": "c_written_contract",
+      "relation_type": "Enables",
+      "strength": 0.75,
+      "confidence": 0.80,
+      "explanation": "Common law evolved extensive contract formation rules"
+    },
+    {
+      "id": "r_civil_law_code",
+      "from_concept": "c_civil_law_jurisdiction",
+      "to_concept": "c_written_contract",
+      "relation_type": "Enables",
+      "strength": 0.80,
+      "confidence": 0.85,
+      "explanation": "Civil law relies on codified contract rules"
+    },
+    {
+      "id": "r_minor_voidable",
+      "from_concept": "c_minor_party",
+      "to_concept": "c_voidable_contract",
+      "relation_type": "Causes",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "Contracts with minors generally voidable at minor's option"
+    },
+    {
+      "id": "r_adult_no_voidable_age",
+      "from_concept": "c_adult_party",
+      "to_concept": "c_voidable_contract",
+      "relation_type": "Opposes",
+      "strength": 0.80,
+      "confidence": 0.85,
+      "explanation": "Adult status alone doesn't make contract voidable"
+    },
+    {
+      "id": "r_specific_performance_real_estate",
+      "from_concept": "c_specific_performance",
+      "to_concept": "c_unique_goods",
+      "relation_type": "Requires",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "Specific performance typically requires unique subject matter (land, art)"
+    },
+    {
+      "id": "r_impossibility_frustration_similar",
+      "from_concept": "c_impossibility",
+      "to_concept": "c_frustration_of_purpose",
+      "relation_type": "Enables",
+      "strength": 0.70,
+      "confidence": 0.75,
+      "explanation": "Impossibility and frustration are related discharge doctrines"
+    }
+  ]
+}

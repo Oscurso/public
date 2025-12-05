@@ -1,0 +1,281 @@
+{
+  "demo": {
+    "industry": "Scientific Research & Academia",
+    "title": "Experimental Data Consolidation & Hypothesis Generation",
+    "scenario": "Research lab consolidating 18 months of experimental results to discover scientific patterns, methodology insights, and novel research directions"
+  },
+  "concepts": {
+    "sci-001": {
+      "id": "sci-001",
+      "name": "CRISPR Gene Editing",
+      "domain": "Techniques/Molecular_Biology",
+      "created_at": "2024-06-01T09:00:00Z",
+      "confidence": 0.93,
+      "access_count": 245,
+      "last_accessed": "2025-12-05T02:30:00Z"
+    },
+    "sci-002": {
+      "id": "sci-002",
+      "name": "Off-Target Effects",
+      "domain": "Challenges/Specificity",
+      "created_at": "2024-06-15T10:00:00Z",
+      "confidence": 0.88,
+      "access_count": 189,
+      "last_accessed": "2025-12-05T02:15:00Z"
+    },
+    "sci-003": {
+      "id": "sci-003",
+      "name": "Delivery Mechanisms",
+      "domain": "Techniques/Therapeutic",
+      "created_at": "2024-07-01T08:00:00Z",
+      "confidence": 0.82,
+      "access_count": 167,
+      "last_accessed": "2025-12-05T01:45:00Z"
+    },
+    "sci-004": {
+      "id": "sci-004",
+      "name": "Base Editing",
+      "domain": "Techniques/Precision_Medicine",
+      "created_at": "2024-07-15T09:00:00Z",
+      "confidence": 0.85,
+      "access_count": 198,
+      "last_accessed": "2025-12-05T02:00:00Z"
+    },
+    "sci-005": {
+      "id": "sci-005",
+      "name": "Prime Editing",
+      "domain": "Techniques/Advanced",
+      "created_at": "2024-08-01T10:00:00Z",
+      "confidence": 0.79,
+      "access_count": 143,
+      "last_accessed": "2025-12-05T01:30:00Z"
+    },
+    "sci-006": {
+      "id": "sci-006",
+      "name": "Animal Models",
+      "domain": "Methods/In_Vivo",
+      "created_at": "2024-08-15T08:00:00Z",
+      "confidence": 0.91,
+      "access_count": 234,
+      "last_accessed": "2025-12-05T02:30:00Z"
+    },
+    "sci-007": {
+      "id": "sci-007",
+      "name": "Cell Culture Systems",
+      "domain": "Methods/In_Vitro",
+      "created_at": "2024-09-01T09:00:00Z",
+      "confidence": 0.87,
+      "access_count": 212,
+      "last_accessed": "2025-12-05T02:15:00Z"
+    },
+    "sci-008": {
+      "id": "sci-008",
+      "name": "Genomic Sequencing",
+      "domain": "Analysis/Validation",
+      "created_at": "2024-09-15T10:00:00Z",
+      "confidence": 0.94,
+      "access_count": 278,
+      "last_accessed": "2025-12-05T02:45:00Z"
+    },
+    "sci-009": {
+      "id": "sci-009",
+      "name": "Bioinformatics Pipeline",
+      "domain": "Analysis/Computational",
+      "created_at": "2024-10-01T08:00:00Z",
+      "confidence": 0.84,
+      "access_count": 156,
+      "last_accessed": "2025-12-05T01:45:00Z"
+    },
+    "sci-010": {
+      "id": "sci-010",
+      "name": "Statistical Validation",
+      "domain": "Methods/Quality_Control",
+      "created_at": "2024-10-15T09:00:00Z",
+      "confidence": 0.89,
+      "access_count": 203,
+      "last_accessed": "2025-12-05T02:15:00Z"
+    },
+    "sci-011": {
+      "id": "sci-011",
+      "name": "Reproducibility Crisis",
+      "domain": "Challenges/Methodology",
+      "created_at": "2024-11-01T10:00:00Z",
+      "confidence": 0.76,
+      "access_count": 134,
+      "last_accessed": "2025-12-05T01:00:00Z"
+    },
+    "sci-012": {
+      "id": "sci-012",
+      "name": "Ethical Review Boards",
+      "domain": "Governance/Ethics",
+      "created_at": "2024-11-15T08:00:00Z",
+      "confidence": 0.92,
+      "access_count": 187,
+      "last_accessed": "2025-12-05T02:00:00Z"
+    },
+    "sci-013": {
+      "id": "sci-013",
+      "name": "Grant Writing",
+      "domain": "Academia/Funding",
+      "created_at": "2024-12-01T09:00:00Z",
+      "confidence": 0.81,
+      "access_count": 145,
+      "last_accessed": "2025-12-05T01:30:00Z"
+    },
+    "sci-014": {
+      "id": "sci-014",
+      "name": "Peer Review Process",
+      "domain": "Academia/Publication",
+      "created_at": "2024-12-15T10:00:00Z",
+      "confidence": 0.86,
+      "access_count": 167,
+      "last_accessed": "2025-12-05T01:45:00Z"
+    },
+    "sci-015": {
+      "id": "sci-015",
+      "name": "Open Science Practices",
+      "domain": "Philosophy/Transparency",
+      "created_at": "2025-01-01T08:00:00Z",
+      "confidence": 0.73,
+      "access_count": 98,
+      "last_accessed": "2025-12-04T23:30:00Z"
+    }
+  },
+  "relations": {
+    "rel-001": {
+      "id": "rel-001",
+      "from_concept": "sci-001",
+      "to_concept": "sci-002",
+      "relation_type": "challenged_by",
+      "strength": 0.87,
+      "created_at": "2024-06-20T10:00:00Z",
+      "access_count": 178
+    },
+    "rel-002": {
+      "id": "rel-002",
+      "from_concept": "sci-001",
+      "to_concept": "sci-003",
+      "relation_type": "requires",
+      "strength": 0.91,
+      "created_at": "2024-07-05T09:00:00Z",
+      "access_count": 203
+    },
+    "rel-003": {
+      "id": "rel-003",
+      "from_concept": "sci-004",
+      "to_concept": "sci-002",
+      "relation_type": "reduces",
+      "strength": 0.83,
+      "created_at": "2024-07-20T10:00:00Z",
+      "access_count": 167
+    },
+    "rel-004": {
+      "id": "rel-004",
+      "from_concept": "sci-005",
+      "to_concept": "sci-004",
+      "relation_type": "improves_upon",
+      "strength": 0.79,
+      "created_at": "2024-08-05T09:00:00Z",
+      "access_count": 134
+    },
+    "rel-005": {
+      "id": "rel-005",
+      "from_concept": "sci-006",
+      "to_concept": "sci-001",
+      "relation_type": "validates",
+      "strength": 0.88,
+      "created_at": "2024-08-20T10:00:00Z",
+      "access_count": 198
+    },
+    "rel-006": {
+      "id": "rel-006",
+      "from_concept": "sci-007",
+      "to_concept": "sci-006",
+      "relation_type": "precedes",
+      "strength": 0.85,
+      "created_at": "2024-09-05T09:00:00Z",
+      "access_count": 189
+    },
+    "rel-007": {
+      "id": "rel-007",
+      "from_concept": "sci-008",
+      "to_concept": "sci-001",
+      "relation_type": "measures_outcome_of",
+      "strength": 0.94,
+      "created_at": "2024-09-20T10:00:00Z",
+      "access_count": 267
+    },
+    "rel-008": {
+      "id": "rel-008",
+      "from_concept": "sci-009",
+      "to_concept": "sci-008",
+      "relation_type": "analyzes",
+      "strength": 0.92,
+      "created_at": "2024-10-05T09:00:00Z",
+      "access_count": 234
+    },
+    "rel-009": {
+      "id": "rel-009",
+      "from_concept": "sci-010",
+      "to_concept": "sci-008",
+      "relation_type": "validates",
+      "strength": 0.89,
+      "created_at": "2024-10-20T10:00:00Z",
+      "access_count": 198
+    },
+    "rel-010": {
+      "id": "rel-010",
+      "from_concept": "sci-011",
+      "to_concept": "sci-010",
+      "relation_type": "addressed_by",
+      "strength": 0.82,
+      "created_at": "2024-11-05T09:00:00Z",
+      "access_count": 145
+    },
+    "rel-011": {
+      "id": "rel-011",
+      "from_concept": "sci-012",
+      "to_concept": "sci-006",
+      "relation_type": "governs",
+      "strength": 0.95,
+      "created_at": "2024-11-20T10:00:00Z",
+      "access_count": 176
+    },
+    "rel-012": {
+      "id": "rel-012",
+      "from_concept": "sci-013",
+      "to_concept": "sci-001",
+      "relation_type": "funds",
+      "strength": 0.78,
+      "created_at": "2024-12-05T09:00:00Z",
+      "access_count": 134
+    },
+    "rel-013": {
+      "id": "rel-013",
+      "from_concept": "sci-014",
+      "to_concept": "sci-010",
+      "relation_type": "evaluates",
+      "strength": 0.86,
+      "created_at": "2024-12-20T10:00:00Z",
+      "access_count": 156
+    },
+    "rel-014": {
+      "id": "rel-014",
+      "from_concept": "sci-015",
+      "to_concept": "sci-011",
+      "relation_type": "addresses",
+      "strength": 0.84,
+      "created_at": "2025-01-05T09:00:00Z",
+      "access_count": 112
+    },
+    "rel-015": {
+      "id": "rel-015",
+      "from_concept": "sci-015",
+      "to_concept": "sci-009",
+      "relation_type": "promotes",
+      "strength": 0.76,
+      "created_at": "2025-01-10T10:00:00Z",
+      "access_count": 98
+    }
+  }
+}

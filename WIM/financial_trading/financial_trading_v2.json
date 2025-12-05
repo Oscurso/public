@@ -1,0 +1,535 @@
+{
+  "demo_info": {
+    "id": "financial_trading",
+    "industry": "Quantitative Trading & Portfolio Management",
+    "title": "WIM Industry Demo: Financial Trading",
+    "subtitle": "High-Stakes Decision Making Under Market Volatility",
+    "version": "2.0.0",
+    "duration_minutes": 12,
+    "author": "Oscurso Labs"
+  },
+
+  "introduction": {
+    "header": {
+      "title": "WIM - WORKING INTENT MEMORY",
+      "subtitle": "Industry Demo: Financial Trading",
+      "tagline": "Quantitative Hedge Fund - Market Volatility Crisis"
+    },
+    "welcome_message": "Welcome to the WIM Financial Trading Demo\n\nThis scenario demonstrates how WIM manages complex portfolio decisions\nduring market volatility, where context loss can cost millions in\nmissed opportunities or uncontrolled risk exposure.",
+    "context": {
+      "role": "Senior Portfolio Manager - Quantitative Strategies",
+      "time": "Tuesday 13:45 ET - Pre-FOMC trading session",
+      "location": "Apex Capital Partners - Trading Floor"
+    }
+  },
+
+  "scenario": {
+    "name": "Quarterly Rebalance Interrupted by Fed Surprise",
+    "description": "Systematic portfolio rebalance preparation when Fed surprise rate announcement triggers VIX spike from 18.3 to 42, requiring immediate risk management",
+    "primary_intent": {
+      "id": "INT-REBALANCE-Q4",
+      "description": "Execute quarterly portfolio rebalance for multi-strategy fund",
+      "fund_id": "APEX-QUANT-01",
+      "fund_name": "Apex Systematic Alpha Fund",
+      "aum": "$2.4B",
+      "strategies": ["Equity Market Neutral", "Statistical Arbitrage", "Momentum Factor"],
+      "rebalance_window": "48 hours",
+      "target_turnover": "$340M",
+      "urgency": 0.72
+    }
+  },
+
+  "timeline": [
+    {
+      "scene": 1,
+      "title": "Quarterly Portfolio Rebalance - Primary Intent",
+      "time_offset_minutes": 0,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 1: Quarterly Portfolio Rebalance - Primary Intent"
+        },
+        {
+          "type": "display_message",
+          "content": "Fund: Apex Systematic Alpha Fund\nAUM: $2.4B\nRebalance Window: 48 hours (closes Thursday 16:00 ET)\nTarget Turnover: $340M across 847 positions\nCurrent VIX: 18.3 (Calm market conditions)"
+        },
+        {
+          "type": "wim_intent_create",
+          "intent_id": "INT-REBALANCE-Q4",
+          "description": "Execute quarterly portfolio rebalance for multi-strategy fund",
+          "intent_type": "Goal",
+          "priority": "High",
+          "urgency": 0.72
+        },
+        {
+          "type": "display_message",
+          "style": "success",
+          "content": "▶ Creating primary intent in WIM...\n\nIntent: \"Execute quarterly portfolio rebalance\"\nType: Goal\nPriority: High\nComplexity: 847 positions across 3 strategies"
+        },
+        {
+          "type": "wim_task_decompose",
+          "intent_id": "INT-REBALANCE-Q4",
+          "tasks": [
+            {
+              "id": "REB-TASK-01",
+              "description": "Run factor attribution analysis (momentum, value, quality)",
+              "status": "completed",
+              "output": "89 positions flagged for reduction, 124 for increase"
+            },
+            {
+              "id": "REB-TASK-02",
+              "description": "Calculate optimal trade schedule (VWAP, minimize impact)",
+              "status": "completed",
+              "output": "3-day execution schedule, $113M/day avg volume"
+            },
+            {
+              "id": "REB-TASK-03",
+              "description": "Review sector exposure limits and risk constraints",
+              "status": "in_progress",
+              "progress": 0.65,
+              "current_focus": "Technology sector overweight (+2.4% vs target)"
+            },
+            {
+              "id": "REB-TASK-04",
+              "description": "Generate pre-trade compliance report for Chief Risk Officer",
+              "status": "pending"
+            },
+            {
+              "id": "REB-TASK-05",
+              "description": "Submit orders to execution desk with limit prices",
+              "status": "pending"
+            }
+          ]
+        },
+        {
+          "type": "display_message",
+          "content": "Task Progress:\n  ✓ REB-TASK-01: Factor attribution analysis\n  ✓ REB-TASK-02: Optimal trade schedule calculated\n  → REB-TASK-03: Review sector exposure [IN PROGRESS - 65%]\n  • REB-TASK-04: Compliance report\n  • REB-TASK-05: Submit orders to execution desk"
+        },
+        {
+          "type": "display_task_progress",
+          "completed": 2,
+          "total": 5
+        },
+        {
+          "type": "display_context",
+          "context": {
+            "current_analysis": {
+              "spreadsheet": "Q4_Rebalance_v12.xlsx",
+              "tab": "Sector Exposure Analysis",
+              "finding": "Technology +2.4% overweight (12.7% vs 10.3% target)",
+              "positions_affected": "AAPL, MSFT, NVDA (reduce by $58M combined)",
+              "risk_implication": "Sector concentration breach if left unaddressed"
+            },
+            "market_conditions": {
+              "spy": "448.23 (+0.3%)",
+              "vix": "18.3 (Low volatility)",
+              "fed_event": "FOMC announcement at 14:00 ET (15 min away)"
+            }
+          }
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 2,
+      "title": "Focus & Systematic Analysis",
+      "time_offset_minutes": 8,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 2: Focus & Systematic Analysis"
+        },
+        {
+          "type": "display_message",
+          "content": "13:53 ET - 7 minutes until FOMC announcement\n\nDeep focus on sector exposure optimization..."
+        },
+        {
+          "type": "wim_focus_status",
+          "focus": {
+            "strength": 0.92,
+            "duration_minutes": 8.2,
+            "distractions": 0,
+            "cognitive_load": "High but optimal"
+          }
+        },
+        {
+          "type": "display_message",
+          "content": "Analysis Progress:\n  • Technology sector rebalance: Reduce AAPL by $22M, MSFT by $18M, NVDA by $18M\n  • Healthcare sector: Increase UNH by $14M, JNJ by $9M\n  • Financial sector: Neutral (within target bands)\n  • Energy sector: Reduce exposure by $12M (cyclical momentum fade)"
+        },
+        {
+          "type": "display_message",
+          "style": "success",
+          "content": "▶ Sector exposure optimization: 85% complete\n▶ Expected tracking error: 0.42% (within 0.50% limit)\n▶ Transaction cost estimate: 12 bps (acceptable)"
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 3,
+      "title": "⚠⚠⚠ MARKET VOLATILITY ALERT ⚠⚠⚠",
+      "time_offset_minutes": 17,
+      "events": [
+        {
+          "type": "display_header",
+          "style": "critical",
+          "content": "SCENE 3: ⚠⚠⚠ MARKET VOLATILITY ALERT ⚠⚠⚠"
+        },
+        {
+          "type": "display_alert_box",
+          "title": "FED SURPRISE - HAWKISH STATEMENT",
+          "content": "FOMC ANNOUNCEMENT - 14:00 ET\nRates: HOLD at 5.50% (expected)\nStatement: \"Prepared to raise rates if needed\"\nMarket Reaction: SEVERE RISK-OFF"
+        },
+        {
+          "type": "display_message",
+          "style": "critical",
+          "content": "▶ Real-time market data:\n\n  SPY:  448.23 → 441.18 (-1.6% in 90 seconds)\n  VIX:   18.3 → 42.0 (+130% SPIKE)\n  DXY:   106.2 → 107.8 (dollar surge)\n  10Y:    4.82% → 5.01% (yield spike)\n\n  Trading volume: 4.2x normal\n  Market regime: RISK-OFF PANIC"
+        },
+        {
+          "type": "wim_interruption",
+          "interruption": {
+            "id": "INT-VOLATILITY-001",
+            "type": "market_crisis",
+            "description": "Fed surprise triggers VIX spike and risk-off cascade",
+            "urgency": 0.94,
+            "severity": "Critical - Portfolio risk exposure exceeding limits",
+            "immediate_actions": [
+              "Assess portfolio P&L impact",
+              "Check margin requirements",
+              "Evaluate stop-loss triggers",
+              "Consider hedging strategies"
+            ]
+          }
+        },
+        {
+          "type": "wim_urgency_analysis",
+          "current_urgency": 0.72,
+          "interruption_urgency": 0.94,
+          "threshold": 0.80,
+          "decision": "HANDLE_NOW",
+          "rationale": "Market volatility exceeds risk limits - fiduciary duty requires immediate action"
+        },
+        {
+          "type": "display_message",
+          "style": "warning",
+          "content": "WIM Interruption Handler analyzing...\n\n  Current intent urgency: 0.72 (Rebalance - important but not time-critical)\n  Interruption urgency:   0.94 (Market crisis - risk limits breached)\n  Interruption threshold: 0.80\n\n→ Market volatility EXCEEDS threshold by 0.14\n→ Decision: HANDLE IMMEDIATELY\n\nRegulatory requirement: Must respond to material risk events within minutes"
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 4,
+      "title": "Context Preservation - Portfolio State",
+      "time_offset_minutes": 19,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 4: Context Preservation - Portfolio State"
+        },
+        {
+          "type": "wim_context_preserve",
+          "intent_id": "INT-REBALANCE-Q4",
+          "preserved_state": {
+            "spreadsheet": "Q4_Rebalance_v12.xlsx",
+            "active_tab": "Sector Exposure Analysis",
+            "cursor_position": "Row 47 (Technology sector summary)",
+            "pending_decisions": [
+              "Technology: Reduce AAPL $22M, MSFT $18M, NVDA $18M",
+              "Healthcare: Increase UNH $14M, JNJ $9M",
+              "Energy: Reduce $12M (momentum fade)"
+            ],
+            "mental_context": "85% through sector optimization, tracking error 0.42%, transaction costs acceptable",
+            "next_step": "Generate compliance report, then submit to execution desk"
+          }
+        },
+        {
+          "type": "display_message",
+          "content": "WIM is preserving complete portfolio rebalance context...\n\n▶ Capturing state at interruption point:"
+        },
+        {
+          "type": "display_message",
+          "style": "info",
+          "content": "  ✓ Spreadsheet: Q4_Rebalance_v12.xlsx (Tab: Sector Exposure)\n  ✓ Pending trades: 89 reductions, 124 increases ($340M total)\n  ✓ Technology overweight solution: Reduce by $58M\n  ✓ Healthcare underweight solution: Increase by $23M\n  ✓ Analysis progress: 85% complete\n  ✓ Next steps: Compliance report → Execution desk"
+        },
+        {
+          "type": "display_message",
+          "style": "success",
+          "content": "▶ Portfolio analysis state saved\n▶ Factor model parameters preserved\n▶ Trade schedule algorithms bookmarked\n▶ Mental context captured: \"Technology overweight being addressed\""
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 5,
+      "title": "Crisis Response - Risk Management",
+      "time_offset_minutes": 21,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 5: Crisis Response - Risk Management"
+        },
+        {
+          "type": "wim_intent_pause",
+          "intent_id": "INT-REBALANCE-Q4",
+          "reason": "Market crisis requires immediate risk assessment"
+        },
+        {
+          "type": "wim_intent_create",
+          "intent_id": "INT-RISK-MGMT-001",
+          "description": "Manage portfolio risk during volatility spike",
+          "intent_type": "Goal",
+          "priority": "Critical",
+          "urgency": 0.94
+        },
+        {
+          "type": "display_message",
+          "content": "14:02 ET - Crisis Response Mode\n\n▶ WIM has paused rebalance intent\n▶ Creating new crisis management intent..."
+        },
+        {
+          "type": "display_message",
+          "style": "critical",
+          "content": "▶ Real-Time Portfolio Impact Assessment:\n\n  Current P&L (intraday):\n    Market Neutral Strategy: -$4.2M (-0.18%)\n    Statistical Arb Strategy: -$2.8M (-0.12%)\n    Momentum Factor Strategy: -$8.6M (-0.36%)\n    TOTAL FUND P&L: -$15.6M (-0.65%)\n\n  Risk Metrics:\n    Portfolio Beta: 0.08 → 0.14 (increased market exposure)\n    VaR (99%, 1-day): $18M → $34M (EXCEEDED LIMIT)\n    Margin Usage: 23% → 41% (elevated but acceptable)\n    Sharpe Ratio (YTD): 2.1 → 1.9"
+        },
+        {
+          "type": "display_message",
+          "style": "warning",
+          "content": "⚠ RISK LIMIT BREACH DETECTED:\n  • VaR exceeds $25M limit (now $34M)\n  • Requires: Immediate position reduction OR hedging\n  • Fiduciary obligation: Protect investor capital"
+        },
+        {
+          "type": "wim_task_decompose",
+          "intent_id": "INT-RISK-MGMT-001",
+          "tasks": [
+            {
+              "id": "RISK-01",
+              "description": "Identify positions contributing most to VaR increase",
+              "status": "completed",
+              "output": "Tech sector long positions (AAPL, MSFT, NVDA) and momentum longs"
+            },
+            {
+              "id": "RISK-02",
+              "description": "Evaluate hedging options (SPY puts, VIX calls, futures)",
+              "status": "completed",
+              "recommendation": "Buy 200 SPY Dec puts (440 strike) for $480K premium"
+            },
+            {
+              "id": "RISK-03",
+              "description": "Execute hedge trade",
+              "status": "in_progress",
+              "action": "Submitting order to options desk..."
+            }
+          ]
+        },
+        {
+          "type": "display_message",
+          "style": "success",
+          "content": "▶ Crisis response executed in 3 minutes:\n\n  Action: Purchased 200 SPY puts (440 strike, Dec expiry)\n  Cost: $480K premium (0.02% of AUM)\n  Impact: VaR reduced from $34M to $26M (back within limits)\n  Portfolio Beta: 0.14 → 0.06 (market exposure reduced)\n\n  ✓ Risk limits restored\n  ✓ Investor capital protected\n  ✓ Regulatory compliance maintained"
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 6,
+      "title": "Cascading Alerts & Multi-Tasking",
+      "time_offset_minutes": 30,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 6: Cascading Alerts & Multi-Tasking"
+        },
+        {
+          "type": "display_message",
+          "content": "14:11 ET - Markets remain volatile, multiple alerts firing..."
+        },
+        {
+          "type": "display_message",
+          "style": "warning",
+          "content": "▶ Bloomberg Alert: \"Treasury yields surge on Fed hawkish tone\"\n▶ Risk System Alert: \"Statistical Arb pair correlation breakdown\"\n▶ Email from CRO: \"Board wants risk update by EOD\"\n▶ Slack from Execution Desk: \"Spreads widening, rebalance on hold?\""
+        },
+        {
+          "type": "wim_parallel_intents",
+          "intents": [
+            {"id": "INT-RISK-MGMT-001", "status": "Active", "priority": "Critical", "description": "Monitor hedge effectiveness"},
+            {"id": "INT-CRO-REPORT", "status": "Active", "priority": "High", "description": "Prepare board risk update"},
+            {"id": "INT-ARBIT-REVIEW", "status": "Active", "priority": "Medium", "description": "Analyze stat arb correlation breakdown"},
+            {"id": "INT-REBALANCE-Q4", "status": "Paused", "priority": "High", "description": "Resume when markets stabilize"}
+          ]
+        },
+        {
+          "type": "display_message",
+          "content": "▶ WIM is managing 4 concurrent intents:\n\n  1. [ACTIVE - CRITICAL] Monitor hedge effectiveness\n  2. [ACTIVE - HIGH] Prepare board risk update (CRO request)\n  3. [ACTIVE - MEDIUM] Analyze stat arb correlation issue\n  4. [PAUSED - HIGH] Q4 rebalance (resume when calm)\n\nContext switching between intents without losing critical details..."
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 7,
+      "title": "Market Stabilization & Return to Rebalance",
+      "time_offset_minutes": 120,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 7: Market Stabilization & Return to Rebalance"
+        },
+        {
+          "type": "display_message",
+          "content": "15:45 ET - Markets stabilizing after 1h 45m of volatility\n\nSPY: 441.18 → 444.67 (+0.8% recovery)\nVIX: 42.0 → 28.4 (-32% from peak, still elevated)\n\nPortfolio P&L: -$15.6M → -$8.2M (recovery + hedge profit)"
+        },
+        {
+          "type": "wim_intent_resume",
+          "intent_id": "INT-REBALANCE-Q4",
+          "reason": "Market volatility normalized, risk limits restored"
+        },
+        {
+          "type": "display_message",
+          "style": "info",
+          "content": "▶ WIM restoring quarterly rebalance context:\n\n  ✓ Reopened: Q4_Rebalance_v12.xlsx\n  ✓ Restored tab: Sector Exposure Analysis (Row 47)\n  ✓ Recalled pending decisions:\n      - Technology: Reduce AAPL $22M, MSFT $18M, NVDA $18M\n      - Healthcare: Increase UNH $14M, JNJ $9M\n      - Energy: Reduce $12M\n  ✓ Progress: 85% complete\n  ✓ Next step: Generate compliance report"
+        },
+        {
+          "type": "display_message",
+          "style": "success",
+          "content": "▶ Completing rebalance analysis:\n\n  ✓ Sector exposure optimization finalized\n  ✓ Compliance report generated (tracking error 0.42%)\n  ✓ Orders submitted to execution desk\n  ✓ Expected execution: 3 days (minimize market impact)\n\n  Context restoration time: 2 minutes\n\nWithout WIM: 25-30 minutes to reconstruct mental model\nWith WIM: 2 minutes - seamless continuation"
+        },
+        {
+          "type": "display_task_progress",
+          "completed": 5,
+          "total": 5
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 8,
+      "title": "End-of-Day P&L Report",
+      "time_offset_minutes": 255,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "SCENE 8: End-of-Day P&L Report"
+        },
+        {
+          "type": "display_message",
+          "content": "18:00 ET - Market Close + Post-Analysis"
+        },
+        {
+          "type": "display_metrics_report",
+          "metrics": {
+            "fund_performance": {
+              "total_aum": "$2.4B",
+              "intraday_pnl": "-$3.1M (-0.13%)",
+              "ytd_return": "+18.7%",
+              "benchmark_spy": "-0.8% (outperformed by 0.67%)"
+            },
+            "crisis_management": {
+              "volatility_event": "Fed hawkish surprise",
+              "vix_spike": "18.3 → 42.0 (+130%)",
+              "response_time_minutes": 3,
+              "hedge_effectiveness": "$7.4M losses prevented",
+              "risk_limit_breach_duration": "3 minutes (restored quickly)"
+            },
+            "rebalance_execution": {
+              "status": "✓ Completed despite volatility",
+              "orders_submitted": "$340M across 847 positions",
+              "execution_window": "3 days (VWAP optimized)",
+              "context_switches": 4,
+              "details_lost": 0,
+              "compliance_status": "✓ All regulatory requirements met"
+            },
+            "risk_metrics_eod": {
+              "portfolio_beta": "0.06 (within target)",
+              "var_99_1day": "$21M (within $25M limit)",
+              "sharpe_ratio_ytd": "2.0 (excellent)",
+              "margin_usage": "24% (comfortable)"
+            }
+          }
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    },
+    {
+      "scene": 9,
+      "title": "WIM VALUE PROPOSITION: Financial Trading",
+      "time_offset_minutes": 257,
+      "events": [
+        {
+          "type": "display_header",
+          "content": "WIM VALUE PROPOSITION: Financial Trading"
+        },
+        {
+          "type": "display_value_comparison",
+          "without_wim": [
+            "25-30 minutes to reconstruct portfolio analysis state",
+            "Critical trade decisions delayed during volatility",
+            "Mental model of sector exposure adjustments lost",
+            "Risk: Missed hedging opportunities cost $2-5M per event",
+            "Compliance reporting delayed (regulatory risk)",
+            "Factor model parameters forgotten between sessions"
+          ],
+          "with_wim": [
+            "2-minute context restoration (93% faster)",
+            "3-minute response to VIX spike (hedge executed immediately)",
+            "Complete preservation of sector optimization logic",
+            "$7.4M in losses prevented through rapid hedge execution",
+            "Zero compliance delays - all audit trail intact",
+            "Seamless switching between 4 concurrent risk events",
+            "Factor analysis continuity maintained across interruptions"
+          ],
+          "key_benefits": [
+            "Crisis response time: 28 min → 3 min (90% faster)",
+            "Alpha preservation through faster decision latency",
+            "Risk limit breaches resolved 10x faster",
+            "Regulatory compliance maintained during chaos",
+            "Portfolio optimization quality unchanged despite interruptions",
+            "Hedge timing improved: $7.4M losses prevented per volatility event"
+          ],
+          "roi": {
+            "annual_value": "$94M per $2.4B fund (3.9% AUM improvement)",
+            "decision_latency_reduction": "90% (28min → 3min)",
+            "alpha_preservation": "47 bps/year from faster execution"
+          }
+        },
+        {
+          "type": "pause"
+        }
+      ]
+    }
+  ],
+
+  "value_proposition": {
+    "industry": "Financial Trading & Portfolio Management",
+    "why_wim_matters": "In quantitative finance, milliseconds matter. Context loss during market volatility leads to delayed decisions, missed hedging opportunities, and millions in preventable losses. WIM preserves the complete mental model of portfolio optimization, enabling rapid crisis response while maintaining long-term strategic work.",
+    "without_wim": {
+      "context_restoration_minutes": 27,
+      "crisis_response_minutes": 28,
+      "missed_hedge_cost_per_event": 3500000,
+      "compliance_delays": 0.18
+    },
+    "with_wim": {
+      "context_restoration_minutes": 2,
+      "crisis_response_minutes": 3,
+      "hedge_timing_improvement": 0.90,
+      "compliance_delays": 0.0
+    },
+    "roi": {
+      "annual_value_per_fund": 94000000,
+      "annual_value_percentage_aum": 0.039,
+      "decision_latency_reduction": 0.90,
+      "alpha_preservation_bps": 47,
+      "risk_limit_breach_duration_reduction": 0.92
+    }
+  }
+}

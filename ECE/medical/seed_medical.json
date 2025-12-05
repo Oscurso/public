@@ -1,0 +1,346 @@
+{
+  "concepts": [
+    {
+      "id": "c_patient",
+      "name": "patient",
+      "description": "Person receiving medical treatment",
+      "domain": "healthcare",
+      "clarity": 0.95,
+      "attributes": {}
+    },
+    {
+      "id": "c_diagnosis",
+      "name": "diagnosis",
+      "description": "Identification of a disease or condition",
+      "domain": "healthcare",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_treatment",
+      "name": "treatment",
+      "description": "Medical care given to a patient",
+      "domain": "healthcare",
+      "clarity": 0.8,
+      "attributes": {}
+    },
+    {
+      "id": "c_prognosis",
+      "name": "prognosis",
+      "description": null,
+      "domain": "healthcare",
+      "clarity": 0.2,
+      "attributes": {}
+    },
+    {
+      "id": "c_informed_consent",
+      "name": "informed consent",
+      "description": null,
+      "domain": "healthcare",
+      "clarity": 0.25,
+      "attributes": {}
+    },
+    {
+      "id": "c_symptom",
+      "name": "symptom",
+      "description": "Physical or mental sign of a condition",
+      "domain": "healthcare",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_medication",
+      "name": "medication",
+      "description": "Substance used to treat illness",
+      "domain": "healthcare",
+      "clarity": 0.9,
+      "attributes": {}
+    },
+    {
+      "id": "c_side_effect",
+      "name": "side effect",
+      "description": "Unintended effect of medication",
+      "domain": "healthcare",
+      "clarity": 0.75,
+      "attributes": {}
+    },
+    {
+      "id": "c_clinical_trial",
+      "name": "clinical trial",
+      "description": null,
+      "domain": "research",
+      "clarity": 0.3,
+      "attributes": {}
+    },
+    {
+      "id": "c_efficacy",
+      "name": "efficacy",
+      "description": null,
+      "domain": "healthcare",
+      "clarity": 0.35,
+      "attributes": {}
+    },
+    {
+      "id": "c_contraindication",
+      "name": "contraindication",
+      "description": null,
+      "domain": "healthcare",
+      "clarity": 0.25,
+      "attributes": {}
+    },
+    {
+      "id": "c_dosage",
+      "name": "dosage",
+      "description": "Amount of medication to be taken",
+      "domain": "healthcare",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_adverse_event",
+      "name": "adverse event",
+      "description": "Harmful or undesired effect from medical treatment",
+      "domain": "healthcare",
+      "clarity": 0.7,
+      "attributes": {}
+    },
+    {
+      "id": "c_biomarker",
+      "name": "biomarker",
+      "description": null,
+      "domain": "healthcare",
+      "clarity": 0.3,
+      "attributes": {}
+    },
+    {
+      "id": "c_comorbidity",
+      "name": "comorbidity",
+      "description": null,
+      "domain": "healthcare",
+      "clarity": 0.25,
+      "attributes": {}
+    },
+    {
+      "id": "c_remission",
+      "name": "remission",
+      "description": "Decrease or disappearance of symptoms",
+      "domain": "healthcare",
+      "clarity": 0.75,
+      "attributes": {}
+    },
+    {
+      "id": "c_relapse",
+      "name": "relapse",
+      "description": "Return of disease after period of improvement",
+      "domain": "healthcare",
+      "clarity": 0.8,
+      "attributes": {}
+    },
+    {
+      "id": "c_palliative_care",
+      "name": "palliative care",
+      "description": null,
+      "domain": "healthcare",
+      "clarity": 0.35,
+      "attributes": {}
+    },
+    {
+      "id": "c_differential_diagnosis",
+      "name": "differential diagnosis",
+      "description": null,
+      "domain": "healthcare",
+      "clarity": 0.3,
+      "attributes": {}
+    },
+    {
+      "id": "c_medical_history",
+      "name": "medical history",
+      "description": "Record of patient's past illnesses and treatments",
+      "domain": "healthcare",
+      "clarity": 0.85,
+      "attributes": {}
+    }
+  ],
+  "relations": [
+    {
+      "id": "r_symptom_diagnosis",
+      "from_concept": "c_symptom",
+      "to_concept": "c_diagnosis",
+      "relation_type": "LeadsTo",
+      "strength": 0.85,
+      "confidence": 0.9,
+      "explanation": "Symptoms lead to diagnosis"
+    },
+    {
+      "id": "r_diagnosis_treatment",
+      "from_concept": "c_diagnosis",
+      "to_concept": "c_treatment",
+      "relation_type": "Determines",
+      "strength": 0.9,
+      "confidence": 0.95,
+      "explanation": "Diagnosis determines treatment"
+    },
+    {
+      "id": "r_treatment_prognosis",
+      "from_concept": "c_treatment",
+      "to_concept": "c_prognosis",
+      "relation_type": "Influences",
+      "strength": 0.8,
+      "confidence": 0.6,
+      "explanation": "Treatment influences prognosis"
+    },
+    {
+      "id": "r_informed_consent_treatment",
+      "from_concept": "c_informed_consent",
+      "to_concept": "c_treatment",
+      "relation_type": "RequiredFor",
+      "strength": 0.95,
+      "confidence": 0.7,
+      "explanation": "Informed consent required before treatment"
+    },
+    {
+      "id": "r_medication_side_effect",
+      "from_concept": "c_medication",
+      "to_concept": "c_side_effect",
+      "relation_type": "Causes",
+      "strength": 0.7,
+      "confidence": 0.85,
+      "explanation": "Medications can cause side effects"
+    },
+    {
+      "id": "r_clinical_trial_efficacy",
+      "from_concept": "c_clinical_trial",
+      "to_concept": "c_efficacy",
+      "relation_type": "Determines",
+      "strength": 0.85,
+      "confidence": 0.7,
+      "explanation": "Clinical trials determine efficacy"
+    },
+    {
+      "id": "r_contraindication_treatment",
+      "from_concept": "c_contraindication",
+      "to_concept": "c_treatment",
+      "relation_type": "Opposes",
+      "strength": 0.9,
+      "confidence": 0.8,
+      "explanation": "Contraindications prevent certain treatments"
+    },
+    {
+      "id": "r_dosage_efficacy",
+      "from_concept": "c_dosage",
+      "to_concept": "c_efficacy",
+      "relation_type": "Influences",
+      "strength": 0.85,
+      "confidence": 0.8,
+      "explanation": "Dosage influences treatment efficacy"
+    },
+    {
+      "id": "r_dosage_adverse_event",
+      "from_concept": "c_dosage",
+      "to_concept": "c_adverse_event",
+      "relation_type": "Influences",
+      "strength": 0.8,
+      "confidence": 0.85,
+      "explanation": "Dosage influences risk of adverse events"
+    },
+    {
+      "id": "r_biomarker_diagnosis",
+      "from_concept": "c_biomarker",
+      "to_concept": "c_diagnosis",
+      "relation_type": "Enables",
+      "strength": 0.75,
+      "confidence": 0.7,
+      "explanation": "Biomarkers enable diagnosis"
+    },
+    {
+      "id": "r_comorbidity_treatment",
+      "from_concept": "c_comorbidity",
+      "to_concept": "c_treatment",
+      "relation_type": "Influences",
+      "strength": 0.8,
+      "confidence": 0.75,
+      "explanation": "Comorbidities influence treatment decisions"
+    },
+    {
+      "id": "r_treatment_remission",
+      "from_concept": "c_treatment",
+      "to_concept": "c_remission",
+      "relation_type": "LeadsTo",
+      "strength": 0.7,
+      "confidence": 0.6,
+      "explanation": "Treatment may lead to remission"
+    },
+    {
+      "id": "r_remission_relapse",
+      "from_concept": "c_remission",
+      "to_concept": "c_relapse",
+      "relation_type": "RelatedTo",
+      "strength": 0.6,
+      "confidence": 0.7,
+      "explanation": "Remission may be followed by relapse"
+    },
+    {
+      "id": "r_prognosis_palliative",
+      "from_concept": "c_prognosis",
+      "to_concept": "c_palliative_care",
+      "relation_type": "Determines",
+      "strength": 0.75,
+      "confidence": 0.6,
+      "explanation": "Poor prognosis may indicate palliative care"
+    },
+    {
+      "id": "r_symptom_differential",
+      "from_concept": "c_symptom",
+      "to_concept": "c_differential_diagnosis",
+      "relation_type": "LeadsTo",
+      "strength": 0.8,
+      "confidence": 0.85,
+      "explanation": "Symptoms lead to differential diagnosis"
+    },
+    {
+      "id": "r_differential_diagnosis",
+      "from_concept": "c_differential_diagnosis",
+      "to_concept": "c_diagnosis",
+      "relation_type": "LeadsTo",
+      "strength": 0.85,
+      "confidence": 0.8,
+      "explanation": "Differential diagnosis leads to final diagnosis"
+    },
+    {
+      "id": "r_history_diagnosis",
+      "from_concept": "c_medical_history",
+      "to_concept": "c_diagnosis",
+      "relation_type": "Enables",
+      "strength": 0.8,
+      "confidence": 0.9,
+      "explanation": "Medical history helps enable diagnosis"
+    },
+    {
+      "id": "r_history_contraindication",
+      "from_concept": "c_medical_history",
+      "to_concept": "c_contraindication",
+      "relation_type": "Determines",
+      "strength": 0.85,
+      "confidence": 0.8,
+      "explanation": "Medical history determines contraindications"
+    },
+    {
+      "id": "r_biomarker_prognosis",
+      "from_concept": "c_biomarker",
+      "to_concept": "c_prognosis",
+      "relation_type": "Influences",
+      "strength": 0.7,
+      "confidence": 0.6,
+      "explanation": "Biomarkers can influence prognosis prediction"
+    },
+    {
+      "id": "r_comorbidity_prognosis",
+      "from_concept": "c_comorbidity",
+      "to_concept": "c_prognosis",
+      "relation_type": "Influences",
+      "strength": 0.8,
+      "confidence": 0.75,
+      "explanation": "Comorbidities influence prognosis"
+    }
+  ]
+}

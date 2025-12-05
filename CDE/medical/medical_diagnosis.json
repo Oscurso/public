@@ -1,0 +1,1001 @@
+{
+  "concepts": [
+    {
+      "id": "c_mild_fever",
+      "name": "Mild Fever",
+      "description": "Body temperature 38-39°C (100.4-102.2°F)",
+      "domain": "symptom",
+      "clarity": 0.95,
+      "attributes": {"measurable": true, "objective": true}
+    },
+    {
+      "id": "c_high_fever",
+      "name": "High Fever",
+      "description": "Body temperature above 39.5°C (103°F)",
+      "domain": "symptom",
+      "clarity": 0.95,
+      "attributes": {"measurable": true, "severe": true}
+    },
+    {
+      "id": "c_bacterial_infection",
+      "name": "Bacterial Infection",
+      "description": "Infection caused by pathogenic bacteria",
+      "domain": "diagnosis",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_viral_infection",
+      "name": "Viral Infection",
+      "description": "Infection caused by a virus",
+      "domain": "diagnosis",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_antibiotics",
+      "name": "Antibiotic Treatment",
+      "description": "Treatment using antibacterial medication",
+      "domain": "treatment",
+      "clarity": 0.95,
+      "attributes": {}
+    },
+    {
+      "id": "c_antivirals",
+      "name": "Antiviral Treatment",
+      "description": "Treatment using antiviral medication",
+      "domain": "treatment",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_rest_fluids",
+      "name": "Rest and Fluids",
+      "description": "Conservative treatment with bed rest and hydration",
+      "domain": "treatment",
+      "clarity": 0.95,
+      "attributes": {}
+    },
+    {
+      "id": "c_productive_cough",
+      "name": "Productive Cough",
+      "description": "Cough that produces mucus or phlegm",
+      "domain": "symptom",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_dry_cough",
+      "name": "Dry Cough",
+      "description": "Cough without mucus production",
+      "domain": "symptom",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_sore_throat",
+      "name": "Sore Throat",
+      "description": "Pain or irritation in the throat",
+      "domain": "symptom",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_shortness_breath",
+      "name": "Shortness of Breath",
+      "description": "Difficulty breathing or dyspnea",
+      "domain": "symptom",
+      "clarity": 0.90,
+      "attributes": {"serious": true}
+    },
+    {
+      "id": "c_viral_bronchitis",
+      "name": "Viral Bronchitis",
+      "description": "Inflammation of bronchial tubes caused by virus",
+      "domain": "diagnosis",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_bacterial_bronchitis",
+      "name": "Bacterial Bronchitis",
+      "description": "Inflammation of bronchial tubes caused by bacteria",
+      "domain": "diagnosis",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_viral_pneumonia",
+      "name": "Viral Pneumonia",
+      "description": "Lung infection caused by virus",
+      "domain": "diagnosis",
+      "clarity": 0.85,
+      "attributes": {"serious": true}
+    },
+    {
+      "id": "c_bacterial_pneumonia",
+      "name": "Bacterial Pneumonia",
+      "description": "Lung infection caused by bacteria",
+      "domain": "diagnosis",
+      "clarity": 0.85,
+      "attributes": {"serious": true}
+    },
+    {
+      "id": "c_strep_throat",
+      "name": "Strep Throat",
+      "description": "Bacterial infection of throat caused by Streptococcus",
+      "domain": "diagnosis",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_common_cold",
+      "name": "Common Cold",
+      "description": "Mild viral upper respiratory infection",
+      "domain": "diagnosis",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_influenza",
+      "name": "Influenza",
+      "description": "Acute viral respiratory illness caused by influenza virus",
+      "domain": "diagnosis",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_lab_culture",
+      "name": "Laboratory Culture Test",
+      "description": "Growing pathogens from sample to identify bacteria",
+      "domain": "diagnostic_tool",
+      "clarity": 0.95,
+      "attributes": {"accurate": true}
+    },
+    {
+      "id": "c_pcr_test",
+      "name": "PCR Test",
+      "description": "Molecular test detecting viral genetic material",
+      "domain": "diagnostic_tool",
+      "clarity": 0.95,
+      "attributes": {"accurate": true}
+    },
+    {
+      "id": "c_chest_xray",
+      "name": "Chest X-Ray",
+      "description": "Radiographic imaging of the chest",
+      "domain": "diagnostic_tool",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_rapid_strep_test",
+      "name": "Rapid Strep Test",
+      "description": "Quick test for streptococcal bacteria",
+      "domain": "diagnostic_tool",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_elderly_patient",
+      "name": "Elderly Patient",
+      "description": "Patient aged 65 or older",
+      "domain": "patient_context",
+      "clarity": 0.95,
+      "attributes": {}
+    },
+    {
+      "id": "c_pregnant_patient",
+      "name": "Pregnant Patient",
+      "description": "Patient who is pregnant",
+      "domain": "patient_context",
+      "clarity": 0.95,
+      "attributes": {}
+    },
+    {
+      "id": "c_immunocompromised",
+      "name": "Immunocompromised Patient",
+      "description": "Patient with weakened immune system",
+      "domain": "patient_context",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_pediatric_patient",
+      "name": "Pediatric Patient",
+      "description": "Patient under 18 years of age",
+      "domain": "patient_context",
+      "clarity": 0.95,
+      "attributes": {}
+    },
+    {
+      "id": "c_antibiotic_allergy",
+      "name": "Antibiotic Allergy",
+      "description": "Patient allergic to certain antibiotics",
+      "domain": "patient_context",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_antibiotic_resistance",
+      "name": "Antibiotic Resistance",
+      "description": "Bacteria that no longer respond to antibiotics",
+      "domain": "complication",
+      "clarity": 0.90,
+      "attributes": {"serious": true}
+    },
+    {
+      "id": "c_secondary_infection",
+      "name": "Secondary Bacterial Infection",
+      "description": "Bacterial infection following viral illness",
+      "domain": "complication",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_hospitalization",
+      "name": "Hospitalization",
+      "description": "Admission to hospital for treatment",
+      "domain": "treatment",
+      "clarity": 0.95,
+      "attributes": {}
+    },
+    {
+      "id": "c_fever_reducer",
+      "name": "Fever Reducer (Antipyretics)",
+      "description": "Medication to reduce fever like acetaminophen or ibuprofen",
+      "domain": "treatment",
+      "clarity": 0.95,
+      "attributes": {}
+    },
+    {
+      "id": "c_immune_response",
+      "name": "Immune Response",
+      "description": "Body's natural defense mechanism against infection",
+      "domain": "biological_process",
+      "clarity": 0.80,
+      "attributes": {}
+    },
+    {
+      "id": "c_symptom_relief",
+      "name": "Symptom Relief",
+      "description": "Reduction of uncomfortable symptoms",
+      "domain": "outcome",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_recovery_time",
+      "name": "Recovery Time",
+      "description": "Time needed to return to normal health",
+      "domain": "outcome",
+      "clarity": 0.75,
+      "attributes": {}
+    },
+    {
+      "id": "c_dehydration",
+      "name": "Dehydration",
+      "description": "Insufficient fluid in the body",
+      "domain": "complication",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_sepsis",
+      "name": "Sepsis",
+      "description": "Life-threatening response to infection",
+      "domain": "complication",
+      "clarity": 0.85,
+      "attributes": {"serious": true}
+    },
+    {
+      "id": "c_empirical_antibiotics",
+      "name": "Empirical Antibiotic Treatment",
+      "description": "Starting antibiotics before culture results available",
+      "domain": "treatment",
+      "clarity": 0.80,
+      "attributes": {}
+    },
+    {
+      "id": "c_targeted_antibiotics",
+      "name": "Targeted Antibiotic Treatment",
+      "description": "Antibiotics chosen based on culture results",
+      "domain": "treatment",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_watchful_waiting",
+      "name": "Watchful Waiting",
+      "description": "Monitoring condition without immediate treatment",
+      "domain": "treatment",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_white_blood_count",
+      "name": "Elevated White Blood Cell Count",
+      "description": "Lab finding suggesting bacterial infection",
+      "domain": "diagnostic_indicator",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_procalcitonin",
+      "name": "Elevated Procalcitonin",
+      "description": "Biomarker suggesting bacterial infection",
+      "domain": "diagnostic_indicator",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_vaccine_preventable",
+      "name": "Vaccine-Preventable Disease",
+      "description": "Disease that can be prevented by vaccination",
+      "domain": "prevention",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_chronic_condition",
+      "name": "Chronic Underlying Condition",
+      "description": "Long-term health condition affecting treatment",
+      "domain": "patient_context",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_adverse_drug_reaction",
+      "name": "Adverse Drug Reaction",
+      "description": "Harmful reaction to medication",
+      "domain": "complication",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_patient_comfort",
+      "name": "Patient Comfort",
+      "description": "Subjective feeling of well-being",
+      "domain": "outcome",
+      "clarity": 0.75,
+      "attributes": {}
+    },
+    {
+      "id": "c_clinical_deterioration",
+      "name": "Clinical Deterioration",
+      "description": "Worsening of patient condition",
+      "domain": "outcome",
+      "clarity": 0.80,
+      "attributes": {}
+    },
+    {
+      "id": "c_appropriate_antibiotic_use",
+      "name": "Appropriate Antibiotic Use",
+      "description": "Using antibiotics only when medically indicated",
+      "domain": "treatment_principle",
+      "clarity": 0.85,
+      "attributes": {}
+    },
+    {
+      "id": "c_broad_spectrum_antibiotics",
+      "name": "Broad-Spectrum Antibiotics",
+      "description": "Antibiotics effective against many bacteria types",
+      "domain": "treatment",
+      "clarity": 0.90,
+      "attributes": {}
+    },
+    {
+      "id": "c_narrow_spectrum_antibiotics",
+      "name": "Narrow-Spectrum Antibiotics",
+      "description": "Antibiotics targeting specific bacteria",
+      "domain": "treatment",
+      "clarity": 0.90,
+      "attributes": {}
+    }
+  ],
+  "relations": [
+    {
+      "id": "r_bacterial_antibiotics",
+      "from_concept": "c_bacterial_infection",
+      "to_concept": "c_antibiotics",
+      "relation_type": "Requires",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Bacterial infections require antibiotic treatment"
+    },
+    {
+      "id": "r_viral_antibiotics_oppose",
+      "from_concept": "c_viral_infection",
+      "to_concept": "c_antibiotics",
+      "relation_type": "Opposes",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Antibiotics are ineffective against viral infections"
+    },
+    {
+      "id": "r_viral_rest",
+      "from_concept": "c_viral_infection",
+      "to_concept": "c_rest_fluids",
+      "relation_type": "Requires",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "Viral infections primarily need rest and supportive care"
+    },
+    {
+      "id": "r_viral_bronchitis_antibiotics",
+      "from_concept": "c_viral_bronchitis",
+      "to_concept": "c_antibiotics",
+      "relation_type": "Opposes",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Viral bronchitis does not benefit from antibiotics"
+    },
+    {
+      "id": "r_bacterial_bronchitis_antibiotics",
+      "from_concept": "c_bacterial_bronchitis",
+      "to_concept": "c_antibiotics",
+      "relation_type": "Requires",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Bacterial bronchitis requires antibiotic treatment"
+    },
+    {
+      "id": "r_viral_pneumonia_antibiotics",
+      "from_concept": "c_viral_pneumonia",
+      "to_concept": "c_antibiotics",
+      "relation_type": "Opposes",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Primary viral pneumonia does not require antibiotics"
+    },
+    {
+      "id": "r_bacterial_pneumonia_antibiotics",
+      "from_concept": "c_bacterial_pneumonia",
+      "to_concept": "c_antibiotics",
+      "relation_type": "Requires",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Bacterial pneumonia requires prompt antibiotic treatment"
+    },
+    {
+      "id": "r_strep_antibiotics",
+      "from_concept": "c_strep_throat",
+      "to_concept": "c_antibiotics",
+      "relation_type": "Requires",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Strep throat requires antibiotic treatment"
+    },
+    {
+      "id": "r_common_cold_antibiotics",
+      "from_concept": "c_common_cold",
+      "to_concept": "c_antibiotics",
+      "relation_type": "Opposes",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Common cold does not benefit from antibiotics"
+    },
+    {
+      "id": "r_lab_culture_bacterial",
+      "from_concept": "c_lab_culture",
+      "to_concept": "c_bacterial_infection",
+      "relation_type": "Confirms",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Positive culture confirms bacterial infection"
+    },
+    {
+      "id": "r_pcr_viral",
+      "from_concept": "c_pcr_test",
+      "to_concept": "c_viral_infection",
+      "relation_type": "Confirms",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Positive PCR confirms viral infection"
+    },
+    {
+      "id": "r_rapid_strep_confirms",
+      "from_concept": "c_rapid_strep_test",
+      "to_concept": "c_strep_throat",
+      "relation_type": "Confirms",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Positive rapid strep test confirms strep throat"
+    },
+    {
+      "id": "r_xray_pneumonia",
+      "from_concept": "c_chest_xray",
+      "to_concept": "c_bacterial_pneumonia",
+      "relation_type": "Indicates",
+      "strength": 0.75,
+      "confidence": 0.70,
+      "explanation": "Chest x-ray can show pneumonia but cannot distinguish bacterial vs viral"
+    },
+    {
+      "id": "r_elderly_hospitalization",
+      "from_concept": "c_elderly_patient",
+      "to_concept": "c_hospitalization",
+      "relation_type": "Requires",
+      "strength": 0.65,
+      "confidence": 0.70,
+      "explanation": "Elderly patients more often need hospitalization for severe infections"
+    },
+    {
+      "id": "r_immunocompromised_antibiotics",
+      "from_concept": "c_immunocompromised",
+      "to_concept": "c_empirical_antibiotics",
+      "relation_type": "Requires",
+      "strength": 0.80,
+      "confidence": 0.80,
+      "explanation": "Immunocompromised patients often need empirical antibiotics while awaiting cultures"
+    },
+    {
+      "id": "r_pregnant_antibiotic_caution",
+      "from_concept": "c_pregnant_patient",
+      "to_concept": "c_antibiotics",
+      "relation_type": "RelatedTo",
+      "strength": 0.70,
+      "confidence": 0.75,
+      "explanation": "Antibiotic choice in pregnancy requires careful consideration of fetal safety"
+    },
+    {
+      "id": "r_antibiotic_allergy_treatment",
+      "from_concept": "c_antibiotic_allergy",
+      "to_concept": "c_antibiotics",
+      "relation_type": "Opposes",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Antibiotic allergy prevents use of certain antibiotics"
+    },
+    {
+      "id": "r_secondary_infection_antibiotics",
+      "from_concept": "c_secondary_infection",
+      "to_concept": "c_antibiotics",
+      "relation_type": "Requires",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Secondary bacterial infections require antibiotics"
+    },
+    {
+      "id": "r_viral_secondary",
+      "from_concept": "c_viral_infection",
+      "to_concept": "c_secondary_infection",
+      "relation_type": "Causes",
+      "strength": 0.40,
+      "confidence": 0.60,
+      "explanation": "Viral infections can lead to secondary bacterial infections"
+    },
+    {
+      "id": "r_antibiotic_resistance_overuse",
+      "from_concept": "c_antibiotics",
+      "to_concept": "c_antibiotic_resistance",
+      "relation_type": "Causes",
+      "strength": 0.75,
+      "confidence": 0.85,
+      "explanation": "Inappropriate antibiotic use drives resistance"
+    },
+    {
+      "id": "r_fever_reducer_comfort",
+      "from_concept": "c_fever_reducer",
+      "to_concept": "c_patient_comfort",
+      "relation_type": "Enables",
+      "strength": 0.85,
+      "confidence": 0.90,
+      "explanation": "Fever reducers improve patient comfort"
+    },
+    {
+      "id": "r_fever_reducer_immune",
+      "from_concept": "c_fever_reducer",
+      "to_concept": "c_immune_response",
+      "relation_type": "Opposes",
+      "strength": 0.50,
+      "confidence": 0.60,
+      "explanation": "Fever reducers may slow immune response by suppressing fever which aids immunity"
+    },
+    {
+      "id": "r_fever_reducer_symptom_relief",
+      "from_concept": "c_fever_reducer",
+      "to_concept": "c_symptom_relief",
+      "relation_type": "Enables",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Fever reducers provide symptom relief"
+    },
+    {
+      "id": "r_high_fever_reducer",
+      "from_concept": "c_high_fever",
+      "to_concept": "c_fever_reducer",
+      "relation_type": "Requires",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "High fever often requires fever reduction for safety and comfort"
+    },
+    {
+      "id": "r_mild_fever_watchful",
+      "from_concept": "c_mild_fever",
+      "to_concept": "c_watchful_waiting",
+      "relation_type": "Requires",
+      "strength": 0.70,
+      "confidence": 0.75,
+      "explanation": "Mild fever may be managed with watchful waiting"
+    },
+    {
+      "id": "r_empirical_vs_targeted",
+      "from_concept": "c_empirical_antibiotics",
+      "to_concept": "c_targeted_antibiotics",
+      "relation_type": "RelatedTo",
+      "strength": 0.75,
+      "confidence": 0.80,
+      "explanation": "Empirical antibiotics should be switched to targeted once culture results available"
+    },
+    {
+      "id": "r_culture_targeted",
+      "from_concept": "c_lab_culture",
+      "to_concept": "c_targeted_antibiotics",
+      "relation_type": "Enables",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Culture results enable targeted antibiotic selection"
+    },
+    {
+      "id": "r_sepsis_hospitalization",
+      "from_concept": "c_sepsis",
+      "to_concept": "c_hospitalization",
+      "relation_type": "Requires",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Sepsis requires immediate hospitalization"
+    },
+    {
+      "id": "r_sepsis_empirical",
+      "from_concept": "c_sepsis",
+      "to_concept": "c_empirical_antibiotics",
+      "relation_type": "Requires",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Sepsis requires immediate empirical broad-spectrum antibiotics"
+    },
+    {
+      "id": "r_bacterial_pneumonia_hospitalization",
+      "from_concept": "c_bacterial_pneumonia",
+      "to_concept": "c_hospitalization",
+      "relation_type": "Requires",
+      "strength": 0.70,
+      "confidence": 0.70,
+      "explanation": "Severe bacterial pneumonia often requires hospitalization"
+    },
+    {
+      "id": "r_dehydration_fever",
+      "from_concept": "c_high_fever",
+      "to_concept": "c_dehydration",
+      "relation_type": "Causes",
+      "strength": 0.70,
+      "confidence": 0.75,
+      "explanation": "High fever increases dehydration risk"
+    },
+    {
+      "id": "r_dehydration_fluids",
+      "from_concept": "c_dehydration",
+      "to_concept": "c_rest_fluids",
+      "relation_type": "Requires",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Dehydration requires fluid replacement"
+    },
+    {
+      "id": "r_white_blood_bacterial",
+      "from_concept": "c_white_blood_count",
+      "to_concept": "c_bacterial_infection",
+      "relation_type": "Indicates",
+      "strength": 0.75,
+      "confidence": 0.70,
+      "explanation": "Elevated WBC suggests but doesn't confirm bacterial infection"
+    },
+    {
+      "id": "r_procalcitonin_bacterial",
+      "from_concept": "c_procalcitonin",
+      "to_concept": "c_bacterial_infection",
+      "relation_type": "Indicates",
+      "strength": 0.80,
+      "confidence": 0.75,
+      "explanation": "Elevated procalcitonin more specific for bacterial infection"
+    },
+    {
+      "id": "r_influenza_vaccine",
+      "from_concept": "c_influenza",
+      "to_concept": "c_vaccine_preventable",
+      "relation_type": "PartOf",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "explanation": "Influenza is vaccine-preventable"
+    },
+    {
+      "id": "r_chronic_condition_risk",
+      "from_concept": "c_chronic_condition",
+      "to_concept": "c_clinical_deterioration",
+      "relation_type": "Causes",
+      "strength": 0.65,
+      "confidence": 0.70,
+      "explanation": "Chronic conditions increase risk of deterioration during infection"
+    },
+    {
+      "id": "r_antibiotic_adverse",
+      "from_concept": "c_antibiotics",
+      "to_concept": "c_adverse_drug_reaction",
+      "relation_type": "Causes",
+      "strength": 0.40,
+      "confidence": 0.60,
+      "explanation": "Antibiotics can cause adverse reactions"
+    },
+    {
+      "id": "r_appropriate_use_resistance",
+      "from_concept": "c_appropriate_antibiotic_use",
+      "to_concept": "c_antibiotic_resistance",
+      "relation_type": "Opposes",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Appropriate antibiotic use reduces resistance development"
+    },
+    {
+      "id": "r_broad_spectrum_empirical",
+      "from_concept": "c_broad_spectrum_antibiotics",
+      "to_concept": "c_empirical_antibiotics",
+      "relation_type": "PartOf",
+      "strength": 0.80,
+      "confidence": 0.85,
+      "explanation": "Broad-spectrum antibiotics often used for empirical treatment"
+    },
+    {
+      "id": "r_narrow_spectrum_targeted",
+      "from_concept": "c_narrow_spectrum_antibiotics",
+      "to_concept": "c_targeted_antibiotics",
+      "relation_type": "PartOf",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Narrow-spectrum antibiotics preferred for targeted treatment"
+    },
+    {
+      "id": "r_broad_resistance_risk",
+      "from_concept": "c_broad_spectrum_antibiotics",
+      "to_concept": "c_antibiotic_resistance",
+      "relation_type": "Causes",
+      "strength": 0.70,
+      "confidence": 0.75,
+      "explanation": "Broad-spectrum antibiotics increase resistance risk"
+    },
+    {
+      "id": "r_narrow_resistance_less",
+      "from_concept": "c_narrow_spectrum_antibiotics",
+      "to_concept": "c_antibiotic_resistance",
+      "relation_type": "Opposes",
+      "strength": 0.60,
+      "confidence": 0.65,
+      "explanation": "Narrow-spectrum antibiotics have lower resistance risk"
+    },
+    {
+      "id": "r_productive_cough_bacterial",
+      "from_concept": "c_productive_cough",
+      "to_concept": "c_bacterial_bronchitis",
+      "relation_type": "Indicates",
+      "strength": 0.65,
+      "confidence": 0.60,
+      "explanation": "Productive cough with colored sputum may suggest bacterial bronchitis"
+    },
+    {
+      "id": "r_dry_cough_viral",
+      "from_concept": "c_dry_cough",
+      "to_concept": "c_viral_bronchitis",
+      "relation_type": "Indicates",
+      "strength": 0.70,
+      "confidence": 0.65,
+      "explanation": "Dry cough more common in viral bronchitis"
+    },
+    {
+      "id": "r_shortness_breath_pneumonia",
+      "from_concept": "c_shortness_breath",
+      "to_concept": "c_bacterial_pneumonia",
+      "relation_type": "Indicates",
+      "strength": 0.70,
+      "confidence": 0.65,
+      "explanation": "Shortness of breath is key symptom of pneumonia"
+    },
+    {
+      "id": "r_pediatric_fever_common",
+      "from_concept": "c_pediatric_patient",
+      "to_concept": "c_mild_fever",
+      "relation_type": "RelatedTo",
+      "strength": 0.75,
+      "confidence": 0.70,
+      "explanation": "Children commonly develop fever with infections"
+    },
+    {
+      "id": "r_elderly_bacterial_risk",
+      "from_concept": "c_elderly_patient",
+      "to_concept": "c_bacterial_pneumonia",
+      "relation_type": "RelatedTo",
+      "strength": 0.70,
+      "confidence": 0.70,
+      "explanation": "Elderly at higher risk for bacterial pneumonia"
+    },
+    {
+      "id": "r_immunocompromised_sepsis",
+      "from_concept": "c_immunocompromised",
+      "to_concept": "c_sepsis",
+      "relation_type": "RelatedTo",
+      "strength": 0.65,
+      "confidence": 0.70,
+      "explanation": "Immunocompromised patients at higher risk for sepsis"
+    },
+    {
+      "id": "r_watchful_waiting_viral",
+      "from_concept": "c_watchful_waiting",
+      "to_concept": "c_viral_infection",
+      "relation_type": "Requires",
+      "strength": 0.75,
+      "confidence": 0.75,
+      "explanation": "Viral infections often managed with watchful waiting"
+    },
+    {
+      "id": "r_clinical_deterioration_antibiotics",
+      "from_concept": "c_clinical_deterioration",
+      "to_concept": "c_empirical_antibiotics",
+      "relation_type": "Requires",
+      "strength": 0.80,
+      "confidence": 0.75,
+      "explanation": "Clinical deterioration may warrant empirical antibiotics"
+    },
+    {
+      "id": "r_sore_throat_strep",
+      "from_concept": "c_sore_throat",
+      "to_concept": "c_strep_throat",
+      "relation_type": "Indicates",
+      "strength": 0.50,
+      "confidence": 0.50,
+      "explanation": "Sore throat is common but not specific for strep"
+    },
+    {
+      "id": "r_influenza_antivirals",
+      "from_concept": "c_influenza",
+      "to_concept": "c_antivirals",
+      "relation_type": "Requires",
+      "strength": 0.65,
+      "confidence": 0.70,
+      "explanation": "Influenza may benefit from antivirals if started early"
+    },
+    {
+      "id": "r_viral_pneumonia_hospitalization",
+      "from_concept": "c_viral_pneumonia",
+      "to_concept": "c_hospitalization",
+      "relation_type": "Requires",
+      "strength": 0.65,
+      "confidence": 0.65,
+      "explanation": "Severe viral pneumonia may require hospitalization"
+    },
+    {
+      "id": "r_pediatric_high_fever_serious",
+      "from_concept": "c_pediatric_patient",
+      "to_concept": "c_high_fever",
+      "relation_type": "RelatedTo",
+      "strength": 0.70,
+      "confidence": 0.65,
+      "explanation": "High fever in young children requires careful evaluation"
+    },
+    {
+      "id": "r_common_cold_rest",
+      "from_concept": "c_common_cold",
+      "to_concept": "c_rest_fluids",
+      "relation_type": "Requires",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Common cold treated with rest and fluids"
+    },
+    {
+      "id": "r_bacterial_pneumonia_xray",
+      "from_concept": "c_bacterial_pneumonia",
+      "to_concept": "c_chest_xray",
+      "relation_type": "Requires",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Bacterial pneumonia diagnosis typically requires chest x-ray"
+    },
+    {
+      "id": "r_immunocompromised_viral_severe",
+      "from_concept": "c_immunocompromised",
+      "to_concept": "c_viral_infection",
+      "relation_type": "RelatedTo",
+      "strength": 0.70,
+      "confidence": 0.70,
+      "explanation": "Viral infections can be severe in immunocompromised patients"
+    },
+    {
+      "id": "r_appropriate_use_principle",
+      "from_concept": "c_appropriate_antibiotic_use",
+      "to_concept": "c_targeted_antibiotics",
+      "relation_type": "Requires",
+      "strength": 0.85,
+      "confidence": 0.85,
+      "explanation": "Appropriate use includes using targeted antibiotics when possible"
+    },
+    {
+      "id": "r_empirical_severe_illness",
+      "from_concept": "c_empirical_antibiotics",
+      "to_concept": "c_bacterial_infection",
+      "relation_type": "RelatedTo",
+      "strength": 0.75,
+      "confidence": 0.70,
+      "explanation": "Empirical antibiotics used when bacterial infection suspected but not confirmed"
+    },
+    {
+      "id": "r_adverse_reaction_allergy",
+      "from_concept": "c_adverse_drug_reaction",
+      "to_concept": "c_antibiotic_allergy",
+      "relation_type": "RelatedTo",
+      "strength": 0.80,
+      "confidence": 0.75,
+      "explanation": "Adverse reactions can indicate or cause antibiotic allergies"
+    },
+    {
+      "id": "r_recovery_time_viral",
+      "from_concept": "c_viral_infection",
+      "to_concept": "c_recovery_time",
+      "relation_type": "RelatedTo",
+      "strength": 0.70,
+      "confidence": 0.65,
+      "explanation": "Viral infections have variable recovery times"
+    },
+    {
+      "id": "r_antibiotics_recovery_bacterial",
+      "from_concept": "c_antibiotics",
+      "to_concept": "c_recovery_time",
+      "relation_type": "Opposes",
+      "strength": 0.75,
+      "confidence": 0.80,
+      "explanation": "Appropriate antibiotics shorten recovery time for bacterial infections"
+    },
+    {
+      "id": "r_rest_recovery",
+      "from_concept": "c_rest_fluids",
+      "to_concept": "c_recovery_time",
+      "relation_type": "Enables",
+      "strength": 0.75,
+      "confidence": 0.75,
+      "explanation": "Rest and fluids support recovery"
+    },
+    {
+      "id": "r_chronic_recovery_longer",
+      "from_concept": "c_chronic_condition",
+      "to_concept": "c_recovery_time",
+      "relation_type": "Causes",
+      "strength": 0.70,
+      "confidence": 0.70,
+      "explanation": "Chronic conditions may prolong recovery from acute infections"
+    },
+    {
+      "id": "r_procalcitonin_guide_antibiotics",
+      "from_concept": "c_procalcitonin",
+      "to_concept": "c_empirical_antibiotics",
+      "relation_type": "Enables",
+      "strength": 0.75,
+      "confidence": 0.70,
+      "explanation": "Procalcitonin can guide decision to start empirical antibiotics"
+    },
+    {
+      "id": "r_viral_bronchitis_rest",
+      "from_concept": "c_viral_bronchitis",
+      "to_concept": "c_rest_fluids",
+      "relation_type": "Requires",
+      "strength": 0.90,
+      "confidence": 0.90,
+      "explanation": "Viral bronchitis treated primarily with rest and fluids"
+    },
+    {
+      "id": "r_bacterial_bronchitis_culture",
+      "from_concept": "c_bacterial_bronchitis",
+      "to_concept": "c_lab_culture",
+      "relation_type": "RelatedTo",
+      "strength": 0.60,
+      "confidence": 0.60,
+      "explanation": "Bacterial bronchitis may be confirmed by sputum culture in severe cases"
+    }
+  ]
+}
